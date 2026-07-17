@@ -1,0 +1,21 @@
+import Explore from "@/components/home/explore";
+import Hero from "@/components/home/hero";
+import Info from "@/components/home/info";
+import TopDestinations from "@/components/home/top-destinations";
+import Navbar from "@/components/navbar";
+import SmoothScroll from "@/components/smooth-scroll";
+
+export default async function Home() {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    return (
+        <SmoothScroll>
+            <main className="animate-fade-in-slow bg-papua-dark min-h-screen">
+                <Navbar />
+                <Hero />
+                <Info />
+                <TopDestinations />
+                <Explore />
+            </main>
+        </SmoothScroll>
+    );
+}
