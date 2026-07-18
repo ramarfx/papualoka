@@ -2,6 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 /**
  * Global smooth scroll provider using Lenis.
@@ -23,15 +29,19 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
         lenisRef.current = lenis;
 
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
+        lenis.on("scroll", ScrollTrigger.update);
+
+        const raf = (time: number) => {
+            lenis.raf(time * 1000);
+        };
+
+        gsap.ticker.add(raf);
+        gsap.ticker.lagSmoothing(0);
 
         return () => {
             lenis.destroy();
             lenisRef.current = null;
+            gsap.ticker.remove(raf);
         };
     }, []);
 

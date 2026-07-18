@@ -32,12 +32,12 @@ export default function Explore() {
         <section className="w-full min-h-screen bg-[url('/img/explore-bg.png')] bg-cover bg-center bg-no-repeat relative py-24 flex flex-col items-center">
             {/* Header Content */}
             <div className="flex flex-col items-center justify-center text-center px-6 max-w-3xl mb-16">
-                <h5 className="text-[#CFC154] font-semibold text-lg md:text-xl font-sans tracking-[0.2em] uppercase mb-4">
+                <h5 className="text-papua-yellow font-semibold text-lg md:text-xl font-sans tracking-[0.2em] uppercase mb-4">
                     JELAJAHI PAPUA
                 </h5>
                 <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl font-heading mb-6">
-                    <span className="text-[#CFC154]">Jelajahi Berdasarkan </span>
-                    <span className="text-[#1A4321]">Kategori</span>
+                    <span className="text-papua-yellow">Jelajahi Berdasarkan </span>
+                    <span className="text-papua-green">Kategori</span>
                 </h1>
                 <p className="text-gray-500 text-sm md:text-base font-sans leading-relaxed">
                     Temukan keberagaman Papua melalui suku, tradisi, kuliner khas, dan cerita rakyat yang diwariskan dari generasi ke generasi.
