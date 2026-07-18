@@ -20,7 +20,7 @@ export default function DestinationAccess({ title, steps }: DestinationAccessPro
     return (
         <section className="w-full relative z-20">
             {/* Top Divider */}
-            <div className="absolute -top-36 left-0 w-full h-auto z-10">
+            <div className="absolute -top-18 d:-top-36 left-0 w-full h-auto z-10">
                 <Image
                     src="/img/divider.svg"
                     alt="Divider"
@@ -43,38 +43,64 @@ export default function DestinationAccess({ title, steps }: DestinationAccessPro
                         {title}
                     </motion.h2>
 
-                    <div className="relative flex flex-col gap-24 md:gap-32">
-                        {/* Curved Line Background (Desktop only) */}
-                        <div className="hidden md:block absolute top-[10%] left-1/2 -translate-x-1/2 h-[80%] w-[600px] z-0 opacity-50 pointer-events-none">
-                            <Image
-                                src="/img/destination/curved-line.svg"
-                                alt=""
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.3 } },
+                            hidden: {}
+                        }}
+                        className="relative flex flex-col gap-24 md:gap-32"
+                    >
                         {steps.map((step, idx) => (
                             <motion.div
                                 key={step.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, amount: 0.4 }}
-                                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 50 },
+                                    visible: { 
+                                        opacity: 1, 
+                                        y: 0, 
+                                        transition: { duration: 0.8, ease: "easeOut" } 
+                                    }
+                                }}
                                 className={`relative z-10 flex flex-col ${step.align === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-20`}
                             >
+                                {/* Connector Line to next step */}
+                                {idx < steps.length - 1 && (
+                                    <motion.div 
+                                        initial={{ pathLength: 0, opacity: 0 }}
+                                        whileInView={{ opacity: 0.5 }}
+                                        transition={{ duration: 1, delay: 0.5 }}
+                                        className="hidden md:block absolute left-1/2 -translate-x-1/2 z-[-1] pointer-events-none"
+                                        style={{ top: '50%', width: step.align === 'left' ? 762 : 782 }}
+                                    >
+                                        <Image
+                                            src={step.align === 'left' ? "/img/destination/curved-right.svg" : "/img/destination/curved-left.svg"}
+                                            alt=""
+                                            width={step.align === 'left' ? 762 : 782}
+                                            height={step.align === 'left' ? 374 : 311}
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </motion.div>
+                                )}
+
                                 {/* Image Circle */}
                                 <div className="flex-1 flex justify-center">
-                                    <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-2 border-2 border-papua-yellow/50 bg-transparent">
+                                    <motion.div 
+                                        whileHover={{ scale: 1.05, rotate: 2 }}
+                                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                        className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-2 border-2 border-papua-yellow/50 bg-transparent cursor-pointer"
+                                    >
                                         <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl">
                                             <Image
                                                 src={step.image}
                                                 alt={step.title}
                                                 fill
-                                                className="object-cover"
+                                                className="object-cover transition-transform duration-700 hover:scale-110"
                                             />
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
 
                                 {/* Text Content */}
@@ -88,7 +114,7 @@ export default function DestinationAccess({ title, steps }: DestinationAccessPro
                                 </div>
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

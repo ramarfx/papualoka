@@ -18,10 +18,10 @@ interface InfiniteCarouselProps {
 }
 
 export default function InfiniteCarousel({ images, speed = "normal" }: InfiniteCarouselProps) {
-    const autoplayDelay = 
-        speed === "slow" ? 4000 : 
-        speed === "fast" ? 0 : 
-        2500;
+    const autoplayDelay =
+        speed === "slow" ? 4000 :
+            speed === "fast" ? 0 :
+                2500;
 
     // We can simulate a continuous marquee effect by using delay: 0 and linear timing
     // Or just a standard smooth slider if delay > 0.
@@ -36,11 +36,17 @@ export default function InfiniteCarousel({ images, speed = "normal" }: InfiniteC
             `}</style>
             <Swiper
                 modules={[Autoplay]}
-                spaceBetween={20}
-                slidesPerView={4}
+                spaceBetween={10}
+                slidesPerView={3}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                }}
                 loop={true}
                 centeredSlides={true}
-                speed={800} // continuous scroll speed vs normal transition
+                speed={800}
                 autoplay={{
                     delay: 1000,
                     disableOnInteraction: false,
@@ -50,18 +56,18 @@ export default function InfiniteCarousel({ images, speed = "normal" }: InfiniteC
             >
                 {/* Duplicate array heavily to ensure enough slides exist on large screens for proper loop calculation */}
                 {[...images, ...images, ...images].map((img, idx) => (
-                    <SwiperSlide 
-                        key={idx} 
-                        style={{ width: 'auto' }} 
-                        className="flex items-center justify-center py-8 transition-all duration-500 [&.swiper-slide-active>div]:scale-[1.2] [&.swiper-slide-active>div]:z-20 [&.swiper-slide-active>div]:shadow-2xl [&.swiper-slide-active>div]:border-papua-yellow/50"
+                    <SwiperSlide
+                        key={idx}
+                        style={{ width: 'auto' }}
+                        className="flex items-center justify-center py-8 transition-all duration-500 [&.swiper-slide-active>div]:scale-[1.2] [&.swiper-slide-active>div]:z-20 [&.swiper-slide-active>div]:shadow-2xl"
                     >
-                        <div 
-                            className={`relative rounded-xl overflow-hidden transition-all duration-500 hover:scale-105 cursor-pointer shadow-lg border border-white/10 ${img.className || "h-48 w-72 md:w-80"}`}
+                        <div
+                            className={`relative overflow-hidden transition-all duration-500 hover:scale-105 cursor-pointer shadow-lg ${img.className || "w-full h-[150px] md:h-48 md:w-80"}`}
                         >
-                            <Image 
-                                src={img.src} 
-                                alt={`Destination Carousel ${idx}`} 
-                                fill 
+                            <Image
+                                src={img.src}
+                                alt={`Destination Carousel ${idx}`}
+                                fill
                                 className="object-cover pointer-events-none"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />

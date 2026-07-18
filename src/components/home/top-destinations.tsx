@@ -172,7 +172,7 @@ export default function TopDestinations() {
                             {DESTINATIONS.map((dest, i) => (
                                 <div
                                     key={dest.id}
-                                    className={`dest-text flex flex-col gap-5 ${i === 0 ? "relative" : "absolute inset-0"}`}
+                                    className={`dest-text flex flex-col gap-5 ${i === 0 ? "relative" : "absolute inset-0"} ${activeIndex === i ? 'pointer-events-auto' : 'pointer-events-none'}`}
                                 >
                                     <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm w-max px-4 py-2 rounded-full">
                                         <div className="w-2.5 h-2.5 rounded-full bg-[#D3B745]" />
@@ -186,7 +186,7 @@ export default function TopDestinations() {
                                     <p className="font-sans text-white/70 text-sm md:text-[15px] leading-relaxed">
                                         {dest.description}
                                     </p>
-                                    <Link href={`/destination/${dest.slug}`} className="flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
+                                    <Link href={`/destination/${dest.id}`} className="flex items-center cursor-pointer gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
                                         <span>Explore</span>
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
                                     </Link>
