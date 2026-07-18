@@ -1,22 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import { AlertCircle, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Info() {
     return (
         <section className="relative w-full min-h-screen bg-[#0F0F0F] flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
             {/* Top Left Cursor Hint */}
-            <div className="absolute top-12 left-8 md:top-24 md:left-24 z-20">
+            <motion.div 
+                className="absolute top-12 left-8 md:top-24 md:left-24 z-20"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className="flex items-center gap-3 bg-[#1F1F1F] hover:bg-[#2A2A2A] transition-colors cursor-default px-5 py-3 rounded-full text-white/90">
                     <AlertCircle className="w-5 h-5 text-white" strokeWidth={2} />
                     <span className="font-sans text-sm tracking-wide font-medium">Gerakkan kursor untuk jelajahi</span>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Main Content Layout */}
             <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 gap-16 lg:gap-8 mt-24 lg:mt-0">
                 
                 {/* Left Content (Text & CTA) */}
-                <div className="w-full lg:w-1/3 flex flex-col justify-end lg:pt-32 order-2 lg:order-1">
+                <motion.div 
+                    className="w-full lg:w-1/3 flex flex-col justify-end lg:pt-32 order-2 lg:order-1"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-[#D3B745] text-3xl font-bold font-sans tracking-wide">PAPUA</h2>
                         <div className="h-[2px] w-12 bg-[#D3B745]"></div>
@@ -28,10 +43,16 @@ export default function Info() {
                         <span>Pelajari Selanjutnya</span>
                         <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" strokeWidth={3} />
                     </button>
-                </div>
+                </motion.div>
 
                 {/* Center Map (Papua Island) */}
-                <div className="w-full lg:w-1/3 flex justify-center relative order-1 lg:order-2 h-[300px] md:h-[400px] lg:h-[500px]">
+                <motion.div 
+                    className="w-full lg:w-1/3 flex justify-center relative order-1 lg:order-2 h-[300px] md:h-[400px] lg:h-[500px]"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 1, type: "spring", bounce: 0.3 }}
+                >
                     {/* Green Glow effect */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[70%] bg-[#38A13B]/20 blur-[80px] rounded-[100%] z-0 pointer-events-none"></div>
                     
@@ -45,10 +66,16 @@ export default function Info() {
                             priority
                         />
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Timeline */}
-                <div className="w-full lg:w-1/3 flex justify-start lg:justify-end order-3 lg:order-3">
+                <motion.div 
+                    className="w-full lg:w-1/3 flex justify-start lg:justify-end order-3 lg:order-3"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                >
                     <div className="flex flex-col gap-12 relative lg:pt-16">
                         {/* Vertical connection line */}
                         <div className="absolute left-[9px] top-6 bottom-6 w-[2px] bg-[#D3B745]/30"></div>
@@ -74,7 +101,7 @@ export default function Info() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
                 
             </div>
         </section>

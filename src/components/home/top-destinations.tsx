@@ -32,29 +32,33 @@ function VerticalIndicator({
     onSelect: (i: number) => void;
 }) {
     return (
-        <div className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4">
-            <div className="absolute top-2 bottom-2 left-1/2 -translate-x-1/2 w-px bg-white/15" />
+        <div className="absolute left-6 md:left-12 top-0  z-30 flex flex-col items-center gap-2">
+            <div className=" w-0.5 h-16 bg-white/60" />
             {DESTINATIONS.map((_, i) => (
-                <button
-                    key={i}
-                    onClick={() => onSelect(i)}
-                    aria-label={`Destinasi ${i + 1}`}
-                    className="relative z-10 flex items-center justify-center w-7 h-7 cursor-pointer"
-                >
-                    <div
-                        className={`rounded-full flex items-center justify-center transition-all duration-500
-                            ${activeIndex === i
-                                ? "w-6 h-6 border-2 border-white bg-papua-dark/80"
-                                : "w-2 h-2 bg-white/30 hover:bg-white/60"
-                            }`}
+                <div key={i} className="relative flex flex-col justify-center items-center gap-2">
+                    <button
+                        key={i}
+                        onClick={() => onSelect(i)}
+                        aria-label={`Destinasi ${i + 1}`}
+                        className="relative z-10 flex items-center justify-center w-7 h-7 cursor-pointer"
                     >
-                        {activeIndex === i && (
-                            <span className="text-[9px] font-bold text-white font-sans">
-                                {i + 1}
-                            </span>
-                        )}
-                    </div>
-                </button>
+                        <div
+                            className={`rounded-full flex items-center justify-center transition-all duration-500
+                            ${activeIndex === i
+                                    ? "w-7.5 h-7.5 bg-white/60"
+                                    : "w-2 h-2 bg-white/30 hover:bg-white/60"
+                                }`}
+                        >
+                            {activeIndex === i && (
+                                <span className="text-lg font-semibold text-white font-sans">
+                                    {i + 1}
+                                </span>
+                            )}
+                        </div>
+                    </button>
+
+                    <div className=" w-0.5 h-15 bg-white/60" />
+                </div>
             ))}
         </div>
     );
@@ -142,7 +146,7 @@ export default function TopDestinations() {
 
     return (
         <section className="relative" ref={sectionRef} id="top-destinasi">
-            <div  className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full h-screen overflow-hidden">
                 {/* ── Background layers (stacked) ── */}
                 {DESTINATIONS.map((dest, i) => (
                     <div
