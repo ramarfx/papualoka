@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { DESTINATIONS } from "@/data/destinations";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -185,16 +186,16 @@ export default function TopDestinations() {
                                     <p className="font-sans text-white/70 text-sm md:text-[15px] leading-relaxed">
                                         {dest.description}
                                     </p>
-                                    <button className="flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
+                                    <Link href={`/destination/${dest.slug}`} className="flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
                                         <span>Explore</span>
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
-                                    </button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
 
                         {/* Right: Card carousel */}
-                        <div className="flex-shrink-0 hidden md:block overflow-hidden" style={{ width: 540 }}>
+                        <div className="shrink-0 hidden md:block overflow-hidden" style={{ width: 540 }}>
                             <div
                                 ref={cardTrackRef}
                                 className="flex items-center gap-4 will-change-transform"
