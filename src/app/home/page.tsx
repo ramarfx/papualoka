@@ -8,10 +8,12 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SmoothScroll from "@/components/smooth-scroll";
 
-export default async function Home() {
-    await new Promise(resolve => setTimeout(resolve, 3000));
+import PageClientLoader from "@/components/page-client-loader";
+
+export default function Home() {
     return (
         <SmoothScroll>
+            <PageClientLoader />
             <main className="animate-fade-in-slow bg-papua-dark min-h-screen">
                 <Navbar />
                 <Hero />

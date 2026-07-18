@@ -10,7 +10,7 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all duration-500 ${isScrolled ? "bg-black/45 backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all maw-300 duration-500 ${isScrolled ? "bg-black/45 backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
                 {/* Left: MENU and Hamburger Icon */}
                 <button
                     onClick={() => setSidebarOpen(true)}
@@ -55,23 +55,27 @@ export default function Navbar() {
                 {/* Backdrop */}
                 <div
                     onClick={() => setSidebarOpen(false)}
-                    className="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity duration-500"
+                    className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-500"
                 />
                 {/* Drawer Body */}
-                <div className={`absolute top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-b from-[#09110d] to-[#040806] border-r border-white/5 p-8 flex flex-col justify-between shadow-2xl transition-transform duration-500 ease-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
-                    <div>
-                        <div className="flex items-center justify-between mb-12">
-                            <Image src="/img/logo.png" alt="PapuaLoka" width={130} height={32} className="h-6 w-auto object-contain" />
+                <div className={`absolute top-0 left-0 bottom-0 w-full sm:w-[380px] bg-[#0c0c0c] border-r border-white/5 p-8 md:p-8 flex flex-col shadow-2xl transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
+                    
+                    {/* Background Texture inside sidebar */}
+                    <Image src="/img/papua-island.png" alt="" fill className="object-cover opacity-[0.03] pointer-events-none mix-blend-screen" />
+
+                    <div className="relative z-10 flex flex-col h-full">
+                        <div className="flex items-center justify-between mb-16">
+                            <Image src="/img/logo.png" alt="PapuaLoka" width={130} height={32} className="h-7 w-auto object-contain" />
                             <button
                                 onClick={() => setSidebarOpen(false)}
-                                className="text-white/60 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                                className="text-white/60 hover:text-papua-yellow p-3 rounded-full hover:bg-white/5 transition-colors cursor-pointer"
                             >
-                                <X className="w-6 h-6" />
+                                <X className="w-7 h-7" />
                             </button>
                         </div>
 
                         {/* Menu Links */}
-                        <div className="flex flex-col gap-6 font-sans">
+                        <div className="flex flex-col gap-8 flex-1 justify-center mt-[-10vh]">
                             {[
                                 { label: "Beranda", id: "beranda" },
                                 { label: "Destinasi Pilihan", id: "destinasi-pilihan" },
@@ -86,24 +90,15 @@ export default function Navbar() {
                                             window.scrollTo({ top: 0, behavior: "smooth" });
                                         }
                                     }}
-                                    className="text-left text-lg text-white/70 hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 font-medium tracking-wide flex items-center gap-3 group cursor-pointer"
+                                    className="text-left text-lg md:text-xl text-white/40 hover:text-white transition-all duration-500 font-heading tracking-wide group cursor-pointer w-max"
                                 >
-                                    <span className="text-xs text-emerald-500 font-mono">0{idx + 1}</span>
-                                    <span>{item.label}</span>
-                                    <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-emerald-400" strokeWidth={2.5} />
+                                    <span className="inline-block relative">
+                                        {item.label}
+                                        <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-papua-yellow transition-all duration-500 group-hover:w-full ease-[cubic-bezier(0.25,1,0.5,1)]"></span>
+                                    </span>
                                 </button>
                             ))}
                         </div>
-                    </div>
-
-                    <div className="border-t border-white/10 pt-6">
-                        <p className="text-[10px] text-white/40 tracking-wider uppercase mb-3">Ikuti Kami</p>
-                        <div className="flex gap-4 mb-5">
-                            {["Instagram", "YouTube", "Twitter"].map((social) => (
-                                <a key={social} href="#" className="text-xs text-white/60 hover:text-emerald-400 transition-colors">{social}</a>
-                            ))}
-                        </div>
-                        <p className="text-[10px] text-white/30">&copy; 2026 PapuaLoka. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
