@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { motion } from "framer-motion";
+import { useState, useMemo, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { MAP_PATHS } from "./map-paths";
 
 // Coordinates scaled up by 1.45x and centered inside the 800x500 container
@@ -13,8 +13,6 @@ const MAP_LAYOUT = [
   { id: "papuaselatan", name: "Papua Selatan", x: 518.95, y: 251.25, w: 213.15 },
   { id: "papua", name: "Papua", x: 360.9, y: 55.5, w: 365.4 },
 ];
-
-
 
 interface InteractiveMapProps {
   onHoverProvince?: (id: string | null) => void;
@@ -53,13 +51,29 @@ export default function InteractiveMap({
     return centers;
   }, []);
 
-  const handleProvinceClick = (id: string) => {
+  // Use callbacks for handlers to prevent inline function recreation on every render (Performance Best Practice)
+  const handleProvinceClick = useCallback((id: string) => {
     const nextId = selectedId === id ? null : id;
     setSelectedId(nextId);
     if (onClickProvince) {
       onClickProvince(nextId);
     }
-  };
+  }, [selectedId, setSelectedId, onClickProvince]);
+
+  const handleHoverStart = useCallback((id: string) => {
+    setHoveredId(id);
+    if (onHoverProvince) onHoverProvince(id);
+  }, [onHoverProvince]);
+
+  const handleHoverEnd = useCallback(() => {
+    setHoveredId(null);
+    if (onHoverProvince) onHoverProvince(null);
+  }, [onHoverProvince]);
+
+  const handleResetZoom = useCallback(() => {
+    setSelectedId(null);
+    if (onClickProvince) onClickProvince(null);
+  }, [setSelectedId, onClickProvince]);
 
   // Determine active zoom transform parameters
   const activeCenter = selectedId ? provinceCenters[selectedId] : null;
@@ -70,133 +84,123 @@ export default function InteractiveMap({
 
   return (
     <div className="relative w-full aspect-[800/500] max-w-[800px] mx-auto select-none overflow-hidden">
-      {/* Outer wrapper to handle smooth animations and transitions */}
-      <motion.div
-        className="w-full h-full"
-        animate={{
-          scale: zoomScale,
-          x: zoomX,
-          y: zoomY,
-        }}
-        style={{
-          transformOrigin,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 150,
-          damping: 22,
-        }}
-      >
+      {/* Outer wrapper */}
+      <div className="w-full h-full">
         <svg
           viewBox="0 0 800 500"
-          className="w-full h-full"
+          className="w-full h-full drop-shadow-2xl"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {MAP_LAYOUT.map((p) => {
-            const pathData = MAP_PATHS[p.id];
-            if (!pathData) return null;
+          {/* Inner motion.g handles zoom in viewBox units, perfectly responsive! */}
+          <motion.g
+            animate={{
+              scale: zoomScale,
+              x: zoomX,
+              y: zoomY,
+            }}
+            style={{ transformOrigin }}
+            transition={{ type: "spring", stiffness: 120, damping: 20 }}
+          >
+            {MAP_LAYOUT.map((p) => {
+              const pathData = MAP_PATHS[p.id];
+              if (!pathData) return null;
 
-            const isHovered = hoveredId === p.id;
-            const isSelected = selectedId === p.id;
-            
-            // Calculate proportional height for viewBox matching
-            const aspect = pathData.height / pathData.width;
-            const h = p.w * aspect;
+              const isHovered = hoveredId === p.id;
+              const isSelected = selectedId === p.id;
+              const aspect = pathData.height / pathData.width;
+              const h = p.w * aspect;
 
-            return (
-              <motion.g
-                key={p.id}
-                id={p.id}
-                className="cursor-pointer"
-                onClick={() => handleProvinceClick(p.id)}
-                onHoverStart={() => {
-                  setHoveredId(p.id);
-                  if (onHoverProvince) onHoverProvince(p.id);
-                }}
-                onHoverEnd={() => {
-                  setHoveredId(null);
-                  if (onHoverProvince) onHoverProvince(null);
-                }}
-                whileHover={{
-                  scale: isSelected ? 1 : 1.02,
-                  zIndex: 30,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 18,
-                }}
-              >
-                {/* Embedded inner SVG representing the province */}
-                <svg
-                  x={p.x}
-                  y={p.y}
-                  width={p.w}
-                  height={h}
-                  viewBox={pathData.viewBox}
+              return (
+                <motion.g
+                  key={p.id}
+                  id={p.id}
+                  className="cursor-pointer"
+                  onClick={() => handleProvinceClick(p.id)}
+                  onHoverStart={() => handleHoverStart(p.id)}
+                  onHoverEnd={handleHoverEnd}
+                  // Avoid using scale on SVG g elements to prevent clipping/layout artifacts.
+                  // We rely purely on crisp color and stroke transitions for a "clean" feel.
+                  animate={{ zIndex: isSelected || isHovered ? 30 : 10 }}
                 >
-                  {pathData.paths.map((pData, idx) => (
-                    <motion.path
-                      key={idx}
-                      d={pData.d}
-                      animate={{
-                        fill: isSelected
-                          ? "rgba(211, 183, 69, 0.35)" // Brand Gold when selected
-                          : isHovered
-                          ? "rgba(16, 185, 129, 0.35)" // Brand Emerald when hovered
-                          : "rgba(16, 185, 129, 0.08)", // Premium dark glass fill
-                        stroke: isSelected
-                          ? "#D3B745" // Vibrant Gold border
-                          : isHovered
-                          ? "#34D399" // Vibrant Emerald border
-                          : "rgba(16, 185, 129, 0.25)", // Subtle dark green border
-                        strokeWidth: isHovered || isSelected ? 1.5 : 1,
-                      }}
-                      transition={{ duration: 0.25 }}
-                      style={{
-                        filter: isSelected
-                          ? "drop-shadow(0 0 8px rgba(211, 183, 69, 0.5))"
-                          : isHovered
-                          ? "drop-shadow(0 0 6px rgba(16, 185, 129, 0.4))"
-                          : "none",
-                      }}
-                      strokeLinecap={pData.strokeLinecap as any}
-                      strokeLinejoin={pData.strokeLinejoin as any}
-                    />
-                  ))}
-                </svg>
-              </motion.g>
-            );
-          })}
+                  <svg
+                    x={p.x}
+                    y={p.y}
+                    width={p.w}
+                    height={h}
+                    viewBox={pathData.viewBox}
+                  >
+                    {pathData.paths.map((pData, idx) => (
+                      <motion.path
+                        key={idx}
+                        d={pData.d}
+                        initial={false}
+                        animate={{
+                          fill: isSelected
+                            ? "rgba(211, 183, 69, 0.4)" // Brand Gold fill when selected
+                            : isHovered
+                            ? "rgba(211, 183, 69, 0.15)" // Subtle Gold fill when hovered
+                            : "rgba(16, 185, 129, 0.08)", // Original emerald green unselected state
+                          stroke: isSelected || isHovered
+                            ? "#D3B745" // Vibrant Gold border
+                            : "rgba(16, 185, 129, 0.25)", // Original subtle green border
+                          strokeWidth: isSelected ? 2 : isHovered ? 1.5 : 1,
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        style={{
+                          filter: isSelected
+                            ? "drop-shadow(0 0 12px rgba(211, 183, 69, 0.6))"
+                            : isHovered
+                            ? "drop-shadow(0 0 8px rgba(211, 183, 69, 0.3))"
+                            : "none",
+                        }}
+                        vectorEffect="non-scaling-stroke" // CRITICAL: keeps strokes 1px thin even when map zooms in
+                        strokeLinecap={pData.strokeLinecap as any}
+                        strokeLinejoin={pData.strokeLinejoin as any}
+                      />
+                    ))}
+                  </svg>
+                </motion.g>
+              );
+            })}
+          </motion.g>
         </svg>
-      </motion.div>
-
-      {/* Floating UI overlay for displaying hovered/selected province name */}
-      <div className="absolute bottom-4 left-6 pointer-events-none font-sans z-30">
-        <span className="text-[10px] text-white/40 tracking-[0.2em] uppercase block mb-1">
-          {selectedId ? "Provinsi Terpilih" : "Berikut Wilayah"}
-        </span>
-        <h4 className="text-[#D3B745] font-bold text-lg tracking-wide uppercase transition-all duration-300">
-          {selectedId
-            ? MAP_LAYOUT.find((p) => p.id === selectedId)?.name
-            : hoveredId
-            ? MAP_LAYOUT.find((p) => p.id === hoveredId)?.name
-            : "Tanah Papua"}
-        </h4>
       </div>
 
+      {/* Floating UI overlay for displaying hovered/selected province name */}
+      <AnimatePresence>
+        {(selectedId || hoveredId) && (
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="absolute bottom-6 left-6 font-sans z-30 bg-[#1F1F1F]/60 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl shadow-xl pointer-events-none"
+          >
+            <span className="text-[10px] text-white/50 tracking-[0.2em] uppercase block mb-1 font-semibold">
+              {selectedId ? "Provinsi Terpilih" : "Wilayah"}
+            </span>
+            <h4 className="text-[#D3B745] font-bold text-lg tracking-wider uppercase">
+              {selectedId
+                ? MAP_LAYOUT.find((p) => p.id === selectedId)?.name
+                : MAP_LAYOUT.find((p) => p.id === hoveredId)?.name}
+            </h4>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Zoom reset button when zoomed in */}
-      {selectedId && (
-        <button
-          onClick={() => {
-            setSelectedId(null);
-            if (onClickProvince) onClickProvince(null);
-          }}
-          className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 active:scale-95 transition-all text-white font-sans text-xs uppercase px-3 py-1.5 rounded-full border border-white/10 cursor-pointer z-30 shadow-lg"
-        >
-          Reset Zoom
-        </button>
-      )}
+      <AnimatePresence>
+        {selectedId && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={handleResetZoom}
+            className="absolute top-6 right-6 bg-[#1F1F1F]/80 backdrop-blur-md hover:bg-[#2A2A2A] active:scale-95 transition-all text-white font-sans text-xs font-bold tracking-wider uppercase px-5 py-2.5 rounded-full border border-white/10 cursor-pointer z-30 shadow-xl"
+          >
+            Reset Zoom
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

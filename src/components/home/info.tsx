@@ -15,9 +15,9 @@ export default function Info() {
                 viewport={{ once: false }}
                 transition={{ duration: 0.8 }}
             >
-                <div className="flex items-center gap-3 bg-[#1F1F1F]/80 backdrop-blur border border-white/5 px-5 py-3 rounded-full text-white/90 shadow-lg">
+                <div className="flex items-center gap-3 bg-papua-dark/60 border border-white/5 px-5 py-3 rounded-lg text-white/90">
                     <AlertCircle
-                        className="w-5 h-5 text-emerald-400"
+                        className="w-5 h-5 text-papua-green"
                         strokeWidth={2}
                     />
                     <span className="font-sans text-sm tracking-wide font-medium">
