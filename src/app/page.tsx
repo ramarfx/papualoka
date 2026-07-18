@@ -4,6 +4,28 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+import { motion, Variants } from "framer-motion";
+
+const papuaText = "PAPUA".split("");
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.5,
+    },
+  },
+};
+
+const childVariants: Variants = {
+  hidden: { y: "150%", opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", damping: 15, stiffness: 100 },
+  },
+};
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,10 +106,19 @@ export default function Home() {
         </div>
 
         {/* Layer 2: Text "PAPUA" (Moves medium, 25%) */}
-        <div ref={textRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 transform-gpu">
-          <h1 className="font-bold text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading -mt-18 text-center select-none">
-            PAPUA
-          </h1>
+        <div ref={textRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 transform-gpu overflow-hidden">
+          <motion.h1 
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="font-bold text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading -mt-18 text-center select-none"
+          >
+            {papuaText.map((char, index) => (
+              <motion.span key={index} variants={childVariants} className="inline-block">
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
         </div>
 
         {/* Layer 3: Foreground Mountain Overlay (Moves slowest, 10%) */}

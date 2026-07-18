@@ -77,7 +77,7 @@ export default function Footer() {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false }}
                 >
                     <h2 className="font-heading text-white text-4xl sm:text-5xl lg:text-[64px] font-bold uppercase leading-[1.1] tracking-wide flex flex-col items-start">
                         <span className="flex items-center gap-4 flex-wrap">
@@ -103,7 +103,7 @@ export default function Footer() {
                         variants={linkContainerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         {[
                             { num: "01", label: "BERANDA", href: "#" },
@@ -127,7 +127,7 @@ export default function Footer() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <a href="mailto:papualoka@gmail.com" className="text-white hover:text-papua-yellow text-sm font-sans font-medium tracking-wide transition-colors">papualoka@gmail.com</a>
                         <p className="text-white text-sm font-sans font-medium tracking-wide">+62 812 3456 7890</p>

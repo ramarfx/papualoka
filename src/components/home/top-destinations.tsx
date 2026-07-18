@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { DESTINATIONS } from "@/data/destinations";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -32,29 +33,33 @@ function VerticalIndicator({
     onSelect: (i: number) => void;
 }) {
     return (
-        <div className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4">
-            <div className="absolute top-2 bottom-2 left-1/2 -translate-x-1/2 w-px bg-white/15" />
+        <div className="absolute left-6 md:left-12 top-0  z-30 flex flex-col items-center gap-2">
+            <div className=" w-0.5 h-16 bg-white/60" />
             {DESTINATIONS.map((_, i) => (
-                <button
-                    key={i}
-                    onClick={() => onSelect(i)}
-                    aria-label={`Destinasi ${i + 1}`}
-                    className="relative z-10 flex items-center justify-center w-7 h-7 cursor-pointer"
-                >
-                    <div
-                        className={`rounded-full flex items-center justify-center transition-all duration-500
-                            ${activeIndex === i
-                                ? "w-6 h-6 border-2 border-white bg-papua-dark/80"
-                                : "w-2 h-2 bg-white/30 hover:bg-white/60"
-                            }`}
+                <div key={i} className="relative flex flex-col justify-center items-center gap-2">
+                    <button
+                        key={i}
+                        onClick={() => onSelect(i)}
+                        aria-label={`Destinasi ${i + 1}`}
+                        className="relative z-10 flex items-center justify-center w-7 h-7 cursor-pointer"
                     >
-                        {activeIndex === i && (
-                            <span className="text-[9px] font-bold text-white font-sans">
-                                {i + 1}
-                            </span>
-                        )}
-                    </div>
-                </button>
+                        <div
+                            className={`rounded-full flex items-center justify-center transition-all duration-500
+                            ${activeIndex === i
+                                    ? "w-7.5 h-7.5 bg-white/60"
+                                    : "w-2 h-2 bg-white/30 hover:bg-white/60"
+                                }`}
+                        >
+                            {activeIndex === i && (
+                                <span className="text-lg font-semibold text-white font-sans">
+                                    {i + 1}
+                                </span>
+                            )}
+                        </div>
+                    </button>
+
+                    <div className=" w-0.5 h-15 bg-white/60" />
+                </div>
             ))}
         </div>
     );
@@ -142,7 +147,7 @@ export default function TopDestinations() {
 
     return (
         <section className="relative" ref={sectionRef} id="top-destinasi">
-            <div  className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full h-screen overflow-hidden">
                 {/* ── Background layers (stacked) ── */}
                 {DESTINATIONS.map((dest, i) => (
                     <div
@@ -167,7 +172,7 @@ export default function TopDestinations() {
                             {DESTINATIONS.map((dest, i) => (
                                 <div
                                     key={dest.id}
-                                    className={`dest-text flex flex-col gap-5 ${i === 0 ? "relative" : "absolute inset-0"}`}
+                                    className={`dest-text flex flex-col gap-5 ${i === 0 ? "relative" : "absolute inset-0"} ${activeIndex === i ? 'pointer-events-auto' : 'pointer-events-none'}`}
                                 >
                                     <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm w-max px-4 py-2 rounded-full">
                                         <div className="w-2.5 h-2.5 rounded-full bg-[#D3B745]" />
@@ -181,16 +186,16 @@ export default function TopDestinations() {
                                     <p className="font-sans text-white/70 text-sm md:text-[15px] leading-relaxed">
                                         {dest.description}
                                     </p>
-                                    <button className="flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
+                                    <Link href={`/destination/${dest.id}`} className="flex items-center cursor-pointer gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 transition-all w-max px-6 py-3 rounded-full font-sans text-xs font-bold tracking-[0.15em] uppercase group">
                                         <span>Explore</span>
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
-                                    </button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
 
                         {/* Right: Card carousel */}
-                        <div className="flex-shrink-0 hidden md:block overflow-hidden" style={{ width: 540 }}>
+                        <div className="shrink-0 hidden md:block overflow-hidden" style={{ width: 540 }}>
                             <div
                                 ref={cardTrackRef}
                                 className="flex items-center gap-4 will-change-transform"

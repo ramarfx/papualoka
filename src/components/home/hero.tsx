@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronDown, ArrowDown } from "lucide-react";
 
 export default function Hero() {
@@ -7,10 +10,16 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[url('/img/home-bg.png')] bg-cover bg-center bg-no-repeat z-0 scale-105"></div>
 
             {/* Gradient Overlay for better readability */}
-            <div className="absolute inset-0 bg-linear-to-b from-[#0F0F0F]/40 via-[#0F0F0F]/10 to-[#0F0F0F] z-10"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-papua-dark/40 via-papua-dark/10 to-papua-dark z-10"></div>
 
             {/* Center Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6">
+            <motion.div 
+                className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
                 <h1 className="font-heading text-center flex flex-col gap-3">
                     <span className="text-[#a67c52] text-2xl md:text-4xl lg:text-6xl font-bold tracking-wider">
                         Tanah di Ujung Timur
@@ -19,10 +28,16 @@ export default function Hero() {
                         Sepotong Surga yang Jatuh ke Alam Dunia
                     </span>
                 </h1>
-            </div>
+            </motion.div>
 
             {/* Bottom Section */}
-            <div className="absolute bottom-8 md:bottom-12 w-full px-6 md:px-16 flex flex-col gap-8 md:gap-12 z-30 pointer-events-none">
+            <motion.div 
+                className="absolute bottom-8 md:bottom-12 w-full px-6 md:px-16 flex flex-col gap-8 md:gap-12 z-30 pointer-events-none"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
 
                 {/* Action Buttons Row */}
                 <div className="flex justify-between items-end w-full">
@@ -59,7 +74,7 @@ export default function Hero() {
                         <ChevronDown className="w-3.5 h-3.5" strokeWidth={2.5} />
                     </button>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }   

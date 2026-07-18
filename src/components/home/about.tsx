@@ -1,16 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState, useCallback } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { useGSAP } from "@gsap/react";
+import { useState, useEffect } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
-
-if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger, useGSAP, ScrollToPlugin);
-}
+import { motion, AnimatePresence } from "framer-motion";
 
 const TRIBES = [
     {
@@ -50,138 +43,113 @@ const TRIBES = [
     }
 ];
 
+import { FadeUpSentences } from "@/components/ui/fade-up-sentences";
+
+const ABOUT_TEXT = "“Di ujung timur Nusantara, Papua berdiri sebagai rumah bagi berbagai suku yang hidup berdampingan dengan alam. Dari pesisir hingga pegunungan, setiap daerah menyimpan cerita, tradisi, dan kearifan lokal yang membentuk identitas masyarakatnya. Keragaman bahasa, budaya, dan cara hidup yang terus dijaga dari generasi ke generasi menjadikan Tanah Cenderawasih bukan sekadar wilayah geografis, melainkan simbol kekayaan Indonesia yang patut dikenali, dihargai, dan dilestarikan.”";
+
 export default function About() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const sectionRef = useRef<HTMLElement>(null);
-    const pinRef = useRef<HTMLDivElement>(null);
     const TOTAL = TRIBES.length;
 
-    useGSAP(
-        () => {
-            if (!sectionRef.current || !pinRef.current) return;
+    // Auto-play interval
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % TOTAL);
+        }, 5000); // Ganti slide setiap 5 detik
 
-            const texts = gsap.utils.toArray<HTMLElement>(".tribe-text", pinRef.current);
-            const images = gsap.utils.toArray<HTMLElement>(".tribe-image", pinRef.current);
-
-            // Initial state
-            texts.forEach((t, i) => {
-                gsap.set(t, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 20 });
-            });
-            images.forEach((img, i) => {
-                gsap.set(img, { opacity: i === 0 ? 1 : 0, scale: i === 0 ? 1 : 1.05 });
-            });
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: pinRef.current,
-                    start: "top top",
-                    end: `+=${window.innerHeight * (TOTAL - 1)}`,
-                    pin: true,
-                    pinSpacing: true,
-                    scrub: 1,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    onUpdate: (self) => {
-                        const idx = Math.min(Math.floor(self.progress * TOTAL), TOTAL - 1);
-                        setActiveIndex(idx);
-                    },
-                },
-            });
-
-
-            for (let i = 0; i < TOTAL - 1; i++) {
-                const label = `t${i}`;
-                tl.addLabel(label);
-
-                // Fade out current
-                tl.to(texts[i], { opacity: 0, y: -20, duration: 0.4, ease: "none" }, label);
-                tl.to(images[i], { opacity: 0, scale: 1.05, duration: 0.5, ease: "none" }, label);
-
-                // Fade in next
-                tl.to(texts[i + 1], { opacity: 1, y: 0, duration: 0.4, ease: "none" }, `${label}+=0.15`);
-                tl.to(images[i + 1], { opacity: 1, scale: 1, duration: 0.5, ease: "none" }, `${label}+=0.15`);
-
-                // Breathing room
-                if (i < TOTAL - 2) tl.to({}, { duration: 0.15 });
-            }
-        },
-        { scope: sectionRef }
-    );
-
-    const goTo = useCallback((index: number) => {
-        const trigger = ScrollTrigger.getAll().find(
-            (t) => t.trigger === pinRef.current
-        );
-        if (!trigger) return;
-        const progress = index / (TOTAL - 1);
-        const scrollTo = trigger.start + (trigger.end - trigger.start) * progress;
-        gsap.to(window, { scrollTo: { y: scrollTo, autoKill: false }, duration: 0.8, ease: "power3.inOut" });
+        return () => clearInterval(timer);
     }, [TOTAL]);
 
+    const goTo = (index: number) => {
+        setActiveIndex(index);
+    };
+
     return (
-        <section ref={sectionRef} className="bg-papua-green relative transition-colors duration-500 overflow-hidden">
+        <section className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
             {/* Top Paragraph */}
-            <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-10">
-                <p className="text-[#4D7C55] text-3xl md:text-4xl font-medium italic font-sans leading-relaxed text-justify">
-                    “Di ujung timur Nusantara, <span className="text-white">Papua</span> berdiri sebagai rumah bagi berbagai suku yang hidup berdampingan dengan alam. <span className="text-white">Dari pesisir</span> hingga pegunungan, setiap daerah menyimpan cerita, tradisi, dan kearifan lokal yang membentuk identitas masyarakatnya. <span className="text-white">Keragaman</span> bahasa, budaya, dan cara hidup yang terus dijaga dari generasi ke generasi menjadikan <span className="text-white">Tanah Cenderawasih</span> bukan sekadar wilayah geografis, melainkan simbol kekayaan Indonesia yang patut dikenali, dihargai, dan dilestarikan.”
-                </p>
+            <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-20">
+                <FadeUpSentences
+                    className="text-[#4D7C55] text-xl md:text-4xl font-medium italic font-sans text-justify"
+                >
+                    {ABOUT_TEXT}
+                </FadeUpSentences>
             </div>
 
-            {/* Pinned Carousel Section */}
-            <div ref={pinRef} className="relative w-full h-screen flex flex-col justify-center overflow-hidden z-10">
-                {/* Dots background - moved inside pinRef so it stays pinned */}
-                <Image src="/img/papua-dots.png" alt="Background" width={1014} height={896} className="opacity-80 absolute right-0 bottom-0 pointer-events-none mix-blend-overlay z-0" />
+            {/* Standard Auto-Playing Carousel Section */}
+            <div className="relative w-full flex flex-col justify-center z-10">
+                {/* Dots background */}
+                <Image src="/img/papua-dots.png" alt="Background" width={1014} height={896} className="opacity-20 absolute right-0 bottom-0 pointer-events-none mix-blend-overlay -z-10" />
 
                 <div className="px-6 mx-auto w-full max-w-7xl relative z-10">
                     <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-10">
                         Beragamnya <span className="text-papua-yellow">Negeri Papua</span>
                     </h1>
 
-                    <div className="flex flex-col md:flex-row items-center gap-6 relative w-full h-[320px] md:h-[400px]">
+                    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-6 relative w-full h-[550px] md:h-[400px]">
                         {/* Image Track */}
-                        <div className="relative w-full md:w-[45%] h-full rounded-2xl overflow-hidden shadow-2xl shrink-0">
-                            {TRIBES.map((tribe, i) => (
-                                <div key={`img-${i}`} className="tribe-image absolute inset-0">
-                                    <Image src={tribe.image} alt="Tribe" fill className="object-cover" sizes="(max-width: 768px) 100vw, 45vw" />
-                                </div>
-                            ))}
+                        <div className="relative w-full md:w-[45%] h-[250px] md:h-full rounded-2xl overflow-hidden shadow-2xl shrink-0 bg-black/20">
+                            <AnimatePresence mode="popLayout">
+                                <motion.div
+                                    key={activeIndex}
+                                    initial={{ opacity: 0, scale: 1.05 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 1.05 }}
+                                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image src={TRIBES[activeIndex].image} alt="Tribe" fill className="object-cover" sizes="(max-width: 768px) 100vw, 45vw" />
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
 
                         {/* Text Track */}
-                        <div className="relative flex-1 h-full flex flex-col justify-center items-center pr-12 md:pr-12">
-                            {TRIBES.map((tribe, i) => (
-                                <div key={`text-${i}`} className="tribe-text absolute inset-x-0  flex flex-col pointer-events-none w-full">
-                                    <p className="text-[#a0b0a3] text-xs font-bold tracking-[0.15em] uppercase mb-3 font-sans">
-                                        {tribe.category}
+                        <div className="relative w-full md:flex-1 h-[250px] md:h-full flex flex-col justify-start md:justify-center pr-0 md:pr-12 pt-4 md:pt-0">
+                            <AnimatePresence mode="popLayout">
+                                <motion.div
+                                    key={activeIndex}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    className="absolute inset-x-0 top-4 md:top-auto flex flex-col pointer-events-none w-full"
+                                >
+                                    <p className="text-[#a0b0a3] text-xs font-bold tracking-[0.15em] uppercase mb-2 md:mb-3 font-sans">
+                                        {TRIBES[activeIndex].category}
                                     </p>
-                                    <h2 className="text-white text-3xl lg:text-[42px] leading-[1.2] font-bold font-sans mb-4" dangerouslySetInnerHTML={{ __html: tribe.title }} />
-                                    <p className="text-[#c4d0c6] text-sm md:text-base leading-relaxed font-sans max-w-10/12">
-                                        {tribe.description}
+                                    <h2 className="text-white text-2xl md:text-3xl lg:text-[42px] leading-[1.2] font-bold font-sans mb-3 md:mb-4" dangerouslySetInnerHTML={{ __html: TRIBES[activeIndex].title }} />
+                                    <p className="text-[#c4d0c6] text-xs md:text-sm lg:text-base leading-relaxed font-sans w-full md:max-w-10/12">
+                                        {TRIBES[activeIndex].description}
                                     </p>
-                                </div>
-                            ))}
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
 
-                        {/* Indicator (Right edge) */}
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-20 pointer-events-auto">
-                            <button onClick={() => goTo(Math.max(0, activeIndex - 1))} className={`w-10 h-10 rounded-full border flex items-center justify-center transition-colors ${activeIndex === 0 ? 'border-white/20 text-white/20 cursor-default' : 'border-white/50 text-white hover:border-papua-yellow hover:text-papua-yellow cursor-pointer'}`}>
+                        {/* Indicator */}
+                        <div className="absolute bottom-0 right-1/2 translate-x-1/2 md:translate-x-0 md:bottom-auto md:right-0 md:top-1/2 md:-translate-y-1/2 flex flex-row md:flex-col items-center gap-4 z-20 pointer-events-auto">
+                            <button
+                                onClick={() => goTo(activeIndex === 0 ? TOTAL - 1 : activeIndex - 1)}
+                                className="hidden md:flex w-10 h-10 rounded-full border items-center justify-center transition-colors border-white/50 text-white hover:border-papua-yellow hover:text-papua-yellow cursor-pointer"
+                            >
                                 <ChevronUp size={20} />
                             </button>
 
-                            <div className="flex flex-col items-center gap-2 py-2">
+                            <div className="flex flex-row md:flex-col items-center gap-2 px-2 md:px-0 py-0 md:py-2">
                                 {TRIBES.map((_, i) => (
-                                    <button 
-                                        key={`dot-${i}`} 
+                                    <button
+                                        key={`dot-${i}`}
                                         onClick={() => goTo(i)}
-                                        className="py-1 group"
+                                        className="px-1 md:px-0 py-0 md:py-1 group cursor-pointer"
                                         aria-label={`Go to slide ${i + 1}`}
                                     >
-                                        <div className={`w-[3px] transition-all duration-300 rounded-full group-hover:bg-white group-hover:opacity-100 ${i === activeIndex ? 'h-6 bg-white' : 'h-2 bg-white/30'}`} />
+                                        <div className={`transition-all duration-300 rounded-full group-hover:bg-white group-hover:opacity-100 ${i === activeIndex ? 'w-6 h-[3px] md:w-[3px] md:h-6 bg-white' : 'w-2 h-[3px] md:w-[3px] md:h-2 bg-white/30'}`} />
                                     </button>
                                 ))}
                             </div>
 
-                            <button onClick={() => goTo(Math.min(TOTAL - 1, activeIndex + 1))} className={`w-10 h-10 rounded-full border flex items-center justify-center transition-colors ${activeIndex === TOTAL - 1 ? 'border-white/20 text-white/20 cursor-default' : 'border-white/50 text-white hover:border-papua-yellow hover:text-papua-yellow cursor-pointer'}`}>
+                            <button
+                                onClick={() => goTo((activeIndex + 1) % TOTAL)}
+                                className="hidden md:flex w-10 h-10 rounded-full border items-center justify-center transition-colors border-white/50 text-white hover:border-papua-yellow hover:text-papua-yellow cursor-pointer"
+                            >
                                 <ChevronDown size={20} />
                             </button>
                         </div>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Download, Compass } from "lucide-react";
+import { motion } from "framer-motion";
 
 /* ─── Gallery Data ─── */
 type GalleryCategory = "BUDAYA" | "TRADISI" | "SUKU" | "WISATA";
@@ -57,14 +58,26 @@ export default function Gallery() {
         >
             <div className="mx-auto w-full max-w-7xl px-6">
                 {/* ── Title ── */}
-                <h1 className="font-heading text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.12em] uppercase leading-[1.15] mb-16 md:mb-20">
+                <motion.h1 
+                    className="font-heading text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.12em] uppercase leading-[1.15] mb-16 md:mb-20"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.8 }}
+                >
                     Galeri<br />
                     Keberagaman,<br />
                     Keindahan
-                </h1>
+                </motion.h1>
 
                 {/* ── Toolbar: label + filters ── */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+                <motion.div 
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     {/* Left label */}
                     <div className="flex items-center gap-4">
                         <span className="text-white/50 text-[11px] font-sans font-semibold tracking-[0.2em] uppercase">
@@ -99,14 +112,19 @@ export default function Gallery() {
                             </button>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* ── Masonry Grid ── */}
                 <div className="columns-2 md:columns-3 lg:columns-4 gap-3 [column-fill:balance]">
-                    {filtered.map((item) => (
-                        <div
+                    {filtered.map((item, i) => (
+                        <motion.div
                             key={item.id}
                             className="break-inside-avoid mb-3 group relative rounded-lg overflow-hidden cursor-pointer"
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            viewport={{ once: false, margin: "50px" }}
+                            transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
+                            layout
                         >
                             {/* Image */}
                             <div
@@ -142,7 +160,7 @@ export default function Gallery() {
                                     strokeWidth={2}
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
