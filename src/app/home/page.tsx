@@ -9,7 +9,7 @@ import Footer from "@/components/footer";
 import SmoothScroll from "@/components/smooth-scroll";
 
 export default async function Home() {
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     return (
         <SmoothScroll>
             <main className="animate-fade-in-slow bg-papua-dark min-h-screen">
