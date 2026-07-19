@@ -66,9 +66,9 @@ const AnimatedText = ({ text, className = "" }: { text: string; className?: stri
     </span>
 );
 
-export default function Footer() {
+export default function Footer({className = ""}: {className?: string}) {
     return (
-        <footer className="bg-black py-20 md:py-32 overflow-hidden">
+        <footer className={`bg-black py-20 md:py-32 overflow-hidden ${className}`}>
             <div className="mx-auto w-full max-w-7xl px-6 flex flex-col lg:flex-row justify-between gap-20 lg:gap-8">
                 
                 {/* Left: Animated Text */}

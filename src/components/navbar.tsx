@@ -84,26 +84,22 @@ export default function Navbar() {
                         {/* Menu Links */}
                         <div className="flex flex-col gap-8 flex-1 justify-center mt-[-10vh]">
                             {[
-                                { label: "Beranda", id: "beranda" },
-                                { label: "Destinasi Pilihan", id: "destinasi-pilihan" },
-                                { label: "Warisan Budaya", id: "warisan-budaya" },
-                                { label: "Rencanakan Perjalanan", id: "rencanakan-perjalanan" }
+                                { label: "Beranda", href: "/home" },
+                                { label: "Destinasi Pilihan", href: "/home#destinasi-pilihan" },
+                                { label: "Warisan Budaya", href: "/home#warisan-budaya" },
+                                { label: "Cerita Rakyat", href: "/cerita-rakyat" }
                             ].map((item, idx) => (
-                                <button
-                                    key={item.id}
-                                    onClick={() => {
-                                        setSidebarOpen(false);
-                                        if (item.id === "beranda") {
-                                            window.scrollTo({ top: 0, behavior: "smooth" });
-                                        }
-                                    }}
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={() => setSidebarOpen(false)}
                                     className="text-left text-lg md:text-xl text-white/40 hover:text-white transition-all duration-500 font-heading tracking-wide group cursor-pointer w-max"
                                 >
                                     <span className="inline-block relative">
                                         {item.label}
                                         <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-papua-yellow transition-all duration-500 group-hover:w-full ease-[cubic-bezier(0.25,1,0.5,1)]"></span>
                                     </span>
-                                </button>
+                                </Link>
                             ))}
                         </div>
                     </div>
