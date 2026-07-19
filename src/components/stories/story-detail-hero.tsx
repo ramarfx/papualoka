@@ -110,27 +110,6 @@ export default function StoryDetailHero({
                 animate="visible"
                 className="relative z-10 text-center px-5 sm:px-8 md:px-12 max-w-4xl mx-auto"
             >
-                {/* Origin + Read Time badges */}
-                <motion.div
-                    variants={fadeUpVariants}
-                    className="flex items-center justify-center gap-4 mb-6 md:mb-8"
-                >
-                    <span
-                        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-sans font-bold tracking-widest uppercase"
-                        style={{
-                            backgroundColor: `${accentColor}20`,
-                            color: accentColor,
-                            border: `1px solid ${accentColor}40`,
-                        }}
-                    >
-                        <MapPin className="w-3 h-3" />
-                        {origin}
-                    </span>
-                    <span className="flex items-center gap-1.5 text-white/50 text-[11px] font-sans">
-                        <Clock className="w-3 h-3" />
-                        {readTime} baca
-                    </span>
-                </motion.div>
 
                 {/* Title — word-by-word stagger, same as stories-hero */}
                 <div className="flex flex-wrap justify-center gap-x-3 md:gap-x-5 mb-6">

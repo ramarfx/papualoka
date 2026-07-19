@@ -17,7 +17,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-99999 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all maw-300 duration-500 ${isScrolled ? "backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-99 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all maw-300 duration-500 ${isScrolled ? "backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
                 {/* Left: MENU and Hamburger Icon */}
                 <button
                     onClick={() => setSidebarOpen(true)}
@@ -58,7 +58,7 @@ export default function Navbar() {
             </nav>
 
             {/* Sidebar Drawer */}
-            <div className={`fixed inset-0 z-50 transition-all duration-500 ${sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            <div className={`fixed inset-0 z-999 transition-all duration-500 ${sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
                 {/* Backdrop */}
                 <div
                     onClick={() => setSidebarOpen(false)}
