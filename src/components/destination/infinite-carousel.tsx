@@ -40,8 +40,8 @@ export default function InfiniteCarousel({ images, speed = "normal" }: InfiniteC
                 slidesPerView={3}
                 breakpoints={{
                     768: {
-                        slidesPerView: 5,
-                        spaceBetween: 32
+                        slidesPerView: 4,
+                        spaceBetween: 15
                     }
                 }}
                 loop={true}
