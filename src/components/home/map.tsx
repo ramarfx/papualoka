@@ -14,6 +14,8 @@ const MAP_LAYOUT = [
   { id: "papua", name: "Papua", x: 360.9, y: 55.5, w: 365.4 },
 ];
 
+export { MAP_LAYOUT };
+
 interface InteractiveMapProps {
   onHoverProvince?: (id: string | null) => void;
   onClickProvince?: (id: string | null) => void;
@@ -39,10 +41,10 @@ export default function InteractiveMap({
     MAP_LAYOUT.forEach((p) => {
       const pathData = MAP_PATHS[p.id];
       if (!pathData) return;
-      
+
       const aspect = pathData.height / pathData.width;
       const h = p.w * aspect;
-      
+
       centers[p.id] = {
         x: p.x + p.w / 2,
         y: p.y + h / 2,
