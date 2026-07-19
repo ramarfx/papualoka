@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "PapuaLoka | Mengenal Papua Lebih Dekat",
   description: "Eksplorasi keindahan alam, kekayaan budaya, dan keragaman tradisi suku-suku di tanah Papua. Temukan pesona tersembunyi dari ujung timur Nusantara.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "PapuaLoka | Mengenal Papua Lebih Dekat",

@@ -1,5 +1,4 @@
 import About from "@/components/home/about";
-import Explore from "@/components/home/explore";
 import Gallery from "@/components/home/gallery";
 import Hero from "@/components/home/hero";
 import Info from "@/components/home/info";
@@ -19,7 +18,6 @@ export default function Home() {
                 <Hero />
                 <Info />
                 <TopDestinations />
-                <Explore />
                 <About/>
                 <Gallery />
                 <Footer />

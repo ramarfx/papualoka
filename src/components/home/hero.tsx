@@ -21,7 +21,7 @@ export default function Hero() {
                 transition={{ duration: 1, ease: "easeOut" }}
             >
                 <h1 className="font-heading text-center flex flex-col gap-3">
-                    <span className="text-[#a67c52] text-2xl md:text-4xl lg:text-6xl font-bold tracking-wider">
+                    <span className="text-papua-yellow text-2xl md:text-4xl lg:text-6xl font-bold tracking-wider">
                         Tanah di Ujung Timur
                     </span>
                     <span className="text-white text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">

@@ -18,7 +18,7 @@ const CAROUSEL_CARDS = [
     "/img/destination/rajaampat-card.png",
     "/img/destination/sentani-card.png",
     "/img/destination/baliem-card.png",
-    "/img/destination/jayawijaya-card.png",
+    "/img/destination/jayawijaya-card-1.png",
     "/img/destination/paniai-card.png",
     "/img/destination/rajaampat-card.png",
     "/img/destination/sentani-card.png",

@@ -7,39 +7,46 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const TRIBES = [
     {
-        id: "asmat",
+        id: "1",
         category: "SENI UKIR | KEHIDUPAN TRADISIONAL",
         title: "Suku Asmat,<br/>dan Warisan Ukirannya",
         description: "Suku Asmat dikenal melalui kehidupan tradisionalnya yang masih sangat dekat dengan alam. Mereka hidup dari berburu dan berkebun, sementara sagu menjadi makanan pokok yang diwariskan dari generasi ke generasi.",
-        image: "/img/about/1.png"
+        image: "/img/adat/1.png"
     },
     {
-        id: "dani",
-        category: "TRADISI ADAT | LEMBAH BALIEM",
-        title: "Suku Dani,<br/>Penjaga Budaya Papua",
-        description: "Suku Dani terkenal dengan kehidupan agraris dan tradisi leluhur yang masih dipertahankan hingga kini. Salah satu adat yang paling dikenal adalah ritual pemotongan jari sebagai simbol duka mendalam.",
-        image: "/img/about/2.png"
+        id: "2",
+        category: "TRADISI ADAT | IKI PALEK",
+        title: "Iki Palek,<br/>Tradisi Papua Pegunungan",
+        description: "Upacara potong jari, jari yang hilang menjadi simbol betapa hancurnya perasaan seseorang setelah ditinggal pergi oleh orang tercinta. Lewat tradisi ini, masyarakat juga berharap bisa menolak bala agar keluarga mereka terhindar dari petaka yang sama.",
+        image: "/img/adat/2.png"
     },
     {
-        id: "amungme",
-        category: "TANAH LELUHUR | PETANI NOMADEN",
-        title: "Suku Amungme,<br/>dan Kesakralan Alam",
-        description: "Bagi masyarakat Amungme, pegunungan dan tanah leluhur memiliki nilai yang sangat sakral. Mereka menjalani kehidupan sebagai petani berpindah, pemburu, dan peramu yang bergantung pada alam.",
-        image: "/img/about/3.png"
+        id: "3",
+        category: "SENJATA TRADISIONAL | BUSUR PANAH",
+        title: "Busur (Suwa)<br/>dan Panah (Wim)",
+        description: "Busur dan panah merupakan salah satu senjata tradisional yang digunakan oleh masyarakat Papua dalam berburu dan berperang. Busur terbuat dari kayu dan tali, sedangkan panah terbuat dari kayu dan bulu.",
+        image: "/img/adat/3.png"
     },
     {
-        id: "lani",
-        category: "BAHASA MONI | IDENTITAS BUDAYA",
-        title: "Suku Lani,<br/>dengan Keunikannya",
-        description: "Suku Lani, yang juga dikenal sebagai Suku Loma, memiliki identitas budaya yang khas. Keunikan mereka terlihat dari penggunaan Bahasa Moni dan Bahasa Amung dalam kehidupan sehari-hari.",
-        image: "/img/about/4.png"
+        id: "4",
+        category: "PAKAIAN ADAT | KOTEKA",
+        title: "Pakaian Koteka,<br/>dengan Keunikannya",
+        description: "busana adat ikonik berupa selubung pelindung bagi kaum pria dari berbagai suku asli di pedalaman Papua. Jauh dari kesan modern, pakaian tradisional yang unik ini dibuat secara alami dari buah labu air (Lagenaria siceraria) yang dikeringkan, dibersihkan bagian dalamnya.",
+        image: "/img/adat/4.png"
     },
     {
-        id: "muyu",
-        category: "SUNGAI MUYU | STRUKTUR ADAT",
-        title: "Suku Muyu,<br/>dan Kehidupan Sungai",
-        description: "Masyarakat Suku Muyu hidup dengan berburu, menangkap ikan, dan mengolah sagu. Kehidupan mereka dipimpin oleh tokoh adat yang memiliki peran penting dalam masyarakat.",
-        image: "/img/about/5.png"
+        id: "5",
+        category: "TARIAN TRADISIONAL | TARI SUANGGI",
+        title: "Tari Suanggi,<br/>Ritual Pengusiran Roh",
+        description: "Tari Suanggi adalah tarian tradisional bernuansa magis asal Papua yang berfungsi sebagai ritual pengusiran roh jahat. Tarian ini biasanya ditarikan ketika ada warga yang meninggal akibat ilmu hitam atau karena arwah masih memiliki janji yang belum terpenuhi.",
+        image: "/img/adat/5.png"
+    },
+    {
+        id: "6",
+        category: "HUNIAN TRADISIONAL | RUMAH POHON",
+        title: "Rumah Pohon,<br/>Khas Suku Korowai",
+        description: "Rumah pohon adalah hunian tradisional masyarakat suku Korowai di pedalaman Papua. Dibangun tinggi di antara pohon-pohon besar, rumah ini berfungsi sebagai tempat tinggal sekaligus benteng pertahanan dari ancaman luar, termasuk satwa liar dan suku lain.",
+        image: "/img/adat/6.png"
     }
 ];
 

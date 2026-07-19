@@ -18,20 +18,22 @@ interface GalleryItem {
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
-    { id: 1,  src: "/img/raja-ampat.png",            location: "Raja Ampat",      category: "WISATA",  size: "tall" },
-    { id: 2,  src: "/img/destination/rajaampat-card.png", location: "Raja Ampat",  category: "WISATA",  size: "normal" },
-    { id: 3,  src: "/img/destination/sentani-card.png",   location: "Danau Sentani", category: "WISATA",  size: "normal" },
-    { id: 4,  src: "/img/destination/baliem-card.png",    location: "Lembah Baliem", category: "BUDAYA",  size: "tall" },
-    { id: 5,  src: "/img/about/1.png",               location: "Suku Asmat",      category: "SUKU",    size: "normal" },
-    { id: 6,  src: "/img/about/2.png",               location: "Suku Dani",       category: "SUKU",    size: "normal" },
-    { id: 7,  src: "/img/destination/paniai-card.png",    location: "Danau Paniai",  category: "WISATA",  size: "normal" },
-    { id: 8,  src: "/img/about/3.png",               location: "Suku Amungme",    category: "TRADISI", size: "tall" },
-    { id: 9,  src: "/img/lorentz.png",               location: "Taman Lorentz",   category: "WISATA",  size: "normal" },
-    { id: 10, src: "/img/about/4.png",               location: "Suku Lani",       category: "SUKU",    size: "normal" },
-    { id: 11, src: "/img/about/5.png",               location: "Suku Muyu",       category: "SUKU",    size: "normal" },
-    { id: 12, src: "/img/baliem-valley.png",          location: "Lembah Baliem",   category: "BUDAYA",  size: "normal" },
-    { id: 13, src: "/img/danau-sentani.png",          location: "Danau Sentani",   category: "WISATA",  size: "normal" },
-    { id: 14, src: "/img/destination/jayawijaya-card.png", location: "Jayawijaya", category: "TRADISI", size: "normal" },
+    { id: 1,  src: "/img/destination/rajaampat-bg.png",            location: "Raja Ampat",      category: "WISATA",  size: "tall" },
+    { id: 2,  src: "/img/destination/rajaampat-card.png",          location: "Raja Ampat",      category: "WISATA",  size: "normal" },
+    { id: 3,  src: "/img/destination/sentani-bg.png",              location: "Danau Sentani",   category: "WISATA",  size: "normal" },
+    { id: 4,  src: "/img/destination/sentani-card.png",            location: "Danau Sentani",   category: "WISATA",  size: "normal" },
+    { id: 5,  src: "/img/adat/1.png",                              location: "Suku Asmat",      category: "SUKU",    size: "normal" },
+    { id: 6,  src: "/img/adat/2.png",                              location: "Iki Palek",       category: "TRADISI", size: "normal" },
+    { id: 7,  src: "/img/destination/paniai-bg.png",               location: "Danau Paniai",    category: "WISATA",  size: "normal" },
+    { id: 8,  src: "/img/destination/paniai-card.png",             location: "Danau Paniai",    category: "WISATA",  size: "normal" },
+    { id: 9,  src: "/img/adat/3.png",                              location: "Busur & Panah",   category: "TRADISI", size: "tall" },
+    { id: 10, src: "/img/adat/4.png",                              location: "Koteka",          category: "SUKU",    size: "normal" },
+    { id: 11, src: "/img/adat/5.png",                              location: "Tari Suanggi",    category: "BUDAYA",  size: "normal" },
+    { id: 12, src: "/img/destination/baliem-bg.png",               location: "Lembah Baliem",   category: "WISATA",  size: "tall" },
+    { id: 13, src: "/img/destination/baliem-card.png",             location: "Lembah Baliem",   category: "WISATA",  size: "normal" },
+    { id: 14, src: "/img/destination/jayawijaya-bg.png",           location: "Jayawijaya",      category: "WISATA",  size: "normal" },
+    { id: 15, src: "/img/destination/jayawijaya-card-1.png",       location: "Jayawijaya",      category: "WISATA",  size: "normal" },
+    { id: 16, src: "/img/adat/6.png",                              location: "Rumah Pohon",     category: "SUKU",    size: "tall" },
 ];
 
 const FILTER_TABS: GalleryCategory[] = ["BUDAYA", "TRADISI", "SUKU", "WISATA"];
@@ -119,13 +121,15 @@ export default function Gallery() {
                     {filtered.map((item, i) => (
                         <motion.div
                             key={item.id}
-                            className="break-inside-avoid mb-3 group relative rounded-lg overflow-hidden cursor-pointer"
+                            className="group break-inside-avoid mb-3 group relative rounded-lg overflow-hidden cursor-pointer"
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: false, margin: "50px" }}
                             transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
                             layout
                         >
+                            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity z-10" />
+
                             {/* Image */}
                             <div
                                 className={`relative w-full ${
@@ -140,17 +144,15 @@ export default function Gallery() {
                                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                 />
 
-                                {/* Gradient overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
 
                                 {/* Category badge (visible on first of its kind or on hover) */}
-                                <span className="absolute top-3 left-3 text-white/90 text-[10px] font-sans font-bold tracking-[0.15em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="absolute z-20 inset-0 flex items-center justify-center text-white/90 text-[10px] font-sans font-bold tracking-[0.15em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     {item.category}
                                 </span>
                             </div>
 
                             {/* Bottom info bar */}
-                            <div className="flex items-center justify-between px-3 py-2.5 bg-[#111]">
+                            <div className="flex items-center justify-between px-3 py-2.5 bg-[#111] z-20 relative">
                                 <span className="text-white text-[11px] font-sans font-semibold tracking-wide uppercase">
                                     {item.location}
                                 </span>
