@@ -1,0 +1,102 @@
+{
+  "src/app/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx"
+  ],
+  "src/app/home/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/page-client-loader.tsx",
+    "src/components/home/hero.tsx",
+    "src/components/home/info.tsx",
+    "src/components/home/top-destinations.tsx",
+    "src/components/home/explore.tsx",
+    "src/components/home/about.tsx",
+    "src/components/home/gallery.tsx"
+  ],
+  "src/app/cerita-rakyat/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/stories/stories-hero.tsx",
+    "src/components/stories/story-card.tsx",
+    "src/lib/stories.ts"
+  ],
+  "src/app/cerita-rakyat/[slug]/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/stories/story-detail-hero.tsx",
+    "src/lib/stories.ts"
+  ],
+  "src/app/destination/raja-ampat/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/destination/destination-hero.tsx",
+    "src/components/destination/destination-stats.tsx",
+    "src/components/destination/destination-video.tsx",
+    "src/components/destination/destination-access.tsx",
+    "src/components/destination/destination-activities.tsx",
+    "src/components/destination/destination-preservation.tsx",
+    "src/components/destination/destination-explore.tsx"
+  ],
+  "src/app/destination/danau-paniai/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/destination/destination-hero.tsx",
+    "src/components/destination/destination-stats.tsx",
+    "src/components/destination/destination-video.tsx",
+    "src/components/destination/destination-access.tsx",
+    "src/components/destination/destination-activities.tsx",
+    "src/components/destination/destination-preservation.tsx",
+    "src/components/destination/destination-explore.tsx"
+  ],
+  "src/app/destination/danau-sentani/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/destination/destination-hero.tsx",
+    "src/components/destination/destination-stats.tsx",
+    "src/components/destination/destination-video.tsx",
+    "src/components/destination/destination-access.tsx",
+    "src/components/destination/destination-activities.tsx",
+    "src/components/destination/destination-preservation.tsx",
+    "src/components/destination/destination-explore.tsx"
+  ],
+  "src/app/destination/lembah-baliem/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/destination/destination-hero.tsx",
+    "src/components/destination/destination-stats.tsx",
+    "src/components/destination/destination-video.tsx",
+    "src/components/destination/destination-access.tsx",
+    "src/components/destination/destination-activities.tsx",
+    "src/components/destination/destination-preservation.tsx",
+    "src/components/destination/destination-explore.tsx"
+  ],
+  "src/app/destination/puncak-jayawijaya/page.tsx": [
+    "src/components/navbar.tsx",
+    "src/components/footer.tsx",
+    "src/components/smooth-scroll.tsx",
+    "src/components/destination/destination-hero.tsx",
+    "src/components/destination/destination-stats.tsx",
+    "src/components/destination/destination-video.tsx",
+    "src/components/destination/destination-access.tsx",
+    "src/components/destination/destination-activities.tsx",
+    "src/components/destination/destination-preservation.tsx",
+    "src/components/destination/destination-explore.tsx"
+  ],
+  "src/components/stories/story-card.tsx": [
+    "src/lib/stories.ts"
+  ],
+  "src/components/stories/stories-hero.tsx": [],
+  "src/components/stories/story-detail-hero.tsx": [],
+  "src/components/destination/destination-hero.tsx": [
+    "src/components/destination/infinite-carousel.tsx"
+  ],
+  "src/components/destination/infinite-carousel.tsx": []
+}

@@ -1,0 +1,505 @@
+{
+  "files": {
+    "next.config.ts": {
+      "path": "next.config.ts",
+      "tokenCount": 35,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/cerita-rakyat/page.tsx": {
+      "path": "src/app/cerita-rakyat/page.tsx",
+      "tokenCount": 1705,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/danau-paniai/page.tsx": {
+      "path": "src/app/destination/danau-paniai/page.tsx",
+      "tokenCount": 2188,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/danau-sentani/page.tsx": {
+      "path": "src/app/destination/danau-sentani/page.tsx",
+      "tokenCount": 2176,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/layout.tsx": {
+      "path": "src/app/destination/layout.tsx",
+      "tokenCount": 33,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/lembah-baliem/page.tsx": {
+      "path": "src/app/destination/lembah-baliem/page.tsx",
+      "tokenCount": 2166,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/puncak-jayawijaya/page.tsx": {
+      "path": "src/app/destination/puncak-jayawijaya/page.tsx",
+      "tokenCount": 2265,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/destination/raja-ampat/page.tsx": {
+      "path": "src/app/destination/raja-ampat/page.tsx",
+      "tokenCount": 2303,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/home/loading.tsx": {
+      "path": "src/app/home/loading.tsx",
+      "tokenCount": 28,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/home/page.tsx": {
+      "path": "src/app/home/page.tsx",
+      "tokenCount": 246,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/layout.tsx": {
+      "path": "src/app/layout.tsx",
+      "tokenCount": 442,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/loader/page.tsx": {
+      "path": "src/app/loader/page.tsx",
+      "tokenCount": 31,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/app/page.tsx": {
+      "path": "src/app/page.tsx",
+      "tokenCount": 1777,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-access.tsx": {
+      "path": "src/components/destination/destination-access.tsx",
+      "tokenCount": 1558,
+      "declaredTypes": "AccessStep,DestinationAccessProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-activities.tsx": {
+      "path": "src/components/destination/destination-activities.tsx",
+      "tokenCount": 1421,
+      "declaredTypes": "ActivityItem,DestinationActivitiesProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-explore.tsx": {
+      "path": "src/components/destination/destination-explore.tsx",
+      "tokenCount": 2553,
+      "declaredTypes": "ExploreItem,DestinationExploreProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-hero.tsx": {
+      "path": "src/components/destination/destination-hero.tsx",
+      "tokenCount": 1031,
+      "declaredTypes": "DestinationHeroProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-preservation.tsx": {
+      "path": "src/components/destination/destination-preservation.tsx",
+      "tokenCount": 1171,
+      "declaredTypes": "PreservationItem,DestinationPreservationProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-stats.tsx": {
+      "path": "src/components/destination/destination-stats.tsx",
+      "tokenCount": 808,
+      "declaredTypes": "StatItem,DestinationStatsProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/destination-video.tsx": {
+      "path": "src/components/destination/destination-video.tsx",
+      "tokenCount": 940,
+      "declaredTypes": "DestinationVideoProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/destination/infinite-carousel.tsx": {
+      "path": "src/components/destination/infinite-carousel.tsx",
+      "tokenCount": 786,
+      "declaredTypes": "CarouselImage,InfiniteCarouselProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/footer.tsx": {
+      "path": "src/components/footer.tsx",
+      "tokenCount": 1523,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/about.tsx": {
+      "path": "src/components/home/about.tsx",
+      "tokenCount": 2407,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/explore.tsx": {
+      "path": "src/components/home/explore.tsx",
+      "tokenCount": 1543,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/gallery.tsx": {
+      "path": "src/components/home/gallery.tsx",
+      "tokenCount": 2446,
+      "declaredTypes": "GalleryCategory,GalleryItem",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/hero.tsx": {
+      "path": "src/components/home/hero.tsx",
+      "tokenCount": 1222,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/info.tsx": {
+      "path": "src/components/home/info.tsx",
+      "tokenCount": 1739,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/map-paths.ts": {
+      "path": "src/components/home/map-paths.ts",
+      "tokenCount": 18578,
+      "declaredTypes": "SvgPath,ProvinceMapData",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/map.tsx": {
+      "path": "src/components/home/map.tsx",
+      "tokenCount": 2158,
+      "declaredTypes": "InteractiveMapProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/home/top-destinations.tsx": {
+      "path": "src/components/home/top-destinations.tsx",
+      "tokenCount": 2746,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/loader.tsx": {
+      "path": "src/components/loader.tsx",
+      "tokenCount": 618,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/navbar.tsx": {
+      "path": "src/components/navbar.tsx",
+      "tokenCount": 1664,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/page-client-loader.tsx": {
+      "path": "src/components/page-client-loader.tsx",
+      "tokenCount": 300,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/smooth-scroll.tsx": {
+      "path": "src/components/smooth-scroll.tsx",
+      "tokenCount": 326,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/stories/stories-hero.tsx": {
+      "path": "src/components/stories/stories-hero.tsx",
+      "tokenCount": 810,
+      "declaredTypes": "",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/stories/story-card.tsx": {
+      "path": "src/components/stories/story-card.tsx",
+      "tokenCount": 1153,
+      "declaredTypes": "Story,StoryCardProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/stories/story-detail-hero.tsx": {
+      "path": "src/components/stories/story-detail-hero.tsx",
+      "tokenCount": 1774,
+      "declaredTypes": "StoryDetailHeroProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/components/ui/fade-up-sentences.tsx": {
+      "path": "src/components/ui/fade-up-sentences.tsx",
+      "tokenCount": 363,
+      "declaredTypes": "FadeUpSentencesProps",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/data/destinations.ts": {
+      "path": "src/data/destinations.ts",
+      "tokenCount": 790,
+      "declaredTypes": "Destination",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    },
+    "src/lib/stories.ts": {
+      "path": "src/lib/stories.ts",
+      "tokenCount": 7135,
+      "declaredTypes": "Story,StoryContent,StoryBlock",
+      "inboundEdges": 0,
+      "outboundEdges": 0
+    }
+  },
+  "nodes": {
+    "AccessStep": {
+      "id": "AccessStep",
+      "name": "AccessStep",
+      "kind": "interface",
+      "file": "src/components/destination/destination-access.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationAccessProps": {
+      "id": "DestinationAccessProps",
+      "name": "DestinationAccessProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-access.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "ActivityItem": {
+      "id": "ActivityItem",
+      "name": "ActivityItem",
+      "kind": "interface",
+      "file": "src/components/destination/destination-activities.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationActivitiesProps": {
+      "id": "DestinationActivitiesProps",
+      "name": "DestinationActivitiesProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-activities.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "ExploreItem": {
+      "id": "ExploreItem",
+      "name": "ExploreItem",
+      "kind": "interface",
+      "file": "src/components/destination/destination-explore.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationExploreProps": {
+      "id": "DestinationExploreProps",
+      "name": "DestinationExploreProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-explore.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationHeroProps": {
+      "id": "DestinationHeroProps",
+      "name": "DestinationHeroProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-hero.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "PreservationItem": {
+      "id": "PreservationItem",
+      "name": "PreservationItem",
+      "kind": "interface",
+      "file": "src/components/destination/destination-preservation.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationPreservationProps": {
+      "id": "DestinationPreservationProps",
+      "name": "DestinationPreservationProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-preservation.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "StatItem": {
+      "id": "StatItem",
+      "name": "StatItem",
+      "kind": "interface",
+      "file": "src/components/destination/destination-stats.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationStatsProps": {
+      "id": "DestinationStatsProps",
+      "name": "DestinationStatsProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-stats.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "DestinationVideoProps": {
+      "id": "DestinationVideoProps",
+      "name": "DestinationVideoProps",
+      "kind": "interface",
+      "file": "src/components/destination/destination-video.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "CarouselImage": {
+      "id": "CarouselImage",
+      "name": "CarouselImage",
+      "kind": "type",
+      "file": "src/components/destination/infinite-carousel.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "InfiniteCarouselProps": {
+      "id": "InfiniteCarouselProps",
+      "name": "InfiniteCarouselProps",
+      "kind": "interface",
+      "file": "src/components/destination/infinite-carousel.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "GalleryCategory": {
+      "id": "GalleryCategory",
+      "name": "GalleryCategory",
+      "kind": "type",
+      "file": "src/components/home/gallery.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "GalleryItem": {
+      "id": "GalleryItem",
+      "name": "GalleryItem",
+      "kind": "interface",
+      "file": "src/components/home/gallery.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "SvgPath": {
+      "id": "SvgPath",
+      "name": "SvgPath",
+      "kind": "interface",
+      "file": "src/components/home/map-paths.ts",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "ProvinceMapData": {
+      "id": "ProvinceMapData",
+      "name": "ProvinceMapData",
+      "kind": "interface",
+      "file": "src/components/home/map-paths.ts",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "InteractiveMapProps": {
+      "id": "InteractiveMapProps",
+      "name": "InteractiveMapProps",
+      "kind": "interface",
+      "file": "src/components/home/map.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "Story": {
+      "id": "Story",
+      "name": "Story",
+      "kind": "interface",
+      "file": "src/lib/stories.ts",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "StoryCardProps": {
+      "id": "StoryCardProps",
+      "name": "StoryCardProps",
+      "kind": "interface",
+      "file": "src/components/stories/story-card.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "StoryDetailHeroProps": {
+      "id": "StoryDetailHeroProps",
+      "name": "StoryDetailHeroProps",
+      "kind": "interface",
+      "file": "src/components/stories/story-detail-hero.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "FadeUpSentencesProps": {
+      "id": "FadeUpSentencesProps",
+      "name": "FadeUpSentencesProps",
+      "kind": "interface",
+      "file": "src/components/ui/fade-up-sentences.tsx",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "Destination": {
+      "id": "Destination",
+      "name": "Destination",
+      "kind": "type",
+      "file": "src/data/destinations.ts",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "StoryContent": {
+      "id": "StoryContent",
+      "name": "StoryContent",
+      "kind": "interface",
+      "file": "src/lib/stories.ts",
+      "namespace": "",
+      "baseTypes": []
+    },
+    "StoryBlock": {
+      "id": "StoryBlock",
+      "name": "StoryBlock",
+      "kind": "type",
+      "file": "src/lib/stories.ts",
+      "namespace": "",
+      "baseTypes": []
+    }
+  },
+  "edges": [],
+  "projectRefs": [],
+  "meta": {
+    "repoRoot": "C:\\XI-RPL\\papualoka",
+    "language": "typescript",
+    "totalFiles": 40,
+    "totalNodes": 27,
+    "totalEdges": 0,
+    "totalProjects": 0,
+    "builtAt": "2026-07-19T07:40:37.785Z"
+  }
+}

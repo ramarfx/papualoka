@@ -1,0 +1,106 @@
+{
+  "Navbar": {
+    "file": "src/components/navbar.tsx",
+    "type": "component"
+  },
+  "Footer": {
+    "file": "src/components/footer.tsx",
+    "type": "component"
+  },
+  "SmoothScroll": {
+    "file": "src/components/smooth-scroll.tsx",
+    "type": "component"
+  },
+  "PageClientLoader": {
+    "file": "src/components/page-client-loader.tsx",
+    "type": "component"
+  },
+  "Loader": {
+    "file": "src/components/loader.tsx",
+    "type": "component"
+  },
+  "DestinationActivities": {
+    "file": "src/components/destination/destination-activities.tsx",
+    "type": "component"
+  },
+  "DestinationAccess": {
+    "file": "src/components/destination/destination-access.tsx",
+    "type": "component"
+  },
+  "DestinationExplore": {
+    "file": "src/components/destination/destination-explore.tsx",
+    "type": "component"
+  },
+  "DestinationHero": {
+    "file": "src/components/destination/destination-hero.tsx",
+    "type": "component"
+  },
+  "DestinationPreservation": {
+    "file": "src/components/destination/destination-preservation.tsx",
+    "type": "component"
+  },
+  "DestinationStats": {
+    "file": "src/components/destination/destination-stats.tsx",
+    "type": "component"
+  },
+  "DestinationVideo": {
+    "file": "src/components/destination/destination-video.tsx",
+    "type": "component"
+  },
+  "InfiniteCarousel": {
+    "file": "src/components/destination/infinite-carousel.tsx",
+    "type": "component"
+  },
+  "StoriesHero": {
+    "file": "src/components/stories/stories-hero.tsx",
+    "type": "component"
+  },
+  "StoryCard": {
+    "file": "src/components/stories/story-card.tsx",
+    "type": "component"
+  },
+  "StoryDetailHero": {
+    "file": "src/components/stories/story-detail-hero.tsx",
+    "type": "component"
+  },
+  "About": {
+    "file": "src/components/home/about.tsx",
+    "type": "component"
+  },
+  "Explore": {
+    "file": "src/components/home/explore.tsx",
+    "type": "component"
+  },
+  "Gallery": {
+    "file": "src/components/home/gallery.tsx",
+    "type": "component"
+  },
+  "Hero": {
+    "file": "src/components/home/hero.tsx",
+    "type": "component"
+  },
+  "Info": {
+    "file": "src/components/home/info.tsx",
+    "type": "component"
+  },
+  "Map": {
+    "file": "src/components/home/map.tsx",
+    "type": "component"
+  },
+  "TopDestinations": {
+    "file": "src/components/home/top-destinations.tsx",
+    "type": "component"
+  },
+  "FadeUpSentences": {
+    "file": "src/components/ui/fade-up-sentences.tsx",
+    "type": "component"
+  },
+  "STORIES": {
+    "file": "src/lib/stories.ts",
+    "type": "data"
+  },
+  "getStoryBySlug": {
+    "file": "src/lib/stories.ts",
+    "type": "utility"
+  }
+}

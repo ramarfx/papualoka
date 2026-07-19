@@ -1,0 +1,11 @@
+{
+  "/": "src/app/page.tsx",
+  "/home": "src/app/home/page.tsx",
+  "/cerita-rakyat": "src/app/cerita-rakyat/page.tsx",
+  "/cerita-rakyat/[slug]": "src/app/cerita-rakyat/[slug]/page.tsx",
+  "/destination/raja-ampat": "src/app/destination/raja-ampat/page.tsx",
+  "/destination/danau-paniai": "src/app/destination/danau-paniai/page.tsx",
+  "/destination/danau-sentani": "src/app/destination/danau-sentani/page.tsx",
+  "/destination/lembah-baliem": "src/app/destination/lembah-baliem/page.tsx",
+  "/destination/puncak-jayawijaya": "src/app/destination/puncak-jayawijaya/page.tsx"
+}
