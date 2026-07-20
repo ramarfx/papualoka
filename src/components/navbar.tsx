@@ -152,20 +152,23 @@ export default function Navbar() {
                         {/* Menu Links */}
                         <div className="flex flex-col gap-8 flex-1 justify-center mt-[-10vh]">
                             {[
-                                { label: "Beranda", href: "/home" },
-                                { label: "Destinasi Pilihan", href: "/home#destinasi-pilihan" },
-                                { label: "Warisan Budaya", href: "/home#warisan-budaya" },
-                                { label: "Alam Papua", href: "/alam-papua" },
-                                { label: "Cerita Rakyat", href: "/cerita-rakyat" },
-                                { label: "Tentang Kami", href: "/about" }
-                            ].map((item, idx) => (
+                                { num: "01", label: "Beranda", href: "/home" },
+                                { num: "02", label: "Jelajah", href: "/home#destinasi-pilihan" },
+                                { num: "03", label: "Budaya", href: "/kalender" },
+                                { num: "04", label: "Alam Papua", href: "/alam-papua" },
+                                { num: "05", label: "Cerita Rakyat", href: "/cerita-rakyat" },
+                                { num: "06", label: "Tentang", href: "/about" },
+                            ].map((item) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setSidebarOpen(false)}
-                                    className="text-left text-lg md:text-xl text-white/40 hover:text-white transition-all duration-500 font-heading tracking-wide group cursor-pointer w-max"
+                                    className="group flex items-center gap-4 text-white/40 hover:text-white transition-colors duration-500 font-heading tracking-wide w-max cursor-pointer"
                                 >
-                                    <span className="inline-block relative">
+                                    <span className="text-white/30 group-hover:text-papua-yellow/50 text-[11px] font-sans font-medium tracking-widest transition-colors">
+                                        {item.num}
+                                    </span>
+                                    <span className="relative text-lg md:text-xl">
                                         {item.label}
                                         <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-papua-yellow transition-all duration-500 group-hover:w-full ease-[cubic-bezier(0.25,1,0.5,1)]"></span>
                                     </span>

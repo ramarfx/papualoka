@@ -50,7 +50,7 @@ const TRIBES = [
     }
 ];
 
-import { FadeUpSentences } from "@/components/ui/fade-up-sentences";
+import { ScrollRevealText } from "@/components/ui/scroll-reveal-text";
 
 const ABOUT_TEXT = "“Di ujung timur Nusantara, Papua berdiri sebagai rumah bagi berbagai suku yang hidup berdampingan dengan alam. Dari pesisir hingga pegunungan, setiap daerah menyimpan cerita, tradisi, dan kearifan lokal yang membentuk identitas masyarakatnya. Keragaman bahasa, budaya, dan cara hidup yang terus dijaga dari generasi ke generasi menjadikan Tanah Cenderawasih bukan sekadar wilayah geografis, melainkan simbol kekayaan Indonesia yang patut dikenali, dihargai, dan dilestarikan.”";
 
@@ -75,11 +75,11 @@ export default function About() {
         <section className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
             {/* Top Paragraph */}
             <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-20">
-                <FadeUpSentences
-                    className="text-white text-xl md:text-4xl font-medium italic font-sans text-justify"
+                <ScrollRevealText
+                    className="text-xl md:text-4xl font-medium italic font-sans text-justify"
                 >
                     {ABOUT_TEXT}
-                </FadeUpSentences>
+                </ScrollRevealText>
             </div>
 
             {/* Standard Auto-Playing Carousel Section */}
