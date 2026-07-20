@@ -1,63 +1,95 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-papua-green: #1A4321;
-  --color-papua-green-light: #49A92A;
-  --color-papua-dark: #0F0F0F;
-  --color-papua-yellow: #CFC154;
-  --font-sans: var(--font-montserrat);
-  --font-heading: var(--font-geom);
-  --animate-fade-in: fade-in 1s ease-out forwards;
-  --animate-fade-in-slow: fade-in 1.5s ease-out forwards;
-  --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  --animate-marquee: marquee 30s linear infinite;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-papua-green: #1a4321;
+    --color-papua-green-light: #49a92a;
+    --color-papua-dark: #0f0f0f;
+    --color-papua-yellow: #cfc154;
+    --font-sans: var(--font-montserrat);
+    --font-heading: var(--font-geom);
+    --animate-fade-in: fade-in 1s ease-out forwards;
+    --animate-fade-in-slow: fade-in 1.5s ease-out forwards;
+    --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    --animate-marquee: marquee 30s linear infinite;
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 /* Credits scrollbar */
 .credits-scrollbar::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 .credits-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
 }
 
 .credits-scrollbar::-webkit-scrollbar-thumb {
-  background: #CFC154;
-  border-radius: 999px;
+    background: #cfc154;
+    border-radius: 999px;
 }
 
 .credits-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d4c75a;
+    background: #d4c75a;
+}
+
+@keyframes loadingGlow {
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 0px rgba(166, 124, 82, 0);
+    }
+
+    50% {
+        opacity: 0.6;
+        text-shadow:
+            0 0 8px rgba(166, 124, 82, 0.4),
+            0 0 20px rgba(166, 124, 82, 0.2);
+    }
+}
+
+.animate-loading-glow {
+    animation: loadingGlow 1.3s ease-in-out infinite;
 }
