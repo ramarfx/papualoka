@@ -35,7 +35,8 @@ export default function TimKamiHeading() {
       <motion.h2
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
         className="
           w-full
           font-heading

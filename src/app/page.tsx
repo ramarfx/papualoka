@@ -101,7 +101,6 @@ export default function Home() {
               pointer-events-none
               z-10
               transform-gpu
-              translate-y-[3vh]
           "
         >
           <div className=" py-4">
