@@ -24,7 +24,7 @@ export default function Home() {
     if (!hasLoaded) {
       setAnimationDelay(4); // Loader duration + delay
     } else {
-      setAnimationDelay(0.5);
+      setAnimationDelay(2.5);
     }
 
     let ticking = false;

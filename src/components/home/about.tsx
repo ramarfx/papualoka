@@ -76,7 +76,7 @@ export default function About() {
             {/* Top Paragraph */}
             <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-20">
                 <FadeUpSentences
-                    className="text-[#4D7C55] text-xl md:text-4xl font-medium italic font-sans text-justify"
+                    className="text-white text-xl md:text-4xl font-medium italic font-sans text-justify"
                 >
                     {ABOUT_TEXT}
                 </FadeUpSentences>

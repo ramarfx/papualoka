@@ -61,7 +61,7 @@ export default function Gallery() {
             <div className="mx-auto w-full max-w-7xl px-6">
                 {/* ── Title ── */}
                 <motion.h1 
-                    className="font-heading text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.12em] uppercase leading-[1.15] mb-16 md:mb-20"
+                    className="font-heading text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.12em] uppercase leading-[1.15] mb-16 md:mb-20"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
@@ -85,11 +85,10 @@ export default function Gallery() {
                         <span className="text-white/50 text-[11px] font-sans font-semibold tracking-[0.2em] uppercase">
                             Anugerah Tuhan
                         </span>
-                        <div className="w-12 h-px bg-white/30" />
                     </div>
 
                     {/* Right filter tabs */}
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center flex-wrap gap-1">
                         <button
                             onClick={() => setActiveFilter(null)}
                             className={`px-4 py-2 rounded-sm text-[11px] font-sans font-bold tracking-[0.12em] uppercase transition-colors ${

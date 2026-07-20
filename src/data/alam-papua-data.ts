@@ -54,15 +54,15 @@ export const ALAM_SECTIONS: AlamPapuaSection[] = [
         label: "Tambang",
     },
     {
-        id: "pegunungan",
-        title: ["Keindahan Alam", "Tanah Papua"],
+        id: "gas",
+        title: ["Gas Alam Tangguh,", "Minyak & Gas Bumi"],
         description:
-            "Dari puncak Jayawijaya yang diselimuti salju abadi hingga lembah Baliem yang subur, Papua menyimpan bentang alam yang tak tertandingi di Indonesia.",
+            "Teluk Bintuni menyimpan cadangan gas alam 23,8 triliun kaki kubik, dikelola lewat Kilang LNG Tangguh sejak 2005.",
         factText:
-            "Puncak Jaya (4.884 m) adalah titik tertinggi di Indonesia dan satu-satunya gletser tropis di Asia Tenggara.",
+            "Sekitar sepertiga produksi gas nasional Indonesia berasal dari Tangguh, Papua Barat.",
         image: "/img/alam-papua/5.png",
         factImage: "/img/alam-papua/5.png",
-        label: "Alam",
+        label: "Gas Bumi",
     },
 ];
 

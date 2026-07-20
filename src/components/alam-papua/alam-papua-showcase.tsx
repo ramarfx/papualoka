@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Trees } from "lucide-react";
+import { Trees } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -254,19 +254,7 @@ export default function AlamPapuaShowcase() {
                     <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-black/30 to-transparent" />
                 </div>
 
-                {/* ── Back button ── */}
-                <div className="absolute top-20 md:top-29 left-5 sm:left-8 md:left-12 lg:left-16 z-30">
-                    <Link
-                        href="/home"
-                        className="group flex gap-4 items-center"
-                    >
-                        <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border border-white/30 group-hover:border-papua-yellow bg-black/10 backdrop-blur-xs transition-all">
-                            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white/70 transition-colors group-hover:-translate-x-0.5 group-hover:text-papua-yellow" />
-                        </div>
-                        <p className="text-white uppercase group-hover:text-papua-yellow font-semibold tracking-wide text-xs sm:text-sm md:text-base lg:text-lg">Kembali</p>
 
-                    </Link>
-                </div>
 
                 {/* ── Main Content Grid ── */}
                 <div className="relative z-10 w-full h-full flex items-start md:items-end px-4 sm:px-8 md:px-0 pt-32 md:pt-0 pb-6 md:pb-0">

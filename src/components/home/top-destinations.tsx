@@ -195,7 +195,7 @@ export default function TopDestinations() {
                         </div>
 
                         {/* Right: Card carousel */}
-                        <div className="shrink-0 hidden md:block overflow-hidden" style={{ width: 540 }}>
+                        <div className="shrink-0 hidden md:block overflow-hidden p-5" style={{ width: 540 }}>
                             <div
                                 ref={cardTrackRef}
                                 className="flex items-center gap-4 will-change-transform"
@@ -203,10 +203,10 @@ export default function TopDestinations() {
                                 {CAROUSEL_CARDS.map((src, i) => (
                                     <div
                                         key={`card-${i}`}
-                                        className="carousel-card relative shrink-0 rounded-xl overflow-hidden shadow-2xl"
+                                        className="carousel-card relative shrink-0 rounded-xl overflow-hidden py-2"
                                         style={{ width: 160, height: 280, transformOrigin: "center center" }}
                                     >
-                                        <Image src={src} alt="Destination" fill className="object-cover" sizes="160px" />
+                                        <Image src={src} alt="Destination" fill className="object-cover rounded-2xl" sizes="160px" />
                                     </div>
                                 ))}
                             </div>

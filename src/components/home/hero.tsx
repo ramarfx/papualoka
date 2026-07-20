@@ -1,10 +1,23 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronDown, ArrowDown } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
+    const [startAnimation, setStartAnimation] = useState(false);
+
+    useEffect(() => {
+        const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+        const delay = hasLoaded ? 1500 : 3500;
+        
+        const timer = setTimeout(() => {
+            setStartAnimation(true);
+        }, delay);
+
+        return () => clearTimeout(timer);
+    }, []);
     return (
         <section className="relative h-screen w-full overflow-hidden">
             {/* Background */}
@@ -17,8 +30,7 @@ export default function Hero() {
             <motion.div 
                 className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6"
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
+                animate={{ opacity: startAnimation ? 1 : 0, y: startAnimation ? 0 : 40 }}
                 transition={{ duration: 1, ease: "easeOut" }}
             >
                 <h1 className="font-heading text-center flex flex-col gap-3">
@@ -35,8 +47,7 @@ export default function Hero() {
             <motion.div 
                 className="absolute bottom-8 md:bottom-12 w-full px-6 md:px-16 flex flex-col gap-8 md:gap-12 z-30 pointer-events-none"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
+                animate={{ opacity: startAnimation ? 1 : 0, y: startAnimation ? 0 : 30 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             >
 
@@ -78,4 +89,4 @@ export default function Hero() {
             </motion.div>
         </section>
     );
-}   
+}

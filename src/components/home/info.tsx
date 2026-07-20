@@ -94,13 +94,13 @@ export default function Info() {
         <section className="relative w-full min-h-screen bg-[#0F0F0F] flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
             {/* Top Left Cursor Hint */}
             <motion.div
-                className="absolute top-12 left-8 md:top-24 md:left-24 z-20"
+                className="absolute top-12 left-0 md:top-24 md:left-24 z-20 w-fit mx-4"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.8 }}
             >
-                <div className="flex items-center gap-3 bg-papua-dark/60 border border-white/5 px-5 py-3 rounded-lg text-white/90">
+                <div className="flex items-center gap-3 bg-papua-dark/60 border border-white/5 px-2 py-3 rounded-lg text-white/90">
                     <AlertCircle
                         className="w-5 h-5 text-papua-green"
                         strokeWidth={2}

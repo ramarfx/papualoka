@@ -62,7 +62,7 @@ export default function Navbar() {
 
     return (
         <>
-            <audio ref={audioRef} src="/audio/backsound.mp3" loop preload="auto" />
+            <audio ref={audioRef} src="/audio/backsound-new.mpeg" loop preload="auto" />
             <nav className={`fixed top-0 left-0 right-0 z-99 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all maw-300 duration-500 ${isScrolled ? "backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
                 {/* Left: MENU and Hamburger Icon */}
                 <button
@@ -70,7 +70,7 @@ export default function Navbar() {
                     className="focus:outline-none flex items-center gap-3 p-2 rounded-full hover:bg-white/10 transition-colors duration-300 group cursor-pointer"
                     aria-label="Buka Menu"
                 >
-                    <span className="text-white font-sans text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Menu</span>
+                    <span className="hidden md:block text-white font-sans text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Menu</span>
                     <div className="flex flex-col gap-[5px] items-start w-6">
                         <div className="w-full h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-papua-yellow"></div>
                         <div className="w-[80%] h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-papua-yellow"></div>

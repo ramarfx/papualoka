@@ -14,11 +14,11 @@ export default function InitialLoader() {
         setIsMounted(true);
         
         // Optional: Check session storage so it only runs once per session
-        const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
-        if (hasLoaded) {
-            setIsLoading(false);
-            return;
-        }
+        // const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+        // if (hasLoaded) {
+        //     setIsLoading(false);
+        //     return;
+        // }
 
         let currentProgress = 0;
         const duration = 2500; // 2.5 seconds total loading time
@@ -59,7 +59,7 @@ export default function InitialLoader() {
                             src="/img/loader-bg.png"
                             alt="Background Texture"
                             fill
-                            className="object-cover opacity-30 mix-blend-overlay"
+                            className="object-cover"
                             priority
                         />
                     </div>
@@ -132,7 +132,7 @@ export default function InitialLoader() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.6 }}
-                            className="text-white font-sans text-sm sm:text-base md:text-xl font-bold tracking-[0.1em] mt-8 sm:mb-12 text-center"
+                            className="text-white font-sans text-sm sm:text-base md:text-xl font-bold tracking-widest mt-8 sm:mb-12 text-center"
                         >
                             Loading
                         </motion.p>

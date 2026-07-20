@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geom, Montserrat } from "next/font/google";
 import "./globals.css";
 import InitialLoader from "@/components/initial-loader";
+import PageTransition from "@/components/page-transition";
 
 const geom = Geom({
   variable: "--font-geom",
@@ -55,9 +56,11 @@ export default function RootLayout({
       lang="en"
       className={`${geom.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body className="bg-papua-dark text-white min-h-full">
         <InitialLoader />
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
