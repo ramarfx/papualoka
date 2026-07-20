@@ -25,7 +25,8 @@ export default function ProvinceStories({ provinceName, description }: ProvinceS
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
                         className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4"
                     >
                         Pilih Cerita yang Ingin Kamu Jelajahi
@@ -33,7 +34,8 @@ export default function ProvinceStories({ provinceName, description }: ProvinceS
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
                         className="text-white/50 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed"
                     >
                         {description}

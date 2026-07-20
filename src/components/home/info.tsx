@@ -158,7 +158,7 @@ export default function Info() {
                     </AnimatePresence>
 
                     {content.title !== DEFAULT_CONTENT.title && (
-                        <Link href={'path' in content ? content.path : "/province"} className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
+                        <Link href={(content as { path?: string }).path || "/province"} className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
                             <span>Pelajari Selanjutnya</span>
                             <ChevronRight
                                 className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
