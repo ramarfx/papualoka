@@ -71,6 +71,23 @@ export default function EventDetail({ event, hovered }: EventDetailProps) {
                                     </span>
                                 ))}
                             </div>
+
+                            {/* Source */}
+                            {event.source && (
+                                <div className="flex items-center gap-2 pt-3 mt-1 border-t border-white/[0.06]">
+                                    <span className="text-white/40 font-sans text-[10px] tracking-[0.15em] uppercase font-semibold">
+                                        Sumber
+                                    </span>
+                                    <a
+                                        href={event.source}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-papua-yellow/80 hover:text-papua-yellow text-xs font-sans font-semibold tracking-wide transition-colors truncate"
+                                    >
+                                        {event.sourceLabel}
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 ) : (

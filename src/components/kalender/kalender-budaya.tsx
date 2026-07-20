@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Calendar from "@/components/kalender/calendar";
 import EventDetail from "@/components/kalender/event-detail";
 import GalleryCard from "@/components/kalender/gallery-card";
-import { getEventByDate, KALENDER_EVENTS } from "@/data/kalender-events";
+import { getEventByDate, KALENDER_EVENTS, MONTH_NAMES } from "@/data/kalender-events";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -55,7 +55,7 @@ export default function KalenderBudaya() {
     const [startAnimation, setStartAnimation] = useState(false);
     const [year, setYear] = useState(2026);
     const [month, setMonth] = useState(8); // September (0-indexed)
-    const [selected, setSelected] = useState<string | null>("2026-09-17");
+    const [selected, setSelected] = useState<string | null>("2026-09-01");
     const [filterOpen, setFilterOpen] = useState(false);
 
     // Hover tracking for the three shared containers
@@ -186,23 +186,29 @@ export default function KalenderBudaya() {
                             className="absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-[320px] rounded-2xl border border-white/10 bg-[#171717]/95 backdrop-blur-xl p-2 z-30"
                             style={{ top: "100%" }}
                         >
-                            {KALENDER_EVENTS.map((e) => (
-                                <button
-                                    key={e.date}
-                                    onClick={() => {
-                                        setSelected(e.date);
-                                        setFilterOpen(false);
-                                    }}
-                                    className="flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-white/[0.05] transition-colors cursor-pointer"
-                                >
-                                    <span className="font-sans text-xs font-bold text-papua-yellow w-10 shrink-0">
-                                        {e.date.slice(-2)}
-                                    </span>
-                                    <span className="font-sans text-sm text-white/80">
-                                        {e.title}
-                                    </span>
-                                </button>
-                            ))}
+                            {KALENDER_EVENTS.map((e) => {
+                                const eventMonth = parseInt(e.date.slice(5, 7), 10) - 1;
+                                const day = parseInt(e.date.slice(-2), 10);
+                                return (
+                                    <button
+                                        key={e.date}
+                                        onClick={() => {
+                                            setSelected(e.date);
+                                            setFilterOpen(false);
+                                        }}
+                                        className="flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-white/[0.05] transition-colors cursor-pointer"
+                                    >
+                                        <span className="font-sans text-xs font-bold text-papua-yellow w-14 shrink-0 text-center leading-tight">
+                                            {day}
+                                            <br />
+                                            <span className="text-[9px] tracking-widest uppercase text-papua-yellow/60 font-semibold">{MONTH_NAMES[eventMonth].slice(0, 3)}</span>
+                                        </span>
+                                        <span className="font-sans text-sm text-white/80 leading-snug">
+                                            {e.title}
+                                        </span>
+                                    </button>
+                                );
+                            })}
                             <button
                                 onClick={scrollToFirstEvent}
                                 className="flex w-full items-center justify-center gap-2 mt-1 px-3 py-2.5 rounded-xl text-papua-yellow/80 hover:bg-white/[0.05] transition-colors text-xs font-semibold tracking-wide cursor-pointer"

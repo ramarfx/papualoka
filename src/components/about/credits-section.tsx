@@ -6,33 +6,213 @@ import { ExternalLink } from "lucide-react";
 const CREDITS = [
   {
     id: "01",
-    title: "Lorem Ipsum Dolor Sit",
-    subtitle: "Sumber referensi konten",
-    url: "#",
+    title: "KPU Papua Pegunungan",
+    subtitle: "Data pemerintahan & informasi daerah",
+    url: "https://papuapegunungan.kpu.go.id",
   },
   {
     id: "02",
-    title: "Am consectetur adipis",
-    subtitle: "Data dan riset",
-    url: "#",
+    title: "Liputan6",
+    subtitle: "Referensi kuliner Papua",
+    url: "https://www.liputan6.com/hot/read/5850096/intip-11-makanan-khas-papua-selatan-kekayaan-kuliner-indonesia-timur",
   },
   {
     id: "03",
-    title: "Sed do eiusmod tempor",
-    subtitle: "Artikel dan publikasi",
-    url: "#",
+    title: "Pariwisata Indonesia",
+    subtitle: "Informasi budaya & destinasi",
+    url: "https://pariwisataindonesia.id",
   },
   {
     id: "04",
-    title: "Incididunt ut labore",
-    subtitle: "Gambar dan visual",
-    url: "#",
+    title: "Indonesia Travel",
+    subtitle: "Portal resmi pariwisata Indonesia",
+    url: "https://indonesia.travel",
   },
   {
     id: "05",
-    title: "Dolore magna aliqua",
-    subtitle: "Kontributor konten",
-    url: "#",
+    title: "Suara Papua",
+    subtitle: "Media berita Papua",
+    url: "https://suarapapua.com",
+  },
+  {
+    id: "06",
+    title: "Dimensi Indonesia",
+    subtitle: "Artikel budaya Indonesia",
+    url: "https://dimensiindonesia.com",
+  },
+  {
+    id: "07",
+    title: "YKAN",
+    subtitle: "Konservasi alam Papua",
+    url: "https://ykan.or.id",
+  },
+  {
+    id: "08",
+    title: "Detik",
+    subtitle: "Berita & budaya Indonesia",
+    url: "https://detik.com",
+  },
+  {
+    id: "09",
+    title: "Antara Foto",
+    subtitle: "Dokumentasi visual",
+    url: "https://antarafoto.com",
+  },
+  {
+    id: "10",
+    title: "Daily Sports",
+    subtitle: "Artikel budaya & kuliner Papua",
+    url: "https://www.dailysports.id/umum/19001/makanan-khas-papua-pegunungan",
+  },
+  {
+    id: "11",
+    title: "Indonesia Kaya",
+    subtitle: "Budaya Nusantara",
+    url: "https://indonesiakaya.com",
+  },
+  {
+    id: "12",
+    title: "Kompas",
+    subtitle: "Berita & referensi nasional",
+    url: "https://kompas.com",
+  },
+  {
+    id: "13",
+    title: "The Asian Parent",
+    subtitle: "Tradisi Tanam Sasi",
+    url: "https://id.theasianparent.com/tanam-sasi",
+  },
+  {
+    id: "14",
+    title: "ANTARA News",
+    subtitle: "Pakaian adat Suku Asmat",
+    url: "https://www.antaranews.com/berita/4290011/pakaian-adat-suku-asmat-sebagai-simbol-kekayaan-alam-papua",
+  },
+  {
+    id: "15",
+    title: "Wahana Visi Indonesia",
+    subtitle: "Upacara adat Suku Asmat",
+    url: "https://wahanavisi.org/id/media-materi/cerita/detail/mengenal-3-upacara-adat-suku-asmat-di-papua",
+  },
+  {
+    id: "16",
+    title: "EcoNusa",
+    subtitle: "Taman Nasional Wasur",
+    url: "https://econusa.id/id/ecoblog/taman-nasional-wasur-surga-burung-migran-di-timur-indonesia/",
+  },
+  {
+    id: "17",
+    title: "Indonesia Juara",
+    subtitle: "Kuliner Papua",
+    url: "https://indonesiajuara.asia/blog/makanan-khas-papua/",
+  },
+  {
+    id: "18",
+    title: "Traveloka Explore",
+    subtitle: "Kuliner Papua Barat Daya",
+    url: "https://www.traveloka.com/id-id/explore/destination/daftar-makanan-khas-papua-barat-daya-paling-enak/1007098",
+  },
+  {
+    id: "19",
+    title: "Jurnal JIANA",
+    subtitle: "Publikasi ilmiah",
+    url: "https://jurnal.asian.or.id/index.php/JIANA/article/download/305/114/",
+  },
+  {
+    id: "20",
+    title: "KPU Yahukimo",
+    subtitle: "Warisan leluhur Papua Pegunungan",
+    url: "https://kab-yahukimo.kpu.go.id/blog/read/8504_warisan-leluhur-papua-pegunungan-makna-di-balik-koteka-sali-dan-taring-babi",
+  },
+  {
+    id: "21",
+    title: "Budaya Indonesia",
+    subtitle: "Aunu Kerang",
+    url: "https://budaya-indonesia.org/Aunu-Kerang",
+  },
+  {
+    id: "22",
+    title: "Tempo",
+    subtitle: "Festival Danau Sentani",
+    url: "https://www.tempo.co/hiburan/festival-danau-sentani-dibuka-bagaimana-ke-sana-dan-fakta-menariknya-169353",
+  },
+  {
+    id: "23",
+    title: "Keluyuran",
+    subtitle: "Tarian adat Papua",
+    url: "https://keluyuran.com/tarian-adat-papua/",
+  },
+  {
+    id: "24",
+    title: "Sastra Papua",
+    subtitle: "Keberagaman suku Papua",
+    url: "https://sastrapapua.com/suku-di-papua-barat-keberagaman-budaya-tanah-cenderawasih/",
+  },
+  {
+    id: "25",
+    title: "Kumparan",
+    subtitle: "Budaya & wisata Papua",
+    url: "https://kumparan.com/bumi-papua/menyusuri-kampung-di-danau-sentani-tempat-penyelenggaraan-kman-vi-1yvb26ebBYb",
+  },
+  {
+    id: "26",
+    title: "Wisataka",
+    subtitle: "Festival Danau Sentani",
+    url: "https://wisataka.com/festival-danau-sentani-di-papua/",
+  },
+  {
+    id: "27",
+    title: "Pagar Alam Pos",
+    subtitle: "Suku Kamoro",
+    url: "https://pagaralampos.disway.id/sejarah-dan-misteri/read/737965/sejarah-suku-kamoro-jejak-budaya-pesisir-papua-yang-bertahan-di-tengah-arus-modernisasi/15",
+  },
+  {
+    id: "28",
+    title: "DPRD Paniai",
+    subtitle: "Tradisi budaya Paniai",
+    url: "https://www.dprdpaniai.id/10-tradisi-budaya-menarik-di-paniai-papua-yang-harus-diketahui/",
+  },
+  {
+    id: "29",
+    title: "Viral Food Travel",
+    subtitle: "Tarian Tumbu Tanah",
+    url: "https://kumparan.com/viral-food-travel/tarian-daerah-papua-mengenal-kesenian-tumbu-tanah-masyarakat-arfak-1w2BUGhcmaZ",
+  },
+  {
+    id: "30",
+    title: "Salam Papua",
+    subtitle: "Tarian adat Papua",
+    url: "https://salampapua.com/2024/06/10-tarian-adat-papua-yang-menarik-untuk-dipelajari.html",
+  },
+  {
+    id: "31",
+    title: "Hotelier Indonesia",
+    subtitle: "Tari tradisional Papua",
+    url: "https://hotelier.id/studi/tari-tradisional-papua/",
+  },
+  {
+    id: "32",
+    title: "Sering Jalan",
+    subtitle: "Tari adat Papua Barat",
+    url: "https://seringjalan.com/tari-adat-tradisional-papua-barat/",
+  },
+  {
+    id: "33",
+    title: "Pemerintah Kabupaten Raja Ampat",
+    subtitle: "Potensi daerah Raja Ampat",
+    url: "https://rajaampatkab.go.id/potensi-daerah/",
+  },
+  {
+    id: "34",
+    title: "Mongabay Indonesia",
+    subtitle: "Konservasi Raja Ampat",
+    url: "https://mongabay.co.id/2025/06/06/dari-dasar-laut-hingga-puncak-bukit-raja-ampat-adalah-laboratorium-evolusi-kehidupan/",
+  },
+  {
+    id: "35",
+    title: "ICCTF",
+    subtitle: "Desa wisata & konservasi Raja Ampat",
+    url: "https://www.icctf.or.id/penantian-endemi-desa-wisata-spesies-raja-ampat/",
   },
 ];
 
@@ -86,14 +266,14 @@ export default function CreditsSection() {
         </motion.div>
 
         {/* Right Column - Scrollable Card */}
-        <motion.div variants={fadeUpVariants} className="flex-1 w-full max-w-[620px]">
+        <motion.div
+          variants={fadeUpVariants}
+          className="flex-1 w-full max-w-[620px]"
+        >
           <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl backdrop-blur-md p-6 sm:p-8 h-[360px] sm:h-[400px] md:h-[430px] overflow-y-auto credits-scrollbar">
             <ul className="flex flex-col">
               {CREDITS.map((credit) => (
-                <motion.li
-                  key={credit.id}
-                  variants={itemVariants}
-                >
+                <motion.li key={credit.id} variants={itemVariants}>
                   <a
                     href={credit.url}
                     target="_blank"

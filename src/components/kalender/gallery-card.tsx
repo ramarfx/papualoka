@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { GALLERY_ITEMS } from "@/data/kalender-events";
+import { KALENDER_EVENTS } from "@/data/kalender-events";
 
 interface GalleryCardProps {
     hovered: boolean;
 }
 
 export default function GalleryCard({ hovered }: GalleryCardProps) {
+    const items = KALENDER_EVENTS.slice(0, 4);
+
     return (
         <div
             className="rounded-[18px] p-7 overflow-hidden transform-gpu will-change-transform transition-[transform,background-color,border-color,box-shadow] duration-350 ease-[cubic-bezier(.22,1,.36,1)]"
@@ -25,7 +27,7 @@ export default function GalleryCard({ hovered }: GalleryCardProps) {
                     Galeri Acara
                 </h3>
                 <span className="text-papua-yellow/80 font-sans text-[11px] font-semibold tracking-[0.15em] uppercase">
-                    {GALLERY_ITEMS.length} Sorotan
+                    {items.length} Sorotan
                 </span>
             </div>
 
@@ -34,27 +36,27 @@ export default function GalleryCard({ hovered }: GalleryCardProps) {
                 className="grid grid-cols-2 gap-3"
                 style={{ gridAutoRows: "104px" }}
             >
-                {GALLERY_ITEMS.slice(0, 4).map((item, i) => (
+                {items.map((event, i) => (
                     <div
-                        key={item.id}
+                        key={event.date}
                         className={`group relative rounded-xl overflow-hidden bg-black/40 ${
                             i === 0 ? "row-span-2" : "row-span-1"
                         }`}
                     >
                         <Image
-                            src={item.src}
-                            alt={item.location}
+                            src={event.image}
+                            alt={event.title}
                             fill
                             className="object-cover transition-[transform,filter] duration-500 ease-out group-hover:scale-105 group-hover:brightness-105"
                             sizes="(max-width: 768px) 50vw, 20vw"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/10 to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-3">
-                            <p className="text-white font-sans text-[11px] font-bold tracking-wide">
-                                {item.location}
+                            <p className="text-white font-sans text-[11px] font-bold tracking-wide leading-tight line-clamp-2">
+                                {event.title}
                             </p>
-                            <p className="text-white/60 font-sans text-[10px] leading-snug line-clamp-2 mt-0.5">
-                                {item.description}
+                            <p className="text-white/60 font-sans text-[10px] leading-snug mt-0.5">
+                                {event.location}
                             </p>
                         </div>
                     </div>
