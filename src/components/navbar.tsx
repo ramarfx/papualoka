@@ -87,6 +87,7 @@ export default function Navbar() {
                                 { label: "Beranda", href: "/home" },
                                 { label: "Destinasi Pilihan", href: "/home#destinasi-pilihan" },
                                 { label: "Warisan Budaya", href: "/home#warisan-budaya" },
+                                { label: "Alam Papua", href: "/alam-papua" },
                                 { label: "Cerita Rakyat", href: "/cerita-rakyat" }
                             ].map((item, idx) => (
                                 <Link
