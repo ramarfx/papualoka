@@ -62,7 +62,9 @@ export default function TimKamiHeading() {
                   inline-block
                   bg-linear-to-t
                   from-white/50
-                  to-white/0
+                  via-papua-dark/5
+                  via-75%
+                  to-papua-dark/0
                   bg-clip-text
                   text-transparent
                   blur-[0.3px]

@@ -168,7 +168,7 @@ export const STORIES: Story[] = [
         title: "Asal Mula Burung Cendrawasih",
         excerpt:
             "Kisah Kweiya dari Fak-Fak yang berubah menjadi burung indah Cenderawasih akibat iri hati saudara-saudaranya, melahirkan burung surga kebanggaan Papua.",
-        image: "/img/stories/alas-mula.jpeg",
+        image: "/img/stories/odesa-oufa.jpeg",
         readTime: "8 menit",
         origin: "Fakfak",
         href: "/cerita-rakyat/asal-mula-burung-cendrawasih",

@@ -74,7 +74,7 @@ export default function TeamSection() {
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-bold text-[#C8B34A] tracking-wider text-center mb-6"
         >
-          PAPUALOKA
+          PAPUA<span className="text-[#E7E1B1]">LOKA</span>
         </motion.h1>
 
         {/* Description */}
