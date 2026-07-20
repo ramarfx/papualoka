@@ -212,9 +212,10 @@ export default function RajaAmpatPage() {
 
                 <DestinationExplore 
                     items={RAJA_AMPAT_EXPLORE_ITEMS}
+                    currentSlug="raja-ampat"
                 />
 
-                <Footer />
+                <Footer className="bg-papua-dark" />
             </main>
         </SmoothScroll>
     );

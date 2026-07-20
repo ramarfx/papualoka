@@ -24,8 +24,10 @@ export default function PageTransition({ children }: { children: React.ReactNode
 
     useEffect(() => {
         if (isLoading) {
+            window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
             const timer = setTimeout(() => {
                 setIsLoading(false);
+                window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
             }, 2000); // Enforce minimum 2 seconds loader
             return () => clearTimeout(timer);
         }

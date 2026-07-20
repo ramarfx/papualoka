@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/danau-paniai/1.png", className: "" }, 
-    { src: "/img/destination/danau-paniai/2.png", className: "" }, 
-    { src: "/img/destination/danau-paniai/3.png", className: "" }, 
-    { src: "/img/destination/danau-paniai/4.png", className: "" }, 
+    { src: "/img/destination/danau-paniai/1.png", className: "" },
+    { src: "/img/destination/danau-paniai/2.png", className: "" },
+    { src: "/img/destination/danau-paniai/3.png", className: "" },
+    { src: "/img/destination/danau-paniai/4.png", className: "" },
 ];
 
 const STATS = [
@@ -35,7 +35,7 @@ const ACCESS_STEPS: AccessStep[] = [
         id: "step-2",
         title: "2. Akses Jalur Darat",
         description: "Alternatif lain adalah perjalanan darat melintasi pegunungan dan hutan dari kota Nabire, yang memakan waktu sekitar 8 hingga 10 jam.",
-        image: "/img/destination/plane.png", 
+        image: "/img/destination/plane.png",
         align: "right"
     }
 ];
@@ -169,45 +169,46 @@ export default function DanauPaniaiPage() {
         <SmoothScroll>
             <main className="bg-papua-dark min-h-screen">
                 <Navbar />
-                <DestinationHero 
+                <DestinationHero
                     title="Danau Paniai"
                     description="Tersembunyi di dataran tinggi Papua, Danau Paniai adalah permata biru yang dikelilingi pegunungan hijau. Airnya yang jernih dan suasana yang tenang menjadikannya salah satu danau terindah di Indonesia."
                     bgImage="/img/destination/paniai-bg.png"
                     carouselImages={CAROUSEL_IMAGES}
                 />
-                
+
                 <DestinationStats stats={STATS} />
 
-                <DestinationVideo 
+                <DestinationVideo
                     title="Danau Paniai"
                     subtitle="Keindahan Biru di Dataran Tinggi"
                     description="Pesona senja dan keramahan penduduk lokal yang membuat siapa saja jatuh cinta pada keindahan tersembunyi ini."
-                    youtubeId="-yKFExhS9Mk" 
+                    youtubeId="-yKFExhS9Mk"
                 />
 
-                <DestinationAccess 
+                <DestinationAccess
                     title="Akses Menuju Danau Paniai"
                     steps={ACCESS_STEPS}
                 />
 
-                <DestinationActivities 
+                <DestinationActivities
                     title="Aktivitas Seru di Danau Paniai"
                     description="Nikmati ketenangan Danau Paniai melalui panorama alam yang memukau, udara pegunungan yang sejuk, dan aktivitas yang menyatu dengan alam."
                     activities={ACTIVITIES}
                 />
 
-                <DestinationPreservation 
+                <DestinationPreservation
                     bgImage="/img/destination/danau-paniai/pelestarian.png"
                     title="Upaya Pelestarian"
                     description="Danau Paniai menghadirkan panorama alam yang menenangkan. Mari menjaga kebersihan dan kelestarian lingkungannya agar tetap indah dinikmati bersama."
                     items={PRESERVATION_ITEMS}
                 />
 
-                <DestinationExplore 
+                <DestinationExplore
                     items={EXPLORE_ITEMS}
+                    currentSlug="danau-paniai"
                 />
 
-                <Footer />
+                <Footer className="bg-papua-dark" />
             </main>
         </SmoothScroll>
     );

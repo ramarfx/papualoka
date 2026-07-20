@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/lembah-baliem/1.png", className: "" }, 
-    { src: "/img/destination/lembah-baliem/2.png", className: "" }, 
-    { src: "/img/destination/lembah-baliem/3.png", className: "" }, 
-    { src: "/img/destination/lembah-baliem/4.png", className: "" }, 
+    { src: "/img/destination/lembah-baliem/1.png", className: "" },
+    { src: "/img/destination/lembah-baliem/2.png", className: "" },
+    { src: "/img/destination/lembah-baliem/3.png", className: "" },
+    { src: "/img/destination/lembah-baliem/4.png", className: "" },
 ];
 
 const STATS = [
@@ -169,45 +169,46 @@ export default function LembahBaliemPage() {
         <SmoothScroll>
             <main className="bg-papua-dark min-h-screen">
                 <Navbar />
-                <DestinationHero 
+                <DestinationHero
                     title="Lembah Baliem"
                     description="Di tengah Pegunungan Papua, Lembah Baliem menghadirkan hamparan alam yang hijau serta tradisi masyarakat adat yang masih terjaga. Destinasi ini menjadi jendela untuk mengenal kehidupan khas Papua."
                     bgImage="/img/destination/baliem-bg.png"
                     carouselImages={CAROUSEL_IMAGES}
                 />
-                
+
                 <DestinationStats stats={STATS} />
 
-                <DestinationVideo 
+                <DestinationVideo
                     title="Lembah Baliem"
                     subtitle="Jantung Budaya Papua"
                     description="Hamparan padang rumput dan bukit-bukit yang menjadi saksi bisu kekayaan tradisi yang tak lekang oleh waktu."
-                    youtubeId="xcrSDMJB7k8" 
+                    youtubeId="xcrSDMJB7k8"
                 />
 
-                <DestinationAccess 
+                <DestinationAccess
                     title="Akses Menuju Lembah Baliem"
                     steps={ACCESS_STEPS}
                 />
 
-                <DestinationActivities 
+                <DestinationActivities
                     title="Aktivitas Seru di Lembah Baliem"
                     description="Jelajahi Lembah Baliem melalui perpaduan budaya suku asli, panorama pegunungan, dan aktivitas yang memperlihatkan kehidupan Papua yang sesungguhnya."
                     activities={ACTIVITIES}
                 />
 
-                <DestinationPreservation 
+                <DestinationPreservation
                     bgImage="/img/destination/lembah-baliem/pelestarian.png"
                     title="Upaya Pelestarian"
                     description="Lembah Baliem menyimpan budaya dan panorama alam yang luar biasa. Hormati tradisi serta jaga kelestarian lingkungannya di setiap perjalanan."
                     items={PRESERVATION_ITEMS}
                 />
 
-                <DestinationExplore 
+                <DestinationExplore
                     items={EXPLORE_ITEMS}
+                    currentSlug="lembah-baliem"
                 />
 
-                <Footer />
+                <Footer className="bg-papua-dark" />
             </main>
         </SmoothScroll>
     );
