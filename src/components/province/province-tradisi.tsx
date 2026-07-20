@@ -35,14 +35,6 @@ export default function ProvinceTradisi({ provinceName, description, items }: Pr
                     </motion.p>
                 </div>
 
-                <div className="flex items-center gap-3">
-                    <button className="w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black/5 transition-colors cursor-pointer">
-                        <ChevronLeft className="w-5 h-5 text-black/60" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-papua-green text-white flex items-center justify-center hover:bg-papua-green-light transition-colors shadow-lg cursor-pointer">
-                        <ChevronRight className="w-5 h-5" />
-                    </button>
-                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
