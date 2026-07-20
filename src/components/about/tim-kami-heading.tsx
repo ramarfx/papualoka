@@ -31,24 +31,23 @@ const letterVariants: Variants = {
 
 export default function TimKamiHeading() {
   return (
-    <section className="relative flex items-center justify-center w-full overflow-hidden bg-[#1F1F1F] h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
+    <section className="relative flex items-center w-full overflow-hidden bg-[#1F1F1F] min-h-[160px] sm:min-h-[220px] md:min-h-[320px] lg:min-h-[420px] py-4 sm:py-8">
       <motion.h2
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="
+          w-full
           font-heading
           font-black
           uppercase
-          leading-[0.85]
+          leading-none
           text-center
           whitespace-nowrap
           select-none
-          text-[60px]
-          sm:text-[100px]
-          md:text-[160px]
-          lg:text-[220px]
-          xl:text-[280px]
+          tracking-wider
+          text-[20.2vw]
+          px-0
         "
       >
         {text.split("").map((char, index) =>
@@ -60,9 +59,9 @@ export default function TimKamiHeading() {
                 variants={letterVariants}
                 className="
                   inline-block
-                  bg-linear-to-b
-                  from-white/30
-                  to-white/5
+                  bg-linear-to-t
+                  from-white/50
+                  to-white/0
                   bg-clip-text
                   text-transparent
                   blur-[0.3px]
