@@ -87,7 +87,7 @@ export default function ChatbotWidget() {
       {/* Floating Button */}
       <motion.button
         onClick={toggle}
-        className={`fixed bottom-6 right-4 sm:right-6 z-50 w-[56px] h-[56px] sm:w-[62px] sm:h-[62px] rounded-full flex items-center justify-center shadow-[0_4px_24px_rgba(207,193,84,.35)] cursor-pointer overflow-hidden ring-3 ring-[#CFC154]/40 ${isOpen ? "bg-linear-to-br from-[#CFC154] to-[#A89B32]" : "bg-[#0c0c0c]"}`}
+        className={`fixed bottom-6 right-4 sm:right-6 z-50 w-[56px] h-[56px] sm:w-[62px] sm:h-[62px] rounded-full flex items-center justify-center shadow-[0_4px_24px_rgba(207,193,84,.35)] cursor-pointer overflow-hidden ring-3 ring-papua-yellow/40 ${isOpen ? "bg-linear-to-br from-papua-yellow to-[#A89B32]" : "bg-papua-dark"}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.92 }}
         animate={
@@ -122,7 +122,7 @@ export default function ChatbotWidget() {
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 22 }}
-              className="text-[#0F0F0F]"
+              className="text-papua-dark"
             >
               <svg
                 width="22"

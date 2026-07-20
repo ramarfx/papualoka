@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -34,7 +34,7 @@ function parseMarkdown(text: string): string {
     .replace(/\*(.*?)\*/g, "<em>$1</em>")
     .replace(
       /(\/(?:destination|cerita-rakyat|alam-papua|about|home)[\/\w-]*)/g,
-      '<a href="$1" class="text-[#CFC154] underline underline-offset-2 decoration-[#CFC154]/40 hover:decoration-[#CFC154] transition-colors cursor-pointer">$1</a>',
+      '<a href="$1" class="text-papua-yellow underline underline-offset-2 decoration-papua-yellow/40 hover:decoration-papua-yellow transition-colors cursor-pointer">$1</a>',
     );
 }
 
@@ -52,7 +52,7 @@ export default function ChatMessage({ message }: { message: Message }) {
       <div
         className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed font-sans ${
           isUser
-            ? "bg-[#CFC154] text-[#0F0F0F] rounded-br-md font-medium"
+            ? "bg-papua-yellow text-papua-dark rounded-br-md font-medium"
             : "bg-white/[0.06] border border-white/[0.08] text-[#E0E0E0] rounded-bl-md"
         }`}
       >
@@ -81,7 +81,7 @@ export function TypingIndicator() {
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            className="w-2 h-2 rounded-full bg-[#CFC154]/60"
+            className="w-2 h-2 rounded-full bg-papua-yellow/60"
             animate={{ y: [0, -5, 0] }}
             transition={{
               duration: 0.6,

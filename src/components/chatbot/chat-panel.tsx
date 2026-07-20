@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -78,7 +78,7 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
           {
             role: "assistant",
             content:
-              "Maaf, terjadi gangguan koneksi. Coba lagi dalam beberapa saat ya! 🙏",
+              "Maaf, terjadi gangguan koneksi. Coba lagi dalam beberapa saat ya! ðŸ™",
           },
         ]);
       } finally {
@@ -104,7 +104,7 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 20, scale: 0.92 }}
       transition={{ type: "spring", stiffness: 400, damping: 22 }}
-      className="fixed bottom-24 right-4 sm:right-6 w-[calc(100vw-2rem)] sm:w-[400px] h-[520px] sm:h-[560px] max-h-[80vh] bg-[#0c0c0c]/95 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,.6)] flex flex-col overflow-hidden z-50"
+      className="fixed bottom-24 right-4 sm:right-6 w-[calc(100vw-2rem)] sm:w-[400px] h-[520px] sm:h-[560px] max-h-[80vh] bg-papua-dark/95 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,.6)] flex flex-col overflow-hidden z-50"
     >
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06] bg-white/[0.02]">
@@ -119,14 +119,14 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
                 sizes="36px"
               />
             </div>
-            <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-[#0c0c0c]" />
+            <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-papua-green-light rounded-full border-2 border-papua-dark" />
           </div>
           <div>
             <h3 className="font-heading font-bold text-white text-sm tracking-wide">
               PapuaLoka AI
             </h3>
-            <p className="text-[10px] text-[#CFC154]/70 font-sans">
-              Jelajah Papua • Online
+            <p className="text-[10px] text-papua-yellow/70 font-sans">
+              Jelajah Papua â€¢ Online
             </p>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
               <button
                 key={reply}
                 onClick={() => handleQuickReply(reply)}
-                className="shrink-0 px-3 py-1.5 rounded-full text-[11px] font-sans font-medium bg-white/[0.05] border border-white/[0.08] text-[#CFC154]/80 hover:bg-[#CFC154]/10 hover:border-[#CFC154]/30 hover:text-[#CFC154] transition-all duration-300 cursor-pointer"
+                className="shrink-0 px-3 py-1.5 rounded-full text-[11px] font-sans font-medium bg-white/[0.05] border border-white/[0.08] text-papua-yellow/80 hover:bg-papua-yellow/10 hover:border-papua-yellow/30 hover:text-papua-yellow transition-all duration-300 cursor-pointer"
               >
                 {reply}
               </button>
@@ -169,7 +169,7 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
         onSubmit={handleSubmit}
         className="px-4 pb-4 pt-2 border-t border-white/[0.06]"
       >
-        <div className="flex items-center gap-2 bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-2 focus-within:border-[#CFC154]/30 transition-colors">
+        <div className="flex items-center gap-2 bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-2 focus-within:border-papua-yellow/30 transition-colors">
           <input
             ref={inputRef}
             type="text"
@@ -182,7 +182,7 @@ export default function ChatPanel({ onClose }: ChatPanelProps) {
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#CFC154] text-[#0F0F0F] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#d4c75a] transition-all cursor-pointer shrink-0"
+            className="w-8 h-8 rounded-lg flex items-center justify-center bg-papua-yellow text-papua-dark disabled:opacity-30 disabled:cursor-not-allowed hover:bg-papua-yellow/90 transition-all cursor-pointer shrink-0"
           >
             <Send className="w-3.5 h-3.5" />
           </button>
