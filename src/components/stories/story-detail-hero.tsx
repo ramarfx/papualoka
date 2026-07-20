@@ -70,7 +70,7 @@ export default function StoryDetailHero({
     return (
         <section
             ref={ref}
-            className="relative w-full min-h-[88vh] flex flex-col items-center justify-center overflow-hidden"
+            className="relative w-full min-h-[90vh] pt-24 sm:pt-28 md:pt-32 pb-16 flex flex-col justify-between items-center overflow-hidden"
         >
             {/* Parallax Background Image with subtle blur & scale to hide pixelation */}
             <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 overflow-hidden">
@@ -93,14 +93,14 @@ export default function StoryDetailHero({
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="absolute top-24 md:top-28 left-5 sm:left-8 md:left-12 lg:left-16 z-20"
+                className="w-full max-w-7xl px-5 sm:px-8 md:px-12 z-20 flex justify-start mb-4 md:mb-6"
             >
                 <Link
                     href="/cerita-rakyat"
                     className="group flex items-center gap-2 text-papua-yellow transition-colors duration-300 text-sm font-sans font-bold border-2 border-papua-yellow rounded-full px-5 py-2"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
-                    Koleksi Cerita
+                    <span>Koleksi Cerita</span>
                 </Link>
             </motion.div>
 
@@ -109,7 +109,7 @@ export default function StoryDetailHero({
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="relative z-10 text-center px-5 sm:px-8 md:px-12 max-w-4xl mx-auto"
+                className="relative z-10 text-center px-5 sm:px-8 md:px-12 max-w-4xl mx-auto my-auto"
             >
 
                 {/* Title — word-by-word stagger, same as stories-hero */}

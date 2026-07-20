@@ -168,7 +168,7 @@ export const STORIES: Story[] = [
         title: "Asal Mula Burung Cendrawasih",
         excerpt:
             "Kisah Kweiya dari Fak-Fak yang berubah menjadi burung indah Cenderawasih akibat iri hati saudara-saudaranya, melahirkan burung surga kebanggaan Papua.",
-        image: "/img/stories/3.png",
+        image: "/img/stories/alas-mula.jpeg",
         readTime: "8 menit",
         origin: "Fakfak",
         href: "/cerita-rakyat/asal-mula-burung-cendrawasih",
@@ -382,7 +382,7 @@ export const STORIES: Story[] = [
         title: "Kasas Wombik dan Keln Tosara",
         excerpt:
             "Kisah suku Moi di Tanjung Saoka dan Kasuari tentang dua anjing berburu yang berubah wujud menjadi hantu Kasas Wombik dan kekalahan mereka oleh burung Keln Tosara.",
-        image: "/img/province/papua-barat-daya/tradition/3-1.png",
+        image: "/img/stories/kasas.jpeg",
         readTime: "6 menit",
         origin: "Sorong (Suku Moi)",
         href: "/cerita-rakyat/kasas-wombik-dan-keln-tosara",
@@ -459,7 +459,7 @@ export const STORIES: Story[] = [
         title: "Kisah Danau Ayamaru",
         excerpt:
             "Kisah Chlumbles dari Maybrat yang tak sengaja memicu luapan air raksasa saat berburu musang hitam, hingga terciptanya Danau Ayamaru dan penemuan perahu kole-kole.",
-        image: "/img/province/papua-barat-daya/carousel/4.png",
+        image: "/img/stories/ayamaru.jpeg",
         readTime: "8 menit",
         origin: "Maybrat (Suku Maybrat)",
         href: "/cerita-rakyat/kisah-danau-ayamaru",
@@ -601,7 +601,7 @@ export const STORIES: Story[] = [
         title: "Odesa Oufa dan Burung Cendrawasih",
         excerpt:
             "Kisah persahabatan anak kepala suku Arfak Odesa Oufa dan burung cenderawasih kecil Orna Mesra yang melahirkan tradisi perlindungan burung cenderawasih.",
-        image: "/img/province/papua-barat/carousel/1.png",
+        image: "/img/stories/odesa-oufa.jpeg",
         readTime: "7 menit",
         origin: "Pegunungan Arfak",
         href: "/cerita-rakyat/odesa-oufa-dan-burung-cendrawasih",
@@ -671,7 +671,7 @@ export const STORIES: Story[] = [
         title: "Gowoda dan Air Merah",
         excerpt:
             "Kisah keteguhan gadis cantik Gowoda dari Teluk Oburauw Kaimana yang membongkar sihir Nenek Saseworo dan menemukan kebahagiaan bersama Mireta.",
-        image: "/img/province/papua-barat/carousel/5.png",
+        image: "/img/stories/gowo.jpeg",
         readTime: "9 menit",
         origin: "Kaimana",
         href: "/cerita-rakyat/gowoda-dan-air-merah",
@@ -735,7 +735,7 @@ export const STORIES: Story[] = [
         title: "Asal Usul Gunung Sigemerai",
         excerpt:
             "Legenda dua bersaudara Jaseso dan Jakukum di Teluk Bintuni yang menebang pohon kayu besi sakral hingga melahirkan nama Gunung Sigemerai.",
-        image: "/img/province/papua-barat/carousel/2.png",
+        image: "/img/stories/sigemerai.jpeg",
         readTime: "7 menit",
         origin: "Teluk Bintuni",
         href: "/cerita-rakyat/asal-usul-gunung-sigemerai",
@@ -799,53 +799,66 @@ export const STORIES: Story[] = [
         },
     },
     {
-        id: "asal-mula-pohon-kelapa",
-        slug: "asal-mula-pohon-kelapa",
-        title: "Asal Mula Pohon Kelapa",
+        id: "legenda-asal-usul-sungai-digul",
+        slug: "legenda-asal-usul-sungai-digul",
+        title: "Legenda Asal Usul Sungai Digul",
         excerpt:
-            "Kisah Cipriw dari suku Asmat di hilir Sungai Fait yang menjelma menjadi pohon kelapa (Jisin) berbuah lebat di atas peraduannya.",
-        image: "/img/province/papua-selatan/carousel/3.png",
+            "Kisah keberanian dan ketulusan pemuda bernama Digul yang mengorbankan jiwanya demi membuka aliran air kehidupan di pedalaman Papua Selatan.",
+        image: "/img/stories/digul.jpeg",
         readTime: "8 menit",
-        origin: "Asmat (Suku Asmat)",
-        href: "/cerita-rakyat/asal-mula-pohon-kelapa",
-        accentColor: "#10B981",
+        origin: "Boven Digoel (Papua Selatan)",
+        href: "/cerita-rakyat/legenda-asal-usul-sungai-digul",
+        accentColor: "#F59E0B",
         provinceId: "papua-selatan",
         content: {
             openingQuote:
-                "Setiap pemberian alam menyimpan kisah kasih serta pengorbanan leluhur yang patut kita syukuri dan hargai.",
+                "Air Sungai Digul mengalir deras bukan sekadar arus alam, melainkan bukti ketulusan hati dan pengorbanan seorang pemuda pemberani.",
             youtubeId: "dQw4w9WgXcQ",
-            videoTitle: "Asal Mula Pohon Kelapa Asmat",
+            videoTitle: "Legenda Asal Usul Sungai Digul",
             videoDescription:
-                "Kisah legendaris tumbuhnya pohon kelapa (Jisin) pertama di tanah Asmat, Papua Selatan.",
+                "Legenda mengenai pemuda bernama Digul yang mengalirkan mata air kehidupan di Boven Digoel, Papua Selatan.",
             paragraphs: [
                 {
                     type: "heading",
-                    text: "Cipriw dan Rumah Jew Asmat",
+                    text: "Kampung Damai di Tengah Hutan",
                 },
                 {
                     type: "paragraph",
-                    text: "Di hilir Sungai Fait dari pantai Safan, hiduplah sepasang suami istri suku Asmat bernama Biwiripit dan Teweraut. Mereka memiliki seorang anak tunggal bernama Cipriw. Namun Cipriw sangat penakut, terutama untuk tidur di rumah Jew (rumah bujang pria dewasa) karena takut melewati pohon Ucuw (beringin) yang dipercaya dihuni roh.",
+                    text: "Dahulu kala di pedalaman hutan Papua Selatan, berdiri sebuah kampung kecil yang rukun. Di sana hiduplah Digul, seorang pemuda yang kuat, rajin, dan berhati tulus. Bersama ibunya yang tua, Digul berburu dan menanam sagu untuk bertahan hidup tanpa pernah mengeluh.",
                 },
                 {
                     type: "heading",
-                    text: "Peristiwa Tragis Pohon Ucuw",
+                    text: "Musim Kemarau Panjang & Mimpi Sang Tetua",
                 },
                 {
                     type: "paragraph",
-                    text: "Roh pohon Ucuw yang tersinggung karena Cipriw selalu ketakutan padahal roh tersebut tidak pernah mengganggu warga, akhirnya menancapkan anak panah pada pelipis Cipriw hingga sang anak tewas.",
+                    text: "Suatu ketika, kemarau dahsyat melanda. Sungai-sungai mengering dan warga terancam kehausan. Dalam mimpinya, tetua kampung mendapat petunjuk bahwa air kehidupan terkurung oleh dinding batu raksasa di gunung timur, dan hanya orang berhati bersih yang mampu membuka jalannya.",
                 },
                 {
-                    type: "paragraph",
-                    text: "Kepergian Cipriw mendatangkan duka yang teramat dalam bagi Biwiripit, Teweraut, dan seluruh warga kampung hilir Sungai Fait.",
+                    type: "dialogue",
+                    speaker: "Digul",
+                    text: "Jika tidak ada yang pergi, kita semua dan anak-anak akan menderita. Saya yang akan pergi mencari sumber air itu!",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Tumbuhnya Pohon Jisin",
+                    text: "Membuka Dinding Batu Raksasa",
                 },
                 {
                     type: "paragraph",
-                    text: "Di atas tempat peraduan Cipriw, muncullah keajaiban: tumbuh sebatang pohon aneh berbuah lebat dengan air yang segar dan daging buah bergaris mirip paras Cipriw. Melalui mimpi Biwiripit dan Teweraut, pohon ajaib tersebut dinamai 'Jisin' (pohon kelapa) dan buahnya 'Akyamanmak' (buah dari orang mati), yang menjadi awal keberadaan pohon kelapa di tanah Asmat.",
+                    text: "Dengan restu ibunya, Digul menembus hutan lebat dan rawa-rawa hingga sampai di kaki gunung batu raksasa. Lewat doa yang tulus tanpa mementingkan diri sendiri, petir dan gemuruh memecahkan dinding batu raksasa tersebut hingga air meluap dahsyat.",
+                },
+                {
+                    type: "heading",
+                    text: "Pengorbanan Pemuda Digul",
+                },
+                {
+                    type: "paragraph",
+                    text: "Air meluap membelah hutan dan mengalir membawa kehidupan kembali ke kampung. Namun, Digul terseret oleh arus yang sangat kuat. Untuk mengenang keberaniannya, sungai besar yang mengalir hingga ke selatan tersebut diabadikan dengan nama Sungai Digul.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Air Sungai Digul mengalir hingga hari ini memberi kehidupan bagi hutan, hewan, dan seluruh manusia di bumi Papua Selatan.",
                 },
             ],
         },
@@ -856,7 +869,7 @@ export const STORIES: Story[] = [
         title: "Legenda Danau Paniai",
         excerpt:
             "Kisah ditemukannya telaga jernih nan luas di pegunungan Paniai oleh pemburu Suku Mee yang menjadi Danau Paniai pemberi kehidupan.",
-        image: "/img/province/papua-tengah/carousel/1.png",
+        image: "/img/stories/paniai.jpeg",
         readTime: "7 menit",
         origin: "Paniai (Suku Mee)",
         href: "/cerita-rakyat/legenda-danau-paniai",
@@ -909,7 +922,7 @@ export const STORIES: Story[] = [
         title: "Legenda Ukiran Sakral Kamoro",
         excerpt:
             "Kisah seniman ukir Suku Kamoro di Mimika yang mendapat ilham dari roh leluhur untuk menciptakan ukiran Mbitoro dan patung penghormatan.",
-        image: "/img/province/papua-tengah/tradition/3-1.png",
+        image: "/img/stories/kamoro.jpeg",
         readTime: "6 menit",
         origin: "Mimika (Suku Kamoro)",
         href: "/cerita-rakyat/legenda-ukiran-sakral-kamoro",
@@ -957,54 +970,107 @@ export const STORIES: Story[] = [
         },
     },
     {
-        id: "fumeripitsy-pencipta-suku-asmat",
-        slug: "fumeripitsy-pencipta-suku-asmat",
-        title: "Fumeripitsy Pencipta Suku Asmat",
+        id: "cerita-keperkasaan-panglima-caadara",
+        slug: "cerita-keperkasaan-panglima-caadara",
+        title: "Cerita Keperkasaan Panglima Caadara",
         excerpt:
-            "Mitologi Dewa Fumeripitsy yang mengukir patung manusia dari kayu dan menghidupkannya dengan tabuhan genderang di tanah Asmat.",
-        image: "/img/province/papua-selatan/carousel/1.png",
+            "Kisah keahlian strategi perang dan keberanian luar biasa pemuda Caadara dari Merauke dalam menumpas serangan laskar musuh demi melindungi sukunya.",
+        image: "/img/stories/caadara.jpeg",
         readTime: "7 menit",
-        origin: "Asmat (Suku Asmat)",
-        href: "/cerita-rakyat/fumeripitsy-pencipta-suku-asmat",
-        accentColor: "#F59E0B",
+        origin: "Kiman, Merauke (Papua Selatan)",
+        href: "/cerita-rakyat/cerita-keperkasaan-panglima-caadara",
+        accentColor: "#10B981",
         provinceId: "papua-selatan",
         content: {
             openingQuote:
-                "Suku Asmat percaya bahwa manusia lahir dari ukiran seni dan tabuhan musik yang menggemakan nafas kehidupan.",
+                "Seorang pahlawan sejati tidak hanya bertempur dengan raga, melainkan memimpin dengan ketenangan dan taktik yang bijaksana.",
             youtubeId: "dQw4w9WgXcQ",
-            videoTitle: "Fumeripitsy Pencipta Suku Asmat",
+            videoTitle: "Cerita Keperkasaan Panglima Caadara",
             videoDescription:
-                "Kisah asal usul mitologi penciptaan manusia Suku Asmat oleh Dewa Fumeripitsy di Papua Selatan.",
+                "Kisah kepahlawanan Caadara dari Merauke yang melegenda dalam kebudayaan masyarakat Kiman Papua Selatan.",
             paragraphs: [
                 {
                     type: "heading",
-                    text: "Pertarungan Dewa Fumeripitsy",
+                    text: "Putra Panglima Wire dari Kramuderu",
                 },
                 {
                     type: "paragraph",
-                    text: "Alkisah, Dewa Fumeripitsy turun ke bumi dan menjelajah dari ufuk barat. Di tengah petualangannya, ia bertarung melawan buaya raksasa hingga terluka parah dan terdampar di tepian sungai Asmat. Seekor burung flamingo berhati mulia merawat sang dewa hingga sembuh total.",
+                    text: "Di desa Kramuderu Merauke, hiduplah Panglima Wire dan putranya, Caadara. Sejak kecil Caadara dilatih ilmu bela diri dan strategi perang. Kelincahan dan ketangkasan Caadara tumbuh melebihi teman sebayanya hingga ia disegani di seluruh kampung.",
                 },
                 {
                     type: "heading",
-                    text: "Patung Kayu dan Genderang Ajaib",
+                    text: "Ujian Perburuan & Ancaman Musuh",
                 },
                 {
                     type: "paragraph",
-                    text: "Setelah pulih, Fumeripitsy membangun rumah dan mengukir dua buah patung kayu yang sangat indah. Ia kemudian membuat genderang kayu (tifa) yang nyaring bunyinya dan menari tanpa henti di sekeliling patung tersebut.",
+                    text: "Saat berburu di hutan bersama sepuluh temannya, Caadara mendapati penampakan anjing pemburu—sebuah firasat bahaya. Benar saja, lima puluh prajurit musuh datang menyergap. Dengan tenang, Caadara memimpin pasukannya membuat benteng pertahanan semak rimbun.",
                 },
                 {
                     type: "dialogue",
-                    speaker: "Dewa Fumeripitsy",
-                    text: "Bangkitlah wahai patung ukiran kayu, bergerak dan berdansalah mengikuti irama tifa ini!",
+                    speaker: "Caadara",
+                    text: "Tetaplah menjaga kewaspadaan! Buat benteng pertahanan agar kita dapat menangkis dan membalikkan serangan musuh!",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Nenek Moyang Suku Asmat",
+                    text: "Taktik Perang Caadara Ura",
                 },
                 {
                     type: "paragraph",
-                    text: "Gerakan dahsyat sang dewa dan alunan genderang membuat kedua patung kayu itu menjadi hidup dan ikut menari. Pasangan patung manusia tersebut menjadi manusia pertama yang menjadi nenek moyang Suku Asmat. Kepercayaan inilah yang menjadikan Suku Asmat sangat mahir mengukir kayu hingga diakui dunia.",
+                    text: "Menggunakan parang dan ketangkasan tanpa perisai, Caadara menumbangkan puluhan prajurit musuh hingga sisanya lari terpukul mundur. Kemenangan besar ini disambut pesta kehormatan di kampungnya, dan strategi perangnya kini diabadikan sebagai ilmu taktik 'Caadara Ura'.",
+                },
+            ],
+        },
+    },
+    {
+        id: "legenda-taraot-dan-ikan-gabus",
+        slug: "legenda-taraot-dan-ikan-gabus",
+        title: "Legenda Taraot dan Ikan Gabus",
+        excerpt:
+            "Kisah pembelajaran moral keturunan Nenek Yamsyaot di Merauke tentang pentingnya mematuhi nasihat orang tua dan memikul tanggung jawab.",
+        image: "/img/stories/gabus.jpeg",
+        readTime: "6 menit",
+        origin: "Merauke (Papua Selatan)",
+        href: "/cerita-rakyat/legenda-taraot-dan-ikan-gabus",
+        accentColor: "#3B82F6",
+        provinceId: "papua-selatan",
+        content: {
+            openingQuote:
+                "Kepatuhan pada pesan leluhur adalah penuntun langkah, dan setiap perbuatan selalu membawa konsekuensi yang harus dipertanggungjawabkan.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Legenda Taraot dan Ikan Gabus",
+            videoDescription:
+                "Kisah fabel mitologi dan pembelajaran moral Nenek Yamsyaot dari Merauke, Papua Selatan.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Kolam Ikan Gabus Nenek Yamsyaot",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di pedalaman Merauke, Nenek Yamsyaot merawat ketujuh cucunya dengan penuh kasih sayang. Nenek memiliki seekor ikan gabus ajaib di kolam sakral yang dipeliharanya dan tidak boleh diganggu oleh siapapun.",
+                },
+                {
+                    type: "heading",
+                    text: "Kesalahan Ker di Kolam Sakral",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu hari, cucunya yang bernama Ker berburu di dekat kolam dan memanah ikan gabus tersebut karena lapar tanpa mengetahui larangan sang nenek. Perbuatan Ker membuat Nenek Yamsyaot sangat bersedih dan kecewa.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Nenek Yamsyaot",
+                    text: "Pesan dan larangan orang tua ada untuk melindungi kalian. Setiap pelanggaran akan membawa pelajaran berharga di alam liar.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Petualangan dan Pembelajaran Moral",
+                },
+                {
+                    type: "paragraph",
+                    text: "Akibat kejadian tersebut, Ker dan keenam saudaranya mengalami petualangan gaib di hutan belantara. Mereka belajar bertahan hidup, mematuhi nasihat leluhur, serta memahami pentingnya memikul tanggung jawab atas setiap perbuatan.",
                 },
             ],
         },
@@ -1015,7 +1081,7 @@ export const STORIES: Story[] = [
         title: "Batu Menangis Puncak Trikora",
         excerpt:
             "Legenda larangan mengotori tanah sakral Puncak Trikora Wamena dan keajaiban batu menangis yang menurunkan suhu di Lembah Baliem.",
-        image: "/img/province/papua-pegunungan/carousel/1.png",
+        image: "/img/stories/trikora.jpeg",
         readTime: "7 menit",
         origin: "Wamena (Puncak Trikora)",
         href: "/cerita-rakyat/batu-menangis-puncak-trikora",
@@ -1068,7 +1134,7 @@ export const STORIES: Story[] = [
         title: "Pupa dan Narinare dari Lembah Baliem",
         excerpt:
             "Kisah persahabatan Pupa dan Narinare, penemuan Kali Baliem, dan awal mula tradisi bakar batu (Barapen) perdamaian di Wamena.",
-        image: "/img/province/papua-pegunungan/carousel/2.png",
+        image: "/img/stories/pupa-narinare.jpeg",
         readTime: "8 menit",
         origin: "Lembah Baliem (Suku Hubula)",
         href: "/cerita-rakyat/pupa-dan-narinare-lembah-baliem",
@@ -1121,7 +1187,7 @@ export const STORIES: Story[] = [
         title: "Asal Muasal Nama Wamena",
         excerpt:
             "Legenda kesalahpahaman gadis Ahumpua dan penjelajah Ap Huluan mengenai anak babi (Wamena) yang diabadikan menjadi nama kota Wamena.",
-        image: "/img/province/papua-pegunungan/carousel/3.png",
+        image: "/img/stories/wamena.jpeg",
         readTime: "6 menit",
         origin: "Wamena (Ahumpua)",
         href: "/cerita-rakyat/asal-muasal-nama-wamena",
