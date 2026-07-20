@@ -34,7 +34,7 @@ function VerticalIndicator({
 }) {
     return (
         <div className="absolute left-6 md:left-12 top-0  z-30 flex flex-col items-center gap-2">
-            <div className=" w-0.5 h-16 bg-white/60" />
+            <div className=" w-0.5 h-36 bg-white/60" />
             {DESTINATIONS.map((_, i) => (
                 <div key={i} className="relative flex flex-col justify-center items-center gap-2">
                     <button
@@ -216,12 +216,6 @@ export default function TopDestinations() {
 
                 {/* ── Vertical Indicator ── */}
                 <VerticalIndicator activeIndex={activeIndex} onSelect={goTo} />
-            </div>
-            <div>
-                {/* ── Cloud overlay ── */}
-                <div className="absolute -bottom-0.5 w-full z-50 pointer-events-none">
-                    <Image src="/img/cloud.png" width={1140} height={283} alt="Cloud" className="w-full" />
-                </div>
             </div>
         </section>
     );

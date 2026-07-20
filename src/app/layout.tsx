@@ -13,6 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://papualoka.vercel.app"),
   title: "PapuaLoka | Mengenal Papua Lebih Dekat",
   description: "Eksplorasi keindahan alam, kekayaan budaya, dan keragaman tradisi suku-suku di tanah Papua. Temukan pesona tersembunyi dari ujung timur Nusantara.",
   icons: {

@@ -20,26 +20,23 @@ function VerticalIndicator({
     onSelect: (i: number) => void;
 }) {
     return (
-        <div className="absolute right-4 sm:right-6 md:right-10 lg:right-14 bottom-0 z-30 flex flex-col items-end ">
-            {/* The vertical dashed line */}
-            {/* <div className="absolute right-[5.5px] top-0 bottom-0 w-px border-r border-dashed border-white/30" /> */}
-            <div className=" w-0.5 h-20 bg-white/60 mr-1" />
+        <div className="absolute right-3 sm:right-6 md:right-10 lg:right-14 bottom-2 md:bottom-0 z-30 flex flex-col items-end">
+            <div className="w-0.5 h-10 md:h-20 bg-white/60 mr-1" />
             {ALAM_SECTIONS.map((sec, i) => (
-                <div className="flex flex-col justify-center items-end">
+                <div key={sec.id} className="flex flex-col justify-center items-end">
                     <button
-                        key={sec.id}
                         onClick={() => onSelect(i)}
                         aria-label={`Section ${i + 1}: ${sec.label}`}
-                        className="group relative z-10 flex items-center gap-2 cursor-pointer"
+                        className="group relative z-10 flex items-center gap-1.5 md:gap-2 cursor-pointer py-0.5 md:py-0"
                     >
                         {/* Label */}
                         <span
-                            className={`text-lg[11px] font-sans font-semibold tracking-wide transition-all duration-500 ${activeIndex === i
+                            className={`text-[10px] md:text-[11px] font-sans font-semibold tracking-wide transition-all duration-500 ${activeIndex === i
                                 ? "text-white opacity-100"
                                 : "text-white/40 opacity-70 group-hover:opacity-100"
                                 }`}
                         >
-                            {sec.label} {String(i + 1).padStart(2, "0")}
+                            <span className="hidden sm:inline">{sec.label} </span>{String(i + 1).padStart(2, "0")}
                         </span>
 
                         {/* Dot container for perfect alignment */}
@@ -47,19 +44,18 @@ function VerticalIndicator({
                             {/* Dot */}
                             <div
                                 className={`rounded-full transition-all duration-500 ${activeIndex === i
-                                    ? "size-3 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-                                    : "size-2.5 bg-white/40 group-hover:bg-white/70"
+                                    ? "size-2.5 md:size-3 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+                                    : "size-2 md:size-2.5 bg-white/40 group-hover:bg-white/70"
                                     }`}
                             />
                         </div>
                     </button>
                     {i + 1 < ALAM_SECTIONS.length ? (
-                        <div className=" w-0.5 h-16  mr-1 border-white/60 border-0.5 border border-dashed" />
+                        <div className="w-0.5 h-8 md:h-16 mr-1 border-white/60 border-0.5 border border-dashed" />
                     ) : (
-                        <div className=" w-0.5 h-20  mr-1 border border-white/60 border-0.5" />
+                        <div className="w-0.5 h-10 md:h-20 mr-1 border border-white/60 border-0.5" />
                     )}
                 </div>
-
             ))}
         </div>
     );
@@ -242,7 +238,7 @@ export default function AlamPapuaShowcase() {
                         style={{ opacity: i === 0 ? 1 : 0 }}
                     >
                         <div
-                            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+                            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
                             style={{ backgroundImage: `url(${sec.image})` }}
                         />
                     </div>
@@ -255,33 +251,37 @@ export default function AlamPapuaShowcase() {
                 </div>
 
                 {/* ── Back button ── */}
-                <div className="absolute top-20 md:top-32 left-5 sm:left-8 md:left-12 lg:left-16 z-30">
+                <div className="absolute top-20 md:top-29 left-5 sm:left-8 md:left-12 lg:left-16 z-30">
                     <Link
                         href="/home"
-                        className="group flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full border border-white/30 hover:border-white/60 bg-black/10 backdrop-blur-xs transition-all duration-300"
+                        className="group flex gap-4 items-center"
                     >
-                        <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white/70 group-hover:text-white transition-colors group-hover:-translate-x-0.5 duration-300" />
+                        <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border border-white/30 group-hover:border-papua-yellow bg-black/10 backdrop-blur-xs transition-all">
+                            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white/70 transition-colors group-hover:-translate-x-0.5 group-hover:text-papua-yellow" />
+                        </div>
+                        <p className="text-white uppercase group-hover:text-papua-yellow font-semibold tracking-wide text-xs sm:text-sm md:text-base lg:text-lg">Kembali</p>
+
                     </Link>
                 </div>
 
                 {/* ── Main Content Grid ── */}
-                <div className="relative z-10 w-full h-full flex items-end">
-                    <div className="w-full flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10 lg:gap-16 max-w-6xl">
+                <div className="relative z-10 w-full h-full flex items-start md:items-end px-4 sm:px-8 md:px-0 pt-32 md:pt-0 pb-6 md:pb-0">
+                    <div className="w-full flex flex-col md:flex-row items-center md:items-center gap-4 sm:gap-6 md:gap-10 lg:gap-16 max-w-6xl px-4 sm:px-8 md:px-0 pr-10 sm:pr-14 md:pr-0">
                         {/* Left: Image stack */}
-                        <div className="relative w-full md:w-[38%] lg:w-[35%] shrink-0">
-                            <div className="relative w-full aspect-3/4 rounded-tr-lg overflow-hidden">
+                        <div className="relative w-full max-w-full sm:max-h-[250px] md:max-h-none md:max-w-none md:w-[38%] lg:w-[30vw] shrink-0">
+                            <div className="relative w-full aspect-4/3 h-[250px] md:h-auto md:aspect-3/4 rounded-xl md:rounded-none md:rounded-tr-lg overflow-hidden">
                                 {ALAM_SECTIONS.map((sec, i) => (
                                     <div
                                         key={`img-${sec.id}`}
-                                        className="alam-img absolute inset-0"
+                                        className="alam-img absolute inset-0 flex items-center justify-center"
                                         style={{ opacity: i === 0 ? 1 : 0 }}
                                     >
                                         <Image
                                             src={sec.image}
                                             alt={sec.title.join(" ")}
-                                            fill
-                                            className="object-cover"
-                                            sizes="(max-width: 768px) 100vw, 38vw"
+                                            width={474}
+                                            height={593}
+                                            className="object-cover w-full md:w-auto h-full"
                                             priority={i === 0}
                                         />
                                     </div>
@@ -290,9 +290,9 @@ export default function AlamPapuaShowcase() {
                         </div>
 
                         {/* Right: Text content */}
-                        <div className="flex-1 min-w-0 relative">
+                        <div className="flex-1 min-w-0 w-full md:w-auto relative">
                             {/* Titles (stacked, each set positioned absolute except first) */}
-                            <div className="relative mb-4 md:mb-6">
+                            <div className="relative mb-3 md:mb-6 min-h-[48px] sm:min-h-[56px] md:min-h-0">
                                 {ALAM_SECTIONS.map((sec, i) => (
                                     <div
                                         key={`title-${sec.id}`}
@@ -305,7 +305,7 @@ export default function AlamPapuaShowcase() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="alam-title-line">
-                                                    <h2 className="font-heading text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-bold leading-[1.1] tracking-tight">
+                                                    <h2 className="font-heading text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[56px] font-bold leading-[1.1] tracking-tight">
                                                         {line}
                                                     </h2>
                                                 </div>
@@ -316,7 +316,7 @@ export default function AlamPapuaShowcase() {
                             </div>
 
                             {/* Descriptions (stacked) */}
-                            <div className="relative mb-6 md:mb-8 min-h-[80px]">
+                            <div className="relative md:mb-8 sm:min-h-[60px] md:min-h-[80px]">
                                 {ALAM_SECTIONS.map((sec, i) => (
                                     <p
                                         key={`desc-${sec.id}`}
@@ -329,7 +329,7 @@ export default function AlamPapuaShowcase() {
                             </div>
 
                             {/* Fact cards (stacked) */}
-                            <div className="relative min-h-[90px]">
+                            <div className="relative mt-2 min-h-[72px] sm:min-h-[80px] md:min-h-[90px]">
                                 {ALAM_SECTIONS.map((sec, i) => (
                                     <div
                                         key={`fact-${sec.id}`}
@@ -337,10 +337,10 @@ export default function AlamPapuaShowcase() {
                                             }`}
                                     >
                                         {/* Fact text */}
-                                        <div className="flex-1 flex items-center gap-3 px-4 py-3 bg-white/5 backdrop-blur-xs">
-                                            <div className="shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                                        <div className="flex-1 flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 bg-white/5 backdrop-blur-xs">
+                                            <div className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/10 flex items-center justify-center">
                                                 <svg
-                                                    className="w-3.5 h-3.5 text-white/60"
+                                                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/60"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
@@ -353,13 +353,13 @@ export default function AlamPapuaShowcase() {
                                                     />
                                                 </svg>
                                             </div>
-                                            <p className="text-white/80 font-sans text-[11px] sm:text-xs leading-relaxed">
+                                            <p className="text-white/80 font-sans text-[10px] sm:text-xs leading-relaxed">
                                                 {sec.factText}
                                             </p>
                                         </div>
 
                                         {/* Fact image */}
-                                        <div className="relative w-24 sm:w-28 shrink-0">
+                                        <div className="relative w-20 sm:w-24 md:w-28 shrink-0">
                                             <Image
                                                 src={sec.factImage}
                                                 alt="Fact"
@@ -381,3 +381,5 @@ export default function AlamPapuaShowcase() {
         </section>
     );
 }
+
+

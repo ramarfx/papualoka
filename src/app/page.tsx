@@ -98,7 +98,7 @@ export default function Home() {
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="font-bold -mt-36 text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading text-center select-none"
+              className="font-bold -mt-12 text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading text-center select-none"
             >
               PAPUA
             </motion.h1>
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Link 
               href="/home"
-              className="pointer-events-auto px-5 py-2.5 rounded-full border-2 border-white bg-transparent font-sans text-xl tracking-normal font-semibold uppercase cursor-pointer hover:bg-papua-green hover:border-papua-green hover:text-white transition-all"
+              className="pointer-events-auto px-5 py-2.5 rounded-full border-2 border-white bg-transparent font-sans text-xl tracking-normal font-semibold uppercase cursor-pointer hover:bg-papua-green-light hover:border-papua-green-light hover:text-white transition-all"
             >
               Menjelajah
             </Link>
