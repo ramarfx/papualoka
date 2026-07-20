@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -38,6 +39,19 @@ const subtitleVariants: Variants = {
 };
 
 export default function StoriesHero() {
+    const [startAnimation, setStartAnimation] = useState(false);
+
+    useEffect(() => {
+        const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+        const delay = hasLoaded ? 1500 : 3500;
+
+        const timer = setTimeout(() => {
+            setStartAnimation(true);
+        }, delay);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section className="relative w-full min-h-[88vh] flex flex-col items-center justify-center overflow-hidden ">
             {/* Background mosaic collage from story images */}
@@ -63,7 +77,7 @@ export default function StoriesHero() {
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                animate={startAnimation ? "visible" : "hidden"}
                 className="relative z-10 text-center px-6"
             >
                 <div className="overflow-hidden mb-2">

@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/sentani-card.png", className: "" }, 
-    { src: "/img/destination/baliem-card.png", className: "" }, 
-    { src: "/img/destination/jayawijaya-card.png", className: "" }, 
-    { src: "/img/destination/paniai-card.png", className: "" }, 
+    { src: "/img/destination/danau-sentani/1.png", className: "" }, 
+    { src: "/img/destination/danau-sentani/2.png", className: "" }, 
+    { src: "/img/destination/danau-sentani/3.png", className: "" }, 
+    { src: "/img/destination/danau-sentani/4.png", className: "" }, 
 ];
 
 const STATS = [
@@ -42,47 +42,47 @@ const ACCESS_STEPS: AccessStep[] = [
 
 const ACTIVITIES = [
     {
-        id: "diving",
-        title: "DIVING",
-        description: "MENJELAJAHI DUNIA BAWAH LAUT",
-        image: "/img/destination/raja-ampat/activity/1.png"
+        id: "heritage-village",
+        title: "HERITAGE VILLAGE",
+        description: "MENYUSURI KAMPUNG ADAT",
+        image: "/img/destination/danau-sentani/activity/1.png"
     },
     {
-        id: "snorkeling",
-        title: "SNORKELING",
-        description: "MENIKMATI TERUMBU KARANG",
-        image: "/img/destination/raja-ampat/activity/2.png"
+        id: "festival",
+        title: "FESTIVAL",
+        description: "MENYAKSIKAN KEMERIAHAN FESTIVAL",
+        image: "/img/destination/danau-sentani/activity/2.png"
     },
     {
-        id: "photography",
-        title: "PHOTOGRAPHY",
-        description: "MENGABADIKAN SETIAP MOMEN",
-        image: "/img/destination/raja-ampat/activity/3.png"
+        id: "sunrise-view",
+        title: "SUNRISE VIEW",
+        description: "MENIKMATI PANORAMA FAJAR",
+        image: "/img/destination/danau-sentani/activity/3.png"
     },
     {
-        id: "birdwatching",
-        title: "BIRDWATCHING",
-        description: "MENGAMATI BURUNG CENDRAWASIH",
-        image: "/img/destination/raja-ampat/activity/4.png"
+        id: "local-crafts",
+        title: "LOCAL CRAFTS",
+        description: "MENGENAL KARYA PENGRAJIN",
+        image: "/img/destination/danau-sentani/activity/4.png"
     },
     {
         id: "kayaking",
         title: "KAYAKING",
-        description: "MENELUSURI LABIRIN KARST",
-        image: "/img/destination/raja-ampat/activity/5.png"
+        description: "MENGARUNGI TENANGNYA DANAU",
+        image: "/img/destination/danau-sentani/activity/5.png"
     },
     {
-        id: "island-hopping",
-        title: "ISLAND HOPPING",
-        description: "MENJELAJAHI PULAU-PULAU KECIL",
-        image: "/img/destination/raja-ampat/activity/6.png"
+        id: "trekking",
+        title: "TREKKING",
+        description: "MENJELAJAH BUKIT SENTANI",
+        image: "/img/destination/danau-sentani/activity/6.png"
     }
 ];
 
 const PRESERVATION_ITEMS = [
     {
         id: "coral",
-        text: "Tidak merusak terumbu karang dan biota laut",
+        text: "Tidak merusak habitat ikan dan tumbuhan air.",
         icon: (
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
                 <path d="M12 22v-5" />
@@ -111,17 +111,26 @@ const PRESERVATION_ITEMS = [
     },
     {
         id: "economy",
-        text: "Mendukung ekonomi masyarakat lokal",
+        text: "Membeli kerajinan dan produk buatan masyarakat Sentani.",
         icon: <ShoppingBag className="w-12 h-12 stroke-[1.5]" />
     }
 ];
 
 const EXPLORE_ITEMS = [
     {
+        id: "raja-ampat",
+        title: "Temukan Keindahan Papua Lainnya",
+        description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
+        image: "/img/destination/explore/1.png",
+        destinationName: "Raja Ampat",
+        location: "Sorong, Papua Barat Daya",
+        href: "/destination/raja-ampat"
+    },
+    {
         id: "danau-sentani",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/1.png",
+        image: "/img/destination/explore/2.png",
         destinationName: "Danau sentani",
         location: "Jayapura, Papua",
         href: "/destination/danau-sentani"
@@ -130,7 +139,7 @@ const EXPLORE_ITEMS = [
         id: "lembah-baliem",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/2.png",
+        image: "/img/destination/explore/3.png",
         destinationName: "Lembah Baliem",
         location: "Wamena, Papua Pegunungan",
         href: "/destination/lembah-baliem"
@@ -139,7 +148,7 @@ const EXPLORE_ITEMS = [
         id: "puncak-jayawijaya",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/3.png",
+        image: "/img/destination/explore/4.png",
         destinationName: "Puncak Jayawijaya",
         location: "Mimika, Papua Tengah",
         href: "/destination/puncak-jayawijaya"
@@ -148,7 +157,7 @@ const EXPLORE_ITEMS = [
         id: "danau-paniai",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/4.png",
+        image: "/img/destination/explore/5.png",
         destinationName: "Danau Paniai",
         location: "Paniai, Papua Tengah",
         href: "/destination/danau-paniai"
@@ -173,7 +182,7 @@ export default function DanauSentaniPage() {
                     title="Danau Sentani"
                     subtitle="Keindahan di Bawah Pegunungan Cyclops"
                     description="Permukaan air yang tenang berpadu dengan bukit-bukit hijau menciptakan suasana damai yang tak terlupakan di Danau Sentani."
-                    youtubeId="dQw4w9WgXcQ" 
+                    youtubeId="x21y3Ylw_lk" 
                 />
 
                 <DestinationAccess 
@@ -183,14 +192,14 @@ export default function DanauSentaniPage() {
 
                 <DestinationActivities 
                     title="Aktivitas Seru di Danau Sentani"
-                    description="Nikmati berbagai aktivitas seru di Danau Sentani, mulai dari menjelajahi keindahan bawah laut hingga mengabadikan momen di tengah panorama alam yang memukau."
+                    description="Nikmati beragam aktivitas seru di Danau Sentani, mulai dari menjelajahi kampung adat, berburu kerajinan lokal, hingga menikmati panorama alam yang memukau."
                     activities={ACTIVITIES}
                 />
 
                 <DestinationPreservation 
-                    bgImage="/img/destination/raja-ampat/pelestarian.png"
+                    bgImage="/img/destination/danau-sentani/pelestarian.png"
                     title="Upaya Pelestarian"
-                    description="Sebagai salah satu kawasan megabiodiversitas terpenting di dunia, menjaga kelestarian Danau Sentani adalah tanggung jawab kita bersama untuk masa depan generasi mendatang."
+                    description="Danau Sentani memadukan keindahan alam dan budaya yang kaya. Mari menjaga kebersihan serta menghormati tradisi masyarakat setempat."
                     items={PRESERVATION_ITEMS}
                 />
 

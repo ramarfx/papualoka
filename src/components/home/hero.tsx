@@ -11,7 +11,7 @@ export default function Hero() {
     useEffect(() => {
         const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
         const delay = hasLoaded ? 1500 : 3500;
-        
+
         const timer = setTimeout(() => {
             setStartAnimation(true);
         }, delay);
@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-linear-to-b from-papua-dark/40 via-papua-dark/10 to-papua-dark z-10"></div>
 
             {/* Center Content */}
-            <motion.div 
+            <motion.div
                 className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: startAnimation ? 1 : 0, y: startAnimation ? 0 : 40 }}
@@ -44,7 +44,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Bottom Section */}
-            <motion.div 
+            <motion.div
                 className="absolute bottom-8 md:bottom-12 w-full px-6 md:px-16 flex flex-col gap-8 md:gap-12 z-30 pointer-events-none"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: startAnimation ? 1 : 0, y: startAnimation ? 0 : 30 }}

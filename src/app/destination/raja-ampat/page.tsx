@@ -125,10 +125,19 @@ const RAJA_AMPAT_PRESERVATION_ITEMS = [
 
 const RAJA_AMPAT_EXPLORE_ITEMS = [
     {
+        id: "raja-ampat",
+        title: "Temukan Keindahan Papua Lainnya",
+        description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
+        image: "/img/destination/explore/1.png",
+        destinationName: "Raja Ampat",
+        location: "Sorong, Papua Barat Daya",
+        href: "/destination/raja-ampat"
+    },
+    {
         id: "danau-sentani",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/1.png",
+        image: "/img/destination/explore/2.png",
         destinationName: "Danau sentani",
         location: "Jayapura, Papua",
         href: "/destination/danau-sentani"
@@ -137,7 +146,7 @@ const RAJA_AMPAT_EXPLORE_ITEMS = [
         id: "lembah-baliem",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/2.png",
+        image: "/img/destination/explore/3.png",
         destinationName: "Lembah Baliem",
         location: "Wamena, Papua Pegunungan",
         href: "/destination/lembah-baliem"
@@ -146,7 +155,7 @@ const RAJA_AMPAT_EXPLORE_ITEMS = [
         id: "puncak-jayawijaya",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/3.png",
+        image: "/img/destination/explore/4.png",
         destinationName: "Puncak Jayawijaya",
         location: "Mimika, Papua Tengah",
         href: "/destination/puncak-jayawijaya"
@@ -155,7 +164,7 @@ const RAJA_AMPAT_EXPLORE_ITEMS = [
         id: "danau-paniai",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/4.png",
+        image: "/img/destination/explore/5.png",
         destinationName: "Danau Paniai",
         location: "Paniai, Papua Tengah",
         href: "/destination/danau-paniai"
@@ -180,7 +189,7 @@ export default function RajaAmpatPage() {
                     title="Raja Ampat"
                     subtitle="Surga Timur Indonesia"
                     description="Gugusan pulau dan laut biru Raja Ampat menghadirkan panorama alam yang menjadikannya salah satu destinasi paling memukau di Indonesia."
-                    youtubeId="fB8TyLTD7EE" // A placeholder beautiful nature video ID (or any suitable one)
+                    youtubeId="jJdrq4bLeQM"
                 />
 
                 <DestinationAccess 

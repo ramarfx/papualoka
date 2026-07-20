@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/paniai-card.png", className: "" }, 
-    { src: "/img/destination/rajaampat-card.png", className: "" }, 
-    { src: "/img/destination/sentani-card.png", className: "" }, 
-    { src: "/img/destination/baliem-card.png", className: "" }, 
+    { src: "/img/destination/danau-paniai/1.png", className: "" }, 
+    { src: "/img/destination/danau-paniai/2.png", className: "" }, 
+    { src: "/img/destination/danau-paniai/3.png", className: "" }, 
+    { src: "/img/destination/danau-paniai/4.png", className: "" }, 
 ];
 
 const STATS = [
@@ -42,47 +42,47 @@ const ACCESS_STEPS: AccessStep[] = [
 
 const ACTIVITIES = [
     {
-        id: "diving",
-        title: "DIVING",
-        description: "MENJELAJAHI DUNIA BAWAH LAUT",
-        image: "/img/destination/raja-ampat/activity/1.png"
+        id: "kayaking",
+        title: "KAYAKING",
+        description: "MENGARUNGI TENANGNYA DANAU",
+        image: "/img/destination/danau-paniai/activity/1.png"
     },
     {
-        id: "snorkeling",
-        title: "SNORKELING",
-        description: "MENIKMATI TERUMBU KARANG",
-        image: "/img/destination/raja-ampat/activity/2.png"
+        id: "camping",
+        title: "CAMPING",
+        description: "BERMALAM DI ALAM TERBUKA",
+        image: "/img/destination/danau-paniai/activity/2.png"
     },
     {
         id: "photography",
         title: "PHOTOGRAPHY",
         description: "MENGABADIKAN SETIAP MOMEN",
-        image: "/img/destination/raja-ampat/activity/3.png"
+        image: "/img/destination/danau-paniai/activity/3.png"
+    },
+    {
+        id: "sunrise-view",
+        title: "SUNRISE VIEW",
+        description: "MENIKMATI PANORAMA FAJAR",
+        image: "/img/destination/danau-paniai/activity/4.png"
+    },
+    {
+        id: "fishing",
+        title: "FISHING",
+        description: "MENIKMATI SENSASI MEMANCING",
+        image: "/img/destination/danau-paniai/activity/5.png"
     },
     {
         id: "birdwatching",
         title: "BIRDWATCHING",
-        description: "MENGAMATI BURUNG CENDRAWASIH",
-        image: "/img/destination/raja-ampat/activity/4.png"
-    },
-    {
-        id: "kayaking",
-        title: "KAYAKING",
-        description: "MENELUSURI LABIRIN KARST",
-        image: "/img/destination/raja-ampat/activity/5.png"
-    },
-    {
-        id: "island-hopping",
-        title: "ISLAND HOPPING",
-        description: "MENJELAJAHI PULAU-PULAU KECIL",
-        image: "/img/destination/raja-ampat/activity/6.png"
+        description: "MENYAKSIKAN SATWA ENDEMIK",
+        image: "/img/destination/danau-paniai/activity/6.png"
     }
 ];
 
 const PRESERVATION_ITEMS = [
     {
         id: "coral",
-        text: "Tidak merusak terumbu karang dan biota laut",
+        text: "Tidak merusak tumbuhan maupun kawasan sekitar danau.",
         icon: (
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
                 <path d="M12 22v-5" />
@@ -101,27 +101,36 @@ const PRESERVATION_ITEMS = [
     },
     {
         id: "trash",
-        text: "Membawa kembali sampah pribadi",
+        text: "Tidak membuang sampah atau limbah ke perairan.",
         icon: <Trash2 className="w-12 h-12 stroke-[1.5]" />
     },
     {
         id: "culture",
-        text: "Menghormati budaya dan adat istiadat lokal",
+        text: "Menggunakan perahu dan fasilitas secara bertanggung jawab.",
         icon: <Handshake className="w-12 h-12 stroke-[1.5]" />
     },
     {
         id: "economy",
-        text: "Mendukung ekonomi masyarakat lokal",
+        text: "Membeli hasil kerajinan dan produk masyarakat setempat.",
         icon: <ShoppingBag className="w-12 h-12 stroke-[1.5]" />
     }
 ];
 
 const EXPLORE_ITEMS = [
     {
+        id: "raja-ampat",
+        title: "Temukan Keindahan Papua Lainnya",
+        description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
+        image: "/img/destination/explore/1.png",
+        destinationName: "Raja Ampat",
+        location: "Sorong, Papua Barat Daya",
+        href: "/destination/raja-ampat"
+    },
+    {
         id: "danau-sentani",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/1.png",
+        image: "/img/destination/explore/2.png",
         destinationName: "Danau sentani",
         location: "Jayapura, Papua",
         href: "/destination/danau-sentani"
@@ -130,7 +139,7 @@ const EXPLORE_ITEMS = [
         id: "lembah-baliem",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/2.png",
+        image: "/img/destination/explore/3.png",
         destinationName: "Lembah Baliem",
         location: "Wamena, Papua Pegunungan",
         href: "/destination/lembah-baliem"
@@ -139,7 +148,7 @@ const EXPLORE_ITEMS = [
         id: "puncak-jayawijaya",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/3.png",
+        image: "/img/destination/explore/4.png",
         destinationName: "Puncak Jayawijaya",
         location: "Mimika, Papua Tengah",
         href: "/destination/puncak-jayawijaya"
@@ -148,7 +157,7 @@ const EXPLORE_ITEMS = [
         id: "danau-paniai",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/4.png",
+        image: "/img/destination/explore/5.png",
         destinationName: "Danau Paniai",
         location: "Paniai, Papua Tengah",
         href: "/destination/danau-paniai"
@@ -173,7 +182,7 @@ export default function DanauPaniaiPage() {
                     title="Danau Paniai"
                     subtitle="Keindahan Biru di Dataran Tinggi"
                     description="Pesona senja dan keramahan penduduk lokal yang membuat siapa saja jatuh cinta pada keindahan tersembunyi ini."
-                    youtubeId="dQw4w9WgXcQ" 
+                    youtubeId="-yKFExhS9Mk" 
                 />
 
                 <DestinationAccess 
@@ -183,14 +192,14 @@ export default function DanauPaniaiPage() {
 
                 <DestinationActivities 
                     title="Aktivitas Seru di Danau Paniai"
-                    description="Nikmati berbagai aktivitas seru di Danau Paniai, mulai dari menjelajahi keindahan bawah laut hingga mengabadikan momen di tengah panorama alam yang memukau."
+                    description="Nikmati ketenangan Danau Paniai melalui panorama alam yang memukau, udara pegunungan yang sejuk, dan aktivitas yang menyatu dengan alam."
                     activities={ACTIVITIES}
                 />
 
                 <DestinationPreservation 
-                    bgImage="/img/destination/raja-ampat/pelestarian.png"
+                    bgImage="/img/destination/danau-paniai/pelestarian.png"
                     title="Upaya Pelestarian"
-                    description="Sebagai salah satu kawasan megabiodiversitas terpenting di dunia, menjaga kelestarian Danau Paniai adalah tanggung jawab kita bersama untuk masa depan generasi mendatang."
+                    description="Danau Paniai menghadirkan panorama alam yang menenangkan. Mari menjaga kebersihan dan kelestarian lingkungannya agar tetap indah dinikmati bersama."
                     items={PRESERVATION_ITEMS}
                 />
 

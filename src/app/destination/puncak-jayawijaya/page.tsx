@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/jayawijaya-card.png", className: "" }, 
-    { src: "/img/destination/paniai-card.png", className: "" }, 
-    { src: "/img/destination/rajaampat-card.png", className: "" }, 
-    { src: "/img/destination/sentani-card.png", className: "" }, 
+    { src: "/img/destination/puncak-jayawijaya/1.png", className: "" }, 
+    { src: "/img/destination/puncak-jayawijaya/2.png", className: "" }, 
+    { src: "/img/destination/puncak-jayawijaya/3.png", className: "" }, 
+    { src: "/img/destination/puncak-jayawijaya/4.png", className: "" }, 
 ];
 
 const STATS = [
@@ -49,47 +49,47 @@ const ACCESS_STEPS: AccessStep[] = [
 
 const ACTIVITIES = [
     {
-        id: "diving",
-        title: "DIVING",
-        description: "MENJELAJAHI DUNIA BAWAH LAUT",
-        image: "/img/destination/raja-ampat/activity/1.png"
+        id: "summit-climb",
+        title: "SUMMIT CLIMB",
+        description: "MENAKLUKKAN PUNCAK TERTINGGI",
+        image: "/img/destination/puncak-jayawijaya/activity/1.png"
     },
     {
-        id: "snorkeling",
-        title: "SNORKELING",
-        description: "MENIKMATI TERUMBU KARANG",
-        image: "/img/destination/raja-ampat/activity/2.png"
+        id: "rock-climbing",
+        title: "ROCK CLIMBING",
+        description: "MENJELAJAHI TEBING GRANIT",
+        image: "/img/destination/puncak-jayawijaya/activity/2.png"
+    },
+    {
+        id: "base-camp",
+        title: "BASE CAMP",
+        description: "BERMALAM DI BASE CAMP",
+        image: "/img/destination/puncak-jayawijaya/activity/3.png"
+    },
+    {
+        id: "glacier-view",
+        title: "GLACIER VIEW",
+        description: "MENYAKSIKAN HAMPARAN GLETSER",
+        image: "/img/destination/puncak-jayawijaya/activity/4.png"
     },
     {
         id: "photography",
         title: "PHOTOGRAPHY",
-        description: "MENGABADIKAN SETIAP MOMEN",
-        image: "/img/destination/raja-ampat/activity/3.png"
+        description: "MENGABADIKAN PANORAMA PEGUNUNGAN",
+        image: "/img/destination/puncak-jayawijaya/activity/5.png"
     },
     {
-        id: "birdwatching",
-        title: "BIRDWATCHING",
-        description: "MENGAMATI BURUNG CENDRAWASIH",
-        image: "/img/destination/raja-ampat/activity/4.png"
-    },
-    {
-        id: "kayaking",
-        title: "KAYAKING",
-        description: "MENELUSURI LABIRIN KARST",
-        image: "/img/destination/raja-ampat/activity/5.png"
-    },
-    {
-        id: "island-hopping",
-        title: "ISLAND HOPPING",
-        description: "MENJELAJAHI PULAU-PULAU KECIL",
-        image: "/img/destination/raja-ampat/activity/6.png"
+        id: "sunrise-view",
+        title: "SUNRISE VIEW",
+        description: "MENIKMATI PANORAMA FAJAR",
+        image: "/img/destination/puncak-jayawijaya/activity/6.png"
     }
 ];
 
 const PRESERVATION_ITEMS = [
     {
         id: "coral",
-        text: "Tidak merusak terumbu karang dan biota laut",
+        text: "Hindari membuka jalur baru yang merusak vegetasi.",
         icon: (
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
                 <path d="M12 22v-5" />
@@ -108,27 +108,36 @@ const PRESERVATION_ITEMS = [
     },
     {
         id: "trash",
-        text: "Membawa kembali sampah pribadi",
+        text: "Seluruh sampah wajib dibawa kembali dari jalur pendakian.",
         icon: <Trash2 className="w-12 h-12 stroke-[1.5]" />
     },
     {
         id: "culture",
-        text: "Menghormati budaya dan adat istiadat lokal",
+        text: "Tidak merusak batuan, es, maupun ekosistem alami.",
         icon: <Handshake className="w-12 h-12 stroke-[1.5]" />
     },
     {
         id: "economy",
-        text: "Mendukung ekonomi masyarakat lokal",
+        text: "Gunakan area camping yang telah ditentukan.",
         icon: <ShoppingBag className="w-12 h-12 stroke-[1.5]" />
     }
 ];
 
 const EXPLORE_ITEMS = [
     {
+        id: "raja-ampat",
+        title: "Temukan Keindahan Papua Lainnya",
+        description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
+        image: "/img/destination/explore/1.png",
+        destinationName: "Raja Ampat",
+        location: "Sorong, Papua Barat Daya",
+        href: "/destination/raja-ampat"
+    },
+    {
         id: "danau-sentani",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/1.png",
+        image: "/img/destination/explore/2.png",
         destinationName: "Danau sentani",
         location: "Jayapura, Papua",
         href: "/destination/danau-sentani"
@@ -137,7 +146,7 @@ const EXPLORE_ITEMS = [
         id: "lembah-baliem",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/2.png",
+        image: "/img/destination/explore/3.png",
         destinationName: "Lembah Baliem",
         location: "Wamena, Papua Pegunungan",
         href: "/destination/lembah-baliem"
@@ -146,7 +155,7 @@ const EXPLORE_ITEMS = [
         id: "puncak-jayawijaya",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/3.png",
+        image: "/img/destination/explore/4.png",
         destinationName: "Puncak Jayawijaya",
         location: "Mimika, Papua Tengah",
         href: "/destination/puncak-jayawijaya"
@@ -155,7 +164,7 @@ const EXPLORE_ITEMS = [
         id: "danau-paniai",
         title: "Temukan Keindahan Papua Lainnya",
         description: "Papua menyimpan banyak destinasi luar biasa yang tak kalah menakjubkan. Mulai petualanganmu ke tempat-tempat menakjubkan lainnya",
-        image: "/img/destination/raja-ampat/explore/4.png",
+        image: "/img/destination/explore/5.png",
         destinationName: "Danau Paniai",
         location: "Paniai, Papua Tengah",
         href: "/destination/danau-paniai"
@@ -180,7 +189,7 @@ export default function PuncakJayawijayaPage() {
                     title="Puncak Jayawijaya"
                     subtitle="Atap Salju Nusantara"
                     description="Pemandangan bersalju eksotis yang menghiasi langit tropis Papua, menguji setiap jiwa petualang yang berani mendakinya."
-                    youtubeId="dQw4w9WgXcQ" 
+                    youtubeId="QSH9l_80y7Q" 
                 />
 
                 <DestinationAccess 
@@ -190,14 +199,14 @@ export default function PuncakJayawijayaPage() {
 
                 <DestinationActivities 
                     title="Aktivitas Seru di Puncak Jayawijaya"
-                    description="Nikmati berbagai aktivitas seru di Puncak Jayawijaya, mulai dari menjelajahi keindahan bawah laut hingga mengabadikan momen di tengah panorama alam yang memukau."
+                    description="Rasakan sensasi menjelajahi puncak tertinggi Indonesia dengan panorama pegunungan megah dan pengalaman yang tak terlupakan."
                     activities={ACTIVITIES}
                 />
 
                 <DestinationPreservation 
-                    bgImage="/img/destination/raja-ampat/pelestarian.png"
+                    bgImage="/img/destination/puncak-jayawijaya/pelestarian.png"
                     title="Upaya Pelestarian"
-                    description="Sebagai salah satu kawasan megabiodiversitas terpenting di dunia, menjaga kelestarian Puncak Jayawijaya adalah tanggung jawab kita bersama untuk masa depan generasi mendatang."
+                    description="Puncak Jayawijaya menawarkan keindahan alam yang langka. Nikmati setiap petualangan dengan tetap menjaga kebersihan dan kelestarian pegunungan."
                     items={PRESERVATION_ITEMS}
                 />
 

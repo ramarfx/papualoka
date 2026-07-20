@@ -31,103 +31,66 @@ export const STORIES: Story[] = [
         slug: "towjatuwa-buaya-sakti",
         title: "Towjatuwa dan Buaya Sakti",
         excerpt:
-            "Kisah seorang pemuda pemberani dari tepi Danau Sentani yang bersahabat dengan seekor buaya sakti penguasa danau, mengajarkan makna kesetiaan dan perjanjian leluhur.",
+            "Kisah Towjatuwa dan buaya sakti Watuwe dari Sungai Tami, Jayapura, yang mengajarkan balasan kebaikan dan kehormatan pada janji leluhur.",
         image: "/img/stories/1.png",
-        readTime: "8 menit",
-        origin: "Sentani",
+        readTime: "7 menit",
+        origin: "Jayapura",
         href: "/cerita-rakyat/towjatuwa-buaya-sakti",
         accentColor: "#6EE7B7",
         content: {
             openingQuote:
-                "Persahabatan yang tulus tidak mengenal batas antara manusia dan alam. Ia hidup dalam janji yang dijaga, dan abadi dalam kenangan yang diwariskan.",
+                "Kebaikan yang tulus kepada siapa pun—bahkan kepada makhluk yang tampak menakutkan sekalipun—akan berbuah pertolongan saat kita paling membutuhkannya.",
             youtubeId: "dQw4w9WgXcQ",
             videoTitle: "Towjatuwa dan Buaya Sakti",
             videoDescription:
-                "Saksikan kisah legendaris persahabatan antara Towjatuwa, pemuda Sentani, dan Walowue si buaya sakti dalam animasi penuh warna ini.",
+                "Saksikan kisah legendaris persahabatan antara Towjatuwa dan Watuwe si buaya sakti penguasa Sungai Tami dalam animasi ini.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Di tepi Danau Sentani yang airnya biru jernih, hiduplah seorang pemuda bernama Towjatuwa. Ia dikenal sebagai anak yang baik hati dan suka membantu, meskipun hidupnya sederhana. Setiap pagi ia pergi ke danau untuk mencari ikan, dan setiap sore ia kembali dengan senyum meski tangkapannya tidak banyak.",
+                    type: "heading",
+                    text: "Dukun dan Rumput Air Sungai Tami",
                 },
                 {
                     type: "paragraph",
-                    text: "Suatu hari, ketika fajar baru menyingsing, Towjatuwa menemukan seekor buaya besar tergeletak di tepian danau. Tubuhnya penuh luka, napasnya berat, dan matanya yang kuning pucat menatap langit dengan lemah.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Towjatuwa",
-                    text: "Nenek, nenek, tolong! Jika saja hendak melindungi bayi tidak sampai terluka! Towjatuwa memangil nenek dukun!",
+                    text: "Di Kampung Sawjatami, Jayapura, hiduplah sepasang suami istri. Sang suami bernama Towjatuwa. Suatu hari, istrinya yang tengah hamil tua mengalami kesulitan besar saat hendak melahirkan. Tubuhnya menggigil dan mengalami pendarahan, sementara sang bayi tak kunjung lahir. Panik dan ketakutan, Towjatuwa segera berlari menemui seorang nenek dukun di kampungnya untuk meminta pertolongan.",
                 },
                 {
                     type: "paragraph",
-                    text: "Nenek dukun menyarankan agar peralatan penyembuhan dibawakan ke rumah buaya Sungai Tami. Towjatuwa kemudian menemukan Walowue di dalam rumah tersebut. Ia mendapati titik kelemahan buaya itu di dalam keadaan sakit. Kemudian Towjatuwa berhasil meringankan beban dan menyembuhkan luka-luka Walowue. Towjatuwa pun terasa sangat gelisah menyaksikan hal itu.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Nenek dukun",
-                    text: "Towjatuwa, bagi dalam kandungan istirmu terlalu besar biar membantu. Lebih baik kamu pergi ke tepian danau.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Towjatuwa",
-                    text: "Jadi aku harus bagaimana nini? tanya Towjatuwa gelisah.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Untuk membantu istrimu, aku memintamu untuk berlari di sungai Tami dan jangan pernah berhenti. Kemudian jalan Sungai Tami bergerak maju mempercepat aliran airnya untuk membantu kelahiran sang bayi buaya. Towjatuwa pun berlari sepanjang sungai itu, kakinya memercikkan air ke segala penjuru. Setelah sekian lama berhasil, buaya Walowue melahirkan seekor bayi buaya dengan selamat.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Walowue",
-                    text: "Tunggu anak mudaku! si buaya besar berkata. Kau lah hai buaya, yang berterima kasih padamu!",
-                },
-                {
-                    type: "paragraph",
-                    text: "Buaya Walowue memandang Towjatuwa dengan mata berkaca-kaca. Towjatuwa, anakku. Namaku Walowue, buaya penguasa Sungai Tami. Aku berterima kasih karena kamu telah menolong bayiku yang baru lahir dan membantuku melewati proses kelahiran yang berat ini. Kamu adalah manusia pertama yang berani membantu dan memperlakukan kami dengan baik.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Walowue",
-                    text: "Baiklah aku akan menolongmu! Towjatuwa pun mengangkat tubuh besar yang menggelembung penuh buaya yang hendak bergolak, bergerak bergulir.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Walowue",
-                    text: "Tunggu dulu mudaku, kau hendak menikahi lagi terburu-buru!",
-                },
-                { type: "divider" },
-                {
-                    type: "paragraph",
-                    text: "Kemudian Walowue memandang kepada yang menjaring menitip berharap-harap. Ia mendorong Towjatuwa bahwa ia tunggu di sana dan membantu mendirikan istri Towjatuwa. Walowue di buaya pun bergarak membantunya membawa serang lalat mencari ramput baru. Mencari serang ramput di di sungai baru maka, Towjatuwa ikut membawa serang buaya itu menghembuskan buaya kepada ramputnya buaya ini pun bergolak barong-barong bergelung.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Walowue",
-                    text: "Engkau pujiansh dahulu Towjatuwa, jangan kamu lalai atas masalahmu. Aku berjanji akan kemuliamu nanti makan untuk membantu istrimu.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Terimakasiih Walowue telah melahirkan bayimu. Towjatuwa pun segera pulang setelah ia tahu ia memang harus harus pulang ke keluarganya dengan hati lega.",
+                    text: "Nenek dukun itu bergegas menyiapkan peralatan persalinan dan menyusul ke rumah Towjatuwa. Setelah memeriksa keadaan sang istri, ia menyimpulkan bahwa bayi dalam kandungan terlalu besar sehingga sulit keluar. Untuk membantu proses persalinan, nenek dukun meminta Towjatuwa mencari rumput air di Sungai Tami yang letaknya tak jauh dari rumah mereka.",
                 },
                 {
                     type: "heading",
-                    text: "Warisan Persahabatan yang Abadi",
+                    text: "Pertemuan dengan Buaya Sakti",
                 },
                 {
                     type: "paragraph",
-                    text: "Malam harinya Walowue mendapat jantungnya menjadi angin di rumah tamu. Di dalam mimpinya ia bertemu dengan roh Towjatuwa yang jauh pergi. Towjatuwa pun membantu lagi. Walowue membantu Towjatuwa menemukan istri baru yang mencari ramput. Ia berjanji untuk membantu Towjatuwa mencari dan membantu proses kelahiran.",
+                    text: "Di tengah pencariannya di tepi Sungai Tami, Towjatuwa dikejutkan oleh kemunculan seekor buaya raksasa yang tubuhnya ditumbuhi bulu menyerupai bulu burung kasuari. Ketakutan, ia pun berlari. Namun buaya itu memanggilnya dan berbicara layaknya manusia. Buaya itu memperkenalkan diri sebagai Watuwe, penguasa Sungai Tami, yang tengah terhimpit sebongkah batu besar di ekornya dan meminta bantuan Towjatuwa untuk mengangkatnya.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Watuwe",
+                    text: "Tolong aku, wahai manusia! Angkatlah batu besar yang menindih ekorku ini.",
                 },
                 {
                     type: "paragraph",
-                    text: "Towjatuwa, sebagai bentuk terima kasihnya kepada Walowue, telah menjadi pembawa bayi. Aku berjanji kepada kamu, keliling membantu dan berburu. Dan aku nanti sudah sudah sudah mulai sudah cukup panjang. Ia kemudian mencoba bekerja diam menjaga buah buaya Sungai Tami hingga sekarang. Towjatuwa berhasil menaruh serang anak lalat bagi laki-laki itu. Towjatuwa memberi nama anak laki-lakinya itu sebagai Walowue, atas jasanya buaya sakti Walowue.",
+                    text: "Tanpa ragu, Towjatuwa menolong Watuwe mengangkat batu tersebut. Ketika hendak buru-buru pergi, Watuwe menahannya dan bertanya alasan ketergesaannya. Setelah mendengar cerita tentang istri Towjatuwa yang kesulitan melahirkan, Watuwe berjanji akan membalas kebaikan itu. Ia meminta Towjatuwa pulang lebih dulu dan berjanji akan datang ke rumahnya malam itu juga.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Pertolongan dan Perjanjian Leluhur",
                 },
                 {
                     type: "paragraph",
-                    text: "Towjatuwa, aku berterima kasih. Aku memang harus pulang. Namun, sebelum pergi ke kalian, tolong jangan membantu dan berburu lagi. Aku nanti sudah sudah sudah pasti sudah mati satu satu. Ia memberi nasihat baik diri sendiri semua pasti namun akan terus mau pergi.",
+                    text: "Malam harinya, Watuwe benar-benar datang menepati janjinya. Dengan kekuatan saktinya, ia membantu proses kelahiran hingga akhirnya bayi laki-laki yang sehat lahir dengan selamat. Bayi itu diberi nama Narrowra. Towjatuwa dan istrinya mengucapkan terima kasih atas jasa besar Watuwe.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Watuwe",
+                    text: "Jangan pernah memburu maupun memakan buaya-buaya di Sungai Tami. Jika pesan ini dilanggar, keturunanmu akan binasa satu demi satu. Dan jika suatu saat aku mati, bawalah kantung air seniku ke Gunung Sankria.",
                 },
                 {
                     type: "paragraph",
-                    text: "Sejak saat itu Towjatuwa beserta keturunannya selalu menjaga buaya-buaya Sungai Tami hingga sekarang.",
+                    text: "Sejak peristiwa itu, Towjatuwa beserta seluruh keturunannya senantiasa menjaga dan menghormati buaya-buaya penghuni Sungai Tami hingga sekarang, sebagai wujud bakti atas balas budi yang pernah diberikan Watuwe.",
                 },
             ],
         },
@@ -137,53 +100,61 @@ export const STORIES: Story[] = [
         slug: "legenda-batu-keramat",
         title: "Legenda Batu Keramat",
         excerpt:
-            "Di balik batu-batu besar yang tersebar di pegunungan Papua, tersimpan legenda tentang roh leluhur yang menjaga keseimbangan alam dan kehidupan suku-suku di sekitarnya.",
+            "Kisah ajaib penemuan batu keramat penghasil api di Kepulauan Yapen oleh Irimiami dan Isoray yang menjadi awal mula tradisi bersyukur tahunan.",
         image: "/img/stories/2.png",
         readTime: "6 menit",
-        origin: "Lembah Baliem",
+        origin: "Kepulauan Yapen",
         href: "/cerita-rakyat/legenda-batu-keramat",
         accentColor: "#CFC154",
         content: {
             openingQuote:
-                "Batu-batu itu bukan sekadar bebatuan. Di dalamnya tinggal roh para leluhur yang terus menjaga lembah ini dari generasi ke generasi.",
+                "Alam menyimpan keajaiban yang patut dijaga dan dihormati, bukan dieksploitasi. Kebersamaan dalam melestarikan warisan leluhur adalah wujud rasa syukur tertinggi.",
             youtubeId: "dQw4w9WgXcQ",
             videoTitle: "Legenda Batu Keramat",
             videoDescription:
-                "Jelajahi misteri batu-batu keramat yang tersebar di Lembah Baliem, Papua — simbol penjagaan para leluhur yang masih dipercaya hingga kini.",
+                "Saksikan legenda batu keramat Kepulauan Yapen yang menjadi warisan spiritual dan tradisi kebersamaan masyarakat Papua.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Di jantung Pegunungan Tengah Papua, di antara lembah yang dipeluk kabut dan sungai-sungai yang menyanyi di antara batu, berdiri kelompok batu-batu raksasa yang tak seorang pun berani menyentuhnya sembarangan. Masyarakat Dani menyebutnya Wam Hubi, batu penjaga.",
+                    type: "heading",
+                    text: "Amarah Sang Dewa Iriwonawani",
                 },
                 {
                     type: "paragraph",
-                    text: "Menurut cerita tertua yang disampaikan oleh para ondoafi, batu-batu itu dulunya adalah para tetua suku yang merelakan diri berubah wujud demi menjaga lembah dari segala ancaman. Mereka berubah pada malam ketika bintang-bintang jatuh dan langit menjadi merah darah.",
+                    text: "Di Gunung Kamboi Rama, Kepulauan Yapen, Papua, terdapat dua desa kecil yang bertetangga: Desa Kamboi Rama, tempat manusia bermukim, dan Desa Aroempi, yang dipenuhi tanaman sagu milik tuan tanah bergelar Iriwonawani. Setiap hari, kaum lelaki Desa Kamboi Rama pergi berburu, sementara para wanitanya mencari sagu di Desa Aroempi—tak lupa melakukan pemujaan kepada Dewa Iriwonawani sebelum mengambil hasil buminya.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Karena sagu di Desa Aroempi terus-menerus diambil tanpa henti, persediaannya kian menipis. Dewa Iriwonawani murka dan memindahkan seluruh tanaman sagunya ke tempat lain. Ketakutan, penduduk Desa Kamboi Rama pun mengungsi ke daerah pantai atas perintah kepala suku dan mendirikan permukiman baru bernama Desa Randuayaivi. Namun, ada satu pasangan yang memilih bertahan: Irimiami dan istrinya, Isoray.",
+                },
+                {
+                    type: "heading",
+                    text: "Batu yang Mengeluarkan Api",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu hari sepulang dari ladang, Isoray duduk beristirahat di atas sebuah batu besar dan tiba-tiba menjerit kepanasan. Irimiami yang penasaran ikut menyentuh batu itu dan merasakan panas yang sama. Untuk membuktikannya, ia meletakkan sepotong daging rusa di atas batu tersebut—dan tak lama kemudian, daging itu matang dengan sendirinya.",
                 },
                 {
                     type: "dialogue",
-                    speaker: "Tetua Suku",
-                    text: "Kami tidak pergi. Kami hanya berubah rupa. Selama batu ini berdiri, lembah ini akan aman.",
+                    speaker: "Isoray",
+                    text: "Aduh, panas sekali! Batu ini mengeluarkan energi panas yang luar biasa!",
                 },
                 {
                     type: "paragraph",
-                    text: "Dikisahkan bahwa seorang pemburu bernama Ilaga pernah mencoba mengambil salah satu batu untuk dijadikan fondasi rumahnya. Malam itu juga ia bermimpi buruk — kawanan roh tua mengerumuninya dan berkata dengan suara seperti guntur.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Ilaga terbangun dalam keringat dingin. Ia menaruh kembali batu itu tepat di tempatnya. Sejak saat itu, ia menjadi penjaga batu keramat dan mengajarkan anak cucunya untuk melakukan hal yang sama setiap musim panen.",
+                    text: "Keesokan harinya, mereka mencoba lagi dengan meletakkan rumput dan dedaunan kering di atas batu. Kali ini, dedaunan tersebut justru terbakar hingga apinya membesar dan terlihat jelas dari Desa Randuayaivi di tepi pantai. Warga pun berbondong-bondong naik untuk memadamkan kebakaran itu bersama-sama.",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Tradisi yang Terus Hidup",
+                    text: "Batu Keramat yang Dihormati",
                 },
                 {
                     type: "paragraph",
-                    text: "Hingga kini, masyarakat di sekitar Lembah Baliem masih melakukan ritual tahunan di dekat batu-batu itu. Mereka membawa persembahan berupa buah-buahan, daun sirih, dan kadang-kadang bulu burung cendrawasih, sambil menyanyikan lagu-lagu kuno yang konon dapat dimengerti oleh roh di dalam batu.",
+                    text: "Setelah api berhasil dipadamkan, Irimiami dan Isoray menceritakan keajaiban batu tersebut kepada seluruh warga. Ketika dicoba kembali, batu itu benar-benar mampu memasak daging tanpa api dari luar. Melihat keajaiban ini, Irimiami dan Isoray mengusulkan agar diadakan pesta adat setahun sekali di sekitar batu tersebut—usul yang disetujui oleh ketua adat Desa Randuayaivi.",
                 },
                 {
                     type: "paragraph",
-                    text: "Para antropolog yang mengunjungi daerah ini sering terpesona oleh betapa kuatnya kepercayaan ini bertahan di tengah modernisasi. Bagi masyarakat setempat, batu-batu itu bukan takhayul — mereka adalah sejarah yang berdiri tegak, mengingatkan bahwa ada sesuatu yang lebih besar dari sekadar kehidupan manusia.",
+                    text: "Sejak saat itu, batu tersebut dianggap sebagai Batu Keramat oleh masyarakat Kepulauan Yapen. Setiap tahun, warga berkumpul membawa aneka makanan untuk dimasak bersama di sekitar batu itu sembari mempererat tali persaudaraan—sebuah tradisi yang masih lestari hingga kini.",
                 },
             ],
         },
@@ -193,58 +164,69 @@ export const STORIES: Story[] = [
         slug: "asal-mula-burung-cendrawasih",
         title: "Asal Mula Burung Cendrawasih",
         excerpt:
-            "Mengapa burung surga Papua memiliki bulu yang demikian memukau? Sebuah mitos tentang seorang putri dewa yang turun ke bumi dan berubah menjadi burung paling cantik di dunia.",
+            "Kisah Kweiya dari Fak-Fak yang berubah menjadi burung indah Cenderawasih akibat iri hati saudara-saudaranya, melahirkan burung surga kebanggaan Papua.",
         image: "/img/stories/3.png",
-        readTime: "10 menit",
-        origin: "Raja Ampat",
+        readTime: "8 menit",
+        origin: "Fakfak",
         href: "/cerita-rakyat/asal-mula-burung-cendrawasih",
         accentColor: "#F59E0B",
         content: {
             openingQuote:
-                "Tidak ada yang kebetulan di alam Papua. Setiap warna, setiap bunyi, setiap gerakan adalah cerita yang belum selesai ditulis oleh para dewa.",
+                "Keindahan sejati lahir dari ketulusan dan kerja keras. Sebaliknya, rasa iri dan permusuhan hanya membawa penyesalan mendalam.",
             youtubeId: "dQw4w9WgXcQ",
-            videoTitle: "Cendrawasih: Burung Surga Papua",
+            videoTitle: "Asal Mula Burung Cendrawasih",
             videoDescription:
-                "Kisah ajaib tentang asal-usul burung cendrawasih, sang burung surga Papua yang bulu-bulunya menjadi kebanggaan dan simbol keindahan tanah Papua.",
+                "Kisah ajaib tentang asal-usul burung cenderawasih di Fak-Fak, simbol keindahan dan kebanggaan tanah Papua.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Jauh sebelum Raja Ampat dikenal oleh dunia, ketika lautan masih berbicara dengan bahasa para dewa dan hutan masih menyimpan rahasia yang belum pernah terjamah manusia, hiduplah seorang putri kahyangan bernama Cenderawasi. Ia adalah anak bungsu dari Dewa Penjaga Timur, makhluk agung yang bertahta di balik awan keemasan.",
+                    type: "heading",
+                    text: "Buah Pandan Ajaib Bumberi",
                 },
                 {
                     type: "paragraph",
-                    text: "Suatu hari, Cenderawasi melanggar larangan ayahnya. Ia turun ke bumi untuk melihat keindahan yang selalu ia impikan. Bumi itu begitu indah — lautan biru, karang warna-warni, dan manusia yang menari di tepi pantai sambil menyanyikan lagu-lagu gembira.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Dewa Penjaga Timur",
-                    text: "Anakku, kamu telah melanggar batas antara langit dan bumi. Kamu harus menerima konsekuensinya.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Cenderawasi",
-                    text: "Ayah, izinkan aku tinggal di sini. Bumi ini begitu indah dan aku ingin menjaganya seperti ayah menjaga langit.",
+                    text: "Di pegunungan Bumberi, wilayah Fak-Fak, hiduplah seorang perempuan tua bersama seekor anjing betina kesayangannya. Keduanya menggantungkan hidup dari hutan, mencari buah-buahan dan kuskus setiap hari untuk bertahan hidup.",
                 },
                 {
                     type: "paragraph",
-                    text: "Sang Dewa terdiam lama. Akhirnya, dengan hati yang berat namun penuh kasih, ia berkata: 'Baiklah. Tapi kamu tidak bisa tetap menjadi manusia. Kamu akan menjadi penjaga bumi dalam wujud yang berbeda.'",
+                    text: "Suatu ketika, dalam perjalanan mencari makan yang cukup panjang, anjing itu kehabisan tenaga hingga mereka berhenti di sebuah tempat yang dipenuhi pohon pandan berbuah lebat. Perempuan tua itu memberikan buah tersebut kepada anjingnya yang kelaparan. Tak disangka, tak lama setelah memakan buah itu, perut sang anjing membesar dan ia melahirkan seekor anak anjing. Penasaran, perempuan tua itu turut memakan buah yang sama—dan mengalami hal serupa: ia melahirkan seorang bayi laki-laki yang diberi nama Kweiya.",
+                },
+                {
+                    type: "heading",
+                    text: "Kweiya Tumbuh Dewasa dan Kapak Besi",
                 },
                 {
                     type: "paragraph",
-                    text: "Maka dalam sekejap, Cenderawasi berubah menjadi seekor burung. Tubuhnya dibalut bulu-bulu yang memancarkan warna-warna langit — merah saga, kuning keemasan, hijau zamrud, dan biru laut dalam. Setiap bulu adalah warna dari kenangan langit yang ia bawa serta.",
+                    text: "Kweiya tumbuh menjadi pemuda yang tekun membuka hutan untuk berkebun, meski hanya berbekal kapak batu sederhana. Setiap hari ia dan ibunya membakar tumpukan daun dari pohon yang ditebang, hingga asapnya mengepul tinggi ke langit tanpa mereka sadari telah menarik perhatian orang dari kejauhan.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Seorang pria tua yang sedang memancing di laut melihat kepulan asap misterius itu dan memutuskan untuk mencari sumbernya. Setelah berjalan kaki selama seminggu, ia akhirnya tiba dan bertemu Kweiya. Dengan ramah, pria itu memberikan sebuah kapak besi—alat yang jauh lebih tajam dari kapak batu milik Kweiya—untuk membantunya menebang pohon.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Kweiya, yang ingin memperkenalkan pria itu kepada ibunya, menyembunyikannya di dalam bungkusan batang tebu. Ketika sang ibu diminta mengambilkan tebu untuk melepas dahaga Kweiya, ia terkejut mendapati seorang pria di dalam bungkusan itu. Setelah dijelaskan bahwa pria itulah yang memberikan kapak besi yang begitu berguna, sang ibu pun menerimanya dan mereka bertiga hidup bersama. Dari kebersamaan itu, lahirlah beberapa anak lain yang menjadi adik-adik tiri Kweiya.",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Simbol Keindahan Tanah Papua",
+                    text: "Penyesalan dan Perubahan Wujud",
                 },
                 {
                     type: "paragraph",
-                    text: "Sejak hari itu, burung cendrawasih menjadi simbol Papua. Ketika melihat burung itu menari di antara pepohonan, masyarakat Papua percaya bahwa mereka sedang menyaksikan sebuah tarian persembahan kepada dewa-dewa langit — sebuah pengingat bahwa kecantikan sejati adalah bentuk kasih sayang yang tak pernah pupus.",
+                    text: "Seiring waktu, hubungan mereka merenggang karena rasa iri para adik tiri terhadap Kweiya. Suatu hari ketika kedua orang tua sedang mencari ikan, para adik tirinya mengeroyok dan melukai Kweiya. Terluka dan kesal, Kweiya bersembunyi sambil meminta tali dari kulit pohon genemo.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Kweiya",
+                    text: "Ek, ek, ek!",
                 },
                 {
                     type: "paragraph",
-                    text: "Itulah mengapa hingga hari ini, bulu cendrawasih dipakai dalam upacara adat yang paling sakral. Bukan sebagai hiasan semata, melainkan sebagai penghormatan kepada Cenderawasi, putri yang memilih bumi daripada langit — dan mengabadikan kedua keindahan itu dalam setiap helai bulunya.",
+                    text: "Ketika ibunya pulang dan memanggil-manggil namanya, yang terdengar bukan lagi suara manusia, melainkan bunyi 'ek, ek, ek!'—Kweiya telah berubah wujud menjadi seekor burung ajaib dan melompat dari atap rumah menuju dahan pohon.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Sang ibu yang sedih mengikuti jejak anaknya dan turut berubah wujud menjadi burung, lalu bertengger bersama Kweiya di dahan yang tinggi sambil berkicau riang. Sejak itulah burung cenderawasih muncul di bumi, dengan perbedaan wujud antara jantan (disebut siangga) dan betina (disebut hanggam tombor) dalam bahasa Iha di daerah Onin, Fak-Fak. Adik-adik tirinya yang menyesal kemudian saling melempar abu tungku hingga wajah mereka berubah warna, lalu ikut berubah menjadi burung-burung lain yang tersebar di hutan.",
                 },
             ],
         },
@@ -254,67 +236,69 @@ export const STORIES: Story[] = [
         slug: "biwar-sang-penakluk-naga",
         title: "Biwar Sang Penakluk Naga",
         excerpt:
-            "Epik keberanian Biwar, pahlawan muda dari pesisir selatan Papua, yang menantang naga laut raksasa demi menyelamatkan ibunya dan mengembalikan kedamaian bagi desanya.",
+            "Kisah pahlawan muda Biwar dari Mimika yang membalaskan dendam keluarganya dan menaklukkan naga raksasa pemangsa perahu di sungai besar.",
         image: "/img/stories/4.png",
-        readTime: "12 menit",
-        origin: "Papua Selatan",
+        readTime: "8 menit",
+        origin: "Mimika",
         href: "/cerita-rakyat/biwar-sang-penakluk-naga",
         accentColor: "#60A5FA",
         content: {
             openingQuote:
-                "Keberanian bukan berarti tidak takut. Keberanian adalah melangkah maju meskipun lutut gemetar dan dada berdegup kencang.",
+                "Keberanian dan ketekunan mampu mengalahkan rintangan yang tampak mustahil sekalipun. Keadilan dan kegigihan adalah kunci melindungi orang-orang yang kita cintai.",
             youtubeId: "dQw4w9WgXcQ",
-            videoTitle: "Biwar: Pahlawan Papua",
+            videoTitle: "Biwar Sang Penakluk Naga",
             videoDescription:
-                "Epik keberanian Biwar dalam menghadapi naga laut raksasa — kisah seorang putra yang berjuang demi ibu dan desanya.",
+                "Saksikan epik keberanian Biwar menaklukkan naga raksasa demi membela ibu dan desanya di Mimika, Papua.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Di pesisir selatan Papua, di mana ombak Laut Arafura menghantam batu karang dengan garang dan angin selatan membawa bau garam yang asin, lahirlah seorang bayi yang diberi nama Biwar. Ayahnya adalah nelayan pemberani yang hilang di laut ketika Biwar masih dalam kandungan. Ibunya, Nakari, membesarkan Biwar seorang diri.",
+                    type: "heading",
+                    text: "Tragedi Naga Sungai Besar",
                 },
                 {
                     type: "paragraph",
-                    text: "Ketika Biwar beranjak remaja, musibah besar melanda desa mereka. Seekor naga laut raksasa bernama Dawur muncul dari kedalaman samudra dan mulai meneror pesisir. Ia membakar perahu nelayan, menghancurkan rumah-rumah di tepian pantai, dan menculik siapa saja yang ia temui.",
+                    text: "Di sebuah kampung kecil di Mimika, kehidupan berlangsung damai. Setiap hari, para lelaki mencari pohon sagu di hutan, sementara para wanita mengolah sarinya menjadi santapan. Suatu hari, ketika persediaan sagu menipis, rombongan warga—lelaki dan beberapa wanita—menyeberangi sungai besar dengan sepuluh perahu kecil untuk mencari pohon sagu baru.",
                 },
                 {
                     type: "paragraph",
-                    text: "Ibunya, Nakari, adalah salah satu yang diculik.",
+                    text: "Di tengah penyeberangan, seekor naga raksasa muncul dan mengamuk, menghancurkan seluruh perahu mereka. Hampir semua penumpang tewas, kecuali seorang wanita hamil yang berhasil melarikan diri ke dalam hutan dan bersembunyi di sebuah gua.",
                 },
                 {
-                    type: "dialogue",
-                    speaker: "Biwar",
-                    text: "Aku akan pergi mencari ibu. Tidak ada yang bisa menghentikanku.",
+                    type: "heading",
+                    text: "Masa Kecil Biwar dan Terungkapnya Rahasia",
                 },
                 {
-                    type: "dialogue",
-                    speaker: "Tetua Desa",
-                    text: "Anak muda, Dawur adalah naga tertua di lautan ini. Kamu hanya akan sia-sia.",
+                    type: "paragraph",
+                    text: "Karena tak mungkin kembali ke kampung, wanita itu memilih bertahan hidup seorang diri di hutan. Beberapa bulan kemudian, ia melahirkan seorang bayi laki-laki yang diberi nama Biwar. Sang ibu mengajarinya berburu, memanah, dan bercocok tanam ubi, hingga mereka mampu membangun rumah honai sebagai tempat tinggal.",
                 },
                 {
-                    type: "dialogue",
-                    speaker: "Biwar",
-                    text: "Maka biarlah aku mati sia-sia dalam usaha. Lebih baik itu daripada hidup dalam kepengecutan.",
+                    type: "paragraph",
+                    text: "Pada suatu pagi, Biwar meminta izin berburu, namun ibunya berpesan agar ia tidak mendekati sungai besar. Larangan itu justru membuat Biwar penasaran. Diam-diam, ia mendekati sungai tersebut dan menemukan ikan-ikan berukuran luar biasa besar, lalu menangkap beberapa ekor untuk dibawa pulang.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Melihat hasil tangkapan yang tak biasa, sang ibu curiga dan akhirnya menceritakan tragedi yang menimpa keluarga dan warga kampung bertahun-tahun silam—bahwa ayah Biwar tewas dibunuh oleh naga raksasa penghuni sungai. Mendengar kisah itu, amarah Biwar memuncak dan ia bertekad membalaskan dendam.",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Pertempuran di Ujung Samudra",
+                    text: "Pertarungan Cerdik Tepi Sungai",
                 },
                 {
                     type: "paragraph",
-                    text: "Biwar berlayar selama tujuh hari tujuh malam, dipandu oleh bintang-bintang yang bercahaya dan seekor lumba-lumba putih yang konon adalah utusan roh laut baik. Di hari kedelapan, ia menemukan gua bawah laut tempat Dawur tinggal.",
+                    text: "Dengan membawa panah dan tombak, Biwar mendatangi sarang sang naga dan menantangnya keluar. Pertarungan sengit pun terjadi—namun senjata Biwar tak mampu melukai tubuh naga yang keras, sementara semburan api sang naga nyaris membakarnya berkali-kali.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Biwar",
+                    text: "Keluar kau naga raksasa! Hadapi aku putra dari nelayan yang telah kau binasakan!",
                 },
                 {
                     type: "paragraph",
-                    text: "Pertempuran berlangsung sengit. Dawur menyemburkan api, namun Biwar berlindung di balik perisai karang. Biwar menyerang dengan tombak sakti yang ia warisi dari ayahnya — tombak yang terbuat dari tulang paus purba dan dihiasi bulu cendrawasih.",
+                    text: "Menyadari senjatanya tak berguna, Biwar mengubah strategi. Ia berlari menuju tebing di tepi sungai, dan tepat ketika naga bersiap menyemburkan api terbesarnya, Biwar mendorong sebongkah batu besar ke arah kepala sang naga. Makhluk itu pun tewas seketika dan tubuhnya hanyut terbawa arus sungai.",
                 },
                 {
                     type: "paragraph",
-                    text: "Pada akhirnya, keberanian dan kecerdikan mengalahkan kekuatan brute. Biwar berhasil menancapkan tombaknya tepat di jantung Dawur. Naga itu jatuh ke dasar samudra, dan gelombang besar melanda seluruh pesisir sebagai pertanda kematiannya.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Biwar menemukan ibunya selamat di sudut terdalam gua itu. Mereka kembali ke desa sebagai pahlawan, dan nama Biwar pun diukir dalam ingatan masyarakat Papua Selatan hingga selamanya.",
+                    text: "Biwar kembali kepada ibunya yang telah menunggu sambil berdoa. Dengan sungai yang kini aman, mereka berdua memutuskan pulang ke kampung halaman. Warga menyambut mereka dengan sukacita, dan sejak saat itu, nama Biwar Sang Penakluk Naga dikenal luas sebagai simbol keberanian generasi muda Papua.",
                 },
             ],
         },
@@ -324,67 +308,64 @@ export const STORIES: Story[] = [
         slug: "legenda-cabo-pui-dan-batu-ajaib",
         title: "Legenda Cabo Pui dan Batu Ajaib",
         excerpt:
-            "Seorang dukun tua bernama Cabo Pui menemukan batu yang memiliki kekuatan magis. Batu itu mampu menyembuhkan penyakit, namun juga membawa bencana bila disalahgunakan.",
+            "Pengorbanan tulus pemuda Cabo Pui dari Kayo Batu, Jayapura, yang mencari batu ajaib demi mengembalikan kemakmuran dan kerajinan gerabah kampungnya.",
         image: "/img/stories/5.png",
         readTime: "7 menit",
-        origin: "Paniai",
+        origin: "Jayapura",
         href: "/cerita-rakyat/legenda-cabo-pui-dan-batu-ajaib",
         accentColor: "#A78BFA",
         content: {
             openingQuote:
-                "Kekuatan sejati bukan terletak pada apa yang kamu miliki, melainkan pada kebijaksanaan dalam menggunakannya.",
+                "Terkadang, kebaikan besar menuntut pengorbanan yang tulus. Kesetiaan dan kepekaan terhadap petunjuk alam akan membawa terang dalam masa sulit.",
             youtubeId: "dQw4w9WgXcQ",
-            videoTitle: "Cabo Pui dan Batu Ajaib",
+            videoTitle: "Legenda Cabo Pui dan Batu Ajaib",
             videoDescription:
-                "Kisah kebijaksanaan dan konsekuensi dari dukun tua Paniai yang menemukan batu sakti — pelajaran tentang tanggung jawab dan keseimbangan.",
+                "Kisah pengorbanan suci Cabo Pui dari Kayo Batu Jayapura demi kelestarian kerajinan gerabah dan kemakmuran masyarakatnya.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Di tepi Danau Paniai yang tenang dan dingin, di mana kabut pagi selalu menyelimuti permukaan air seperti selendang sutra putih, tinggallah seorang dukun tua bernama Cabo Pui. Ia adalah orang paling dihormati di sekitar danau itu — bukan karena kekayaan atau kekuasaan, melainkan karena kebijaksanaannya yang telah terbukti melewati banyak musim.",
+                    type: "heading",
+                    text: "Mimpi di Kampung Kayo Batu",
                 },
                 {
                     type: "paragraph",
-                    text: "Suatu pagi yang dingin, ketika Cabo Pui sedang berjalan di tepi danau mencari tanaman obat, kakinya tersandung sebuah batu kecil yang berkilau kemerahan. Batu itu terasa hangat di tangannya, padahal udara pagi itu sangat dingin.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Cabo Pui",
-                    text: "Batu apa ini? Mengapa terasa seperti memiliki nyawa sendiri?",
+                    text: "Di Kampung Kayo Batu, Teluk Imbi, Jayapura, penduduknya dikenal terampil membuat gerabah dari tanah liat yang disebut sempe. Namun, tanah subur kampung itu perlahan menjadi gersang, membuat hasil pertanian dan tangkapan ikan kian berkurang. Warga bahkan sering menahan lapar meski telah menggelar berbagai ritual persembahan kepada para dewa.",
                 },
                 {
                     type: "paragraph",
-                    text: "Malam itu, dalam mimpinya, roh danau berbicara kepadanya: 'Batu itu adalah Wagem, batu penyeimbang. Ia bisa menyembuhkan penyakit yang tidak bisa disembuhkan obat biasa. Tapi ingat — kekuatannya hanya akan bekerja untuk kebaikan bersama, bukan untuk kepentingan pribadi.'",
+                    text: "Di tengah keprihatinan itu, seorang pemuda bernama Cabo Pui bermimpi tentang sebuah batu pipih yang indah. Dalam mimpinya, ia bertemu seorang perempuan yang memiliki batu serupa, dan bersama-sama mereka membuat gerabah yang membawa kemakmuran bagi kampung. Yakin mimpi itu adalah pertanda, Cabo bertekad mencari batu tersebut—seorang diri, ditemani anjing setianya, Abu. Sebelum berangkat, ia berpesan kepada saudaranya, Tiaghe, untuk memperhatikan tanda-tanda alam dan menyusul ke Tanjung Suaja jika pertanda itu muncul.",
+                },
+                {
+                    type: "heading",
+                    text: "Perjalanan Menuju Kampung Ormu",
                 },
                 {
                     type: "paragraph",
-                    text: "Cabo Pui menggunakan Wagem dengan bijak selama bertahun-tahun. Ia menyembuhkan anak-anak yang sakit keras, membantu perempuan yang sulit melahirkan, dan menenangkan jiwa-jiwa yang resah. Nama Danau Paniai makin dikenal sebagai tempat yang diberkati.",
+                    text: "Cabo dan Abu menyusuri Sungai Numbai, mendaki bukit, dan singgah di beberapa kampung dalam perjalanannya. Di Kampung Abar, ia bertemu seorang warga bernama Abo yang menjamunya dengan ramah, namun tetua adat setempat tidak mengizinkan Cabo ikut membuat sempe di sana. Tanpa berkecil hati, Cabo melanjutkan perjalanan melewati bukit terjal menuju wilayah utara.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Setelah melewati kabut tebal, Cabo tiba di Kampung Ormu dan bertemu pemimpinnya, Sirwai. Ia menceritakan mimpi dan tujuannya kepada Sirwai, yang kemudian mengajaknya menyusuri jalan menuju tempat batu itu berada. Sirwai menyambutnya layaknya saudara dan menjamu Cabo bersama para lelaki Kampung Ormu.",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Ketika Keserakahan Datang",
+                    text: "Pengorbanan Suci Tanjung Suaja",
                 },
                 {
                     type: "paragraph",
-                    text: "Namun suatu hari, seorang saudagar kaya dari jauh mendengar tentang Wagem. Ia menawarkan harta berlimpah kepada Cabo Pui dengan syarat batu itu diberikan kepadanya untuk memperkaya diri sendiri.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Saudagar",
-                    text: "Aku akan memberikanmu emas sebanyak yang bisa kamu angkut. Berikan batu itu padaku.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Cabo Pui",
-                    text: "Batu ini bukan milikku untuk dijual. Ia adalah titipan alam untuk semua orang, bukan untuk satu orang yang serakah.",
+                    text: "Sebelum Cabo pulang, Sirwai mengungkapkan bahwa batu yang diimpikannya telah ada di dalam nokennya—namun batu itu memiliki kekuatan gaib yang menuntut pengorbanan besar dari Cabo demi kemakmuran kampungnya. Meski bingung, Cabo memantapkan hati untuk menerima takdir itu demi kebahagiaan warga Kayo Batu.",
                 },
                 {
                     type: "paragraph",
-                    text: "Saudagar itu kemudian mencuri Wagem di malam hari. Namun esok paginya, ia ditemukan pingsan di tepi danau. Batu itu kembali ke tempat Cabo Pui menyimpannya, seolah-olah ia berjalan sendiri. Dan sejak hari itu, tak ada lagi yang berani mencoba mengambilnya secara paksa.",
+                    text: "Ditemani Abu, Cabo berlayar menembus gelapnya malam hingga tiba di Tanjung Suaja. Ia membakar perahunya, membersihkan diri di laut, lalu mendaki puncak bukit. Di sanalah ia merasakan energi luar biasa mengalir dalam tubuhnya—sebelum akhirnya tubuh Cabo dan Abu terjatuh ke dalam sebuah celah yang seketika menutup, menelan mereka berdua untuk selamanya.",
                 },
                 {
                     type: "paragraph",
-                    text: "Cabo Pui mewariskan Wagem kepada murid-muridnya dengan satu pesan: 'Jaga ia bukan sebagai kekuatan, melainkan sebagai tanggung jawab.' Dan hingga hari ini, generasi demi generasi dukun Paniai terus memegang pesan itu.",
+                    text: "Di kampung, Tiaghe yang tengah mencari ikan menyadari hasil tangkapannya kembali melimpah—sebuah pertanda yang membuatnya teringat pada Cabo. Merasa gelisah, ia dan istrinya menyusuri jejak Cabo hingga ke Tanjung Out, tempat mereka menemukan sisa perahu yang terbakar serta batu ajaib yang terkubur di tanah merah.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Dengan hati pilu, Tiaghe menyadari mereka tak akan pernah bertemu Cabo lagi. Mereka membawa pulang batu dan tanah merah itu, lalu membuat mangkuk kecil yang setelah dibakar menjadi kerajinan bernama kecabo. Sejak saat itu, kerajinan tanah liat khas Kayo Batu terus berkembang, dan kemakmuran kampung perlahan pulih berkat pengorbanan Cabo Pui.",
                 },
             ],
         },
@@ -394,67 +375,65 @@ export const STORIES: Story[] = [
         slug: "empat-raja",
         title: "Empat Raja",
         excerpt:
-            "Dongeng tentang empat raja yang memerintah empat penjuru tanah Papua — masing-masing menguasai lautan, gunung, hutan, dan langit — dan bagaimana persatuan mereka membentuk tanah ini.",
+            "Kisah enam telur ajaib di Sungai Waikeo yang menetas menjadi empat raja pembagi gugusan pulau megah Raja Ampat serta batu telur yang dikeramatkan.",
         image: "/img/stories/6.png",
-        readTime: "9 menit",
+        readTime: "7 menit",
         origin: "Raja Ampat",
         href: "/cerita-rakyat/empat-raja",
         accentColor: "#F87171",
         content: {
             openingQuote:
-                "Empat arah, empat kekuatan, satu jiwa. Itulah rahasia Papua — sebuah tanah yang agung karena dibentuk oleh persatuan yang tidak pernah goyah.",
+                "Bakti, ketekunan, dan rasa hormat kepada orang tua akan membuahkan hasil yang membanggakan bagi diri sendiri maupun orang banyak.",
             youtubeId: "dQw4w9WgXcQ",
             videoTitle: "Empat Raja Papua",
             videoDescription:
-                "Legenda tentang empat penguasa legendaris Papua yang bersatu membentuk kepulauan Raja Ampat — kisah tentang kekuatan persatuan.",
+                "Legenda enam telur ajaib Sungai Waikeo yang menetas menjadi Empat Raja pembawa kemakmuran di kepulauan Raja Ampat.",
             paragraphs: [
                 {
-                    type: "paragraph",
-                    text: "Pada masa ketika bumi masih muda dan lautan belum menemukan batasnya, Papua belum berbentuk seperti yang kita kenal sekarang. Ia adalah kekacauan yang indah — gunung-gunung yang baru tumbuh, sungai yang tidak tahu harus mengalir ke mana, dan hutan yang begitu lebat hingga matahari pun enggan menembusnya.",
+                    type: "heading",
+                    text: "Enam Telur di Sungai Waikeo",
                 },
                 {
                     type: "paragraph",
-                    text: "Di tengah kekacauan itu, muncullah empat makhluk agung yang kemudian dikenal sebagai Empat Raja: Uryu penguasa lautan, Betew penguasa gunung, Dorang penguasa hutan, dan Mansar penguasa langit.",
+                    text: "Di tanah Papua, hiduplah sepasang suami istri yang telah lama menanti kehadiran seorang anak. Suatu hari, saat mencari kayu bakar di tepi Sungai Waikeo, sang suami tak sengaja menemukan sebuah lubang besar berisi enam butir telur raksasa. Terkejut sekaligus penasaran, keduanya sepakat membawa pulang telur-telur itu sebagai persediaan makanan.",
                 },
                 {
                     type: "paragraph",
-                    text: "Keempatnya hidup dalam persaingan. Masing-masing merasa kekuatannya yang paling penting. Uryu menciptakan ombak yang menenggelamkan daratan. Betew menaikkan gunung-gunung sehingga menghalangi awan. Dorang menebalkan hutan hingga tidak ada makhluk yang bisa melintas. Dan Mansar menarik angin sehingga hujan tidak pernah turun.",
+                    text: "Keesokan harinya, keajaiban terjadi: telur-telur itu menetas menjadi manusia, bukan unggas. Empat menjadi anak laki-laki, satu anak perempuan, sementara satu telur lainnya mengeras menjadi batu. Kelima anak itu diberi nama War, Betani, Dohar, Mohamad, dan sang anak perempuan, Pintolee. Suami istri itu meyakini kelahiran ajaib ini sebagai jawaban doa mereka selama bertahun-tahun.",
+                },
+                {
+                    type: "heading",
+                    text: "Bakti Kelima Anak dan Kepergian Pintolee",
+                },
+                {
+                    type: "paragraph",
+                    text: "Kelima anak tumbuh menjadi sosok yang rajin dan berbakti, membantu orang tua mereka mengelola lahan pertanian hingga berkembang subur ke wilayah Teluk Kabui. Kebaikan mereka membuat seluruh warga desa turut kagum dan menaruh hormat.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di tengah kebahagiaan keluarga itu, Pintolee jatuh cinta kepada seorang pemuda yang tidak direstui keluarganya. Tetap teguh pada pilihannya, Pintolee memilih pergi meninggalkan saudara dan orang tuanya, berlayar menaiki cangkang kerang besar hingga terdampar di Pulau Numfor bersama pemuda pilihannya.",
                 },
                 { type: "divider" },
                 {
                     type: "heading",
-                    text: "Pelajaran tentang Keseimbangan",
+                    text: "Warisan Empat Pulau dan Batu Telur Raja",
+                },
+                {
+                    type: "paragraph",
+                    text: "Bertahun-tahun kemudian, ketika usianya semakin renta, sang ayah memanggil keempat putranya untuk membagikan warisan berupa satu pulau bagi masing-masing anak: War diberi Pulau Waigeo, Betani diberi Pulau Salawati, Dohar diberi Pulau Lilinta, dan Mohamad mendapatkan Pulau Waiga. Sang ayah berpesan agar mereka senantiasa menjaga pulau-pulau tersebut beserta seluruh isinya.",
                 },
                 {
                     type: "dialogue",
-                    speaker: "Uryu",
-                    text: "Lihat! Tanpa lautanku, tidak ada kehidupan di tanah ini!",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Betew",
-                    text: "Dan tanpa gunung, tidak ada hujan untuk mengisi lautanmu!",
+                    speaker: "Sang Ayah",
+                    text: "Jagalah pulau-pulau ini beserta seluruh isinya dengan ketekunan dan kebijaksanaan.",
                 },
                 {
                     type: "paragraph",
-                    text: "Argumen itu berlangsung selama seratus tahun. Sementara mereka berselisih, Papua menjadi padang yang tandus dan tak bernyawa. Makhluk-makhluk kecil mulai menghilang. Pohon-pohon layu. Lautan menjadi keruh.",
+                    text: "Keempat bersaudara itu pun menetap dan memimpin pulau masing-masing dengan penuh ketekunan dan kebijaksanaan. Hingga sang ayah wafat, mereka tetap setia menjalankan amanahnya. Pulau-pulau itu tumbuh subur dan makmur, penduduknya hidup damai—dari sinilah lahir nama Raja Ampat, yang berarti empat raja yang memerintah gugusan pulau yang sejahtera.",
                 },
                 {
                     type: "paragraph",
-                    text: "Akhirnya, seorang nenek bijak bernama Owi turun dari kahyangan. Ia membawa sebuah biji yang kecil dan sederhana.",
-                },
-                {
-                    type: "dialogue",
-                    speaker: "Owi",
-                    text: "Biji ini hanya bisa tumbuh jika keempat dari kalian bekerja bersama. Lautan menyiraminya. Gunung memberi mineralnya. Hutan menaunginya. Langit memberi cahayanya. Tidak ada satu pun yang bisa melakukannya sendiri.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Para raja saling memandang. Untuk pertama kalinya dalam seratus tahun, mereka melihat satu sama lain bukan sebagai pesaing, melainkan sebagai bagian dari keseluruhan yang sama.",
-                },
-                {
-                    type: "paragraph",
-                    text: "Mereka bekerja bersama. Biji itu tumbuh menjadi pohon raksasa yang akarnya menghunjam lautan dan pucuknya menyentuh langit. Dari pohon itulah tanah Papua terbentuk — kepulauan yang bermacam-macam namun menjadi satu, yang dikenal hingga kini sebagai Raja Empat — Raja Ampat.",
+                    text: "Sementara itu, telur yang berubah menjadi batu tetap dijaga dan diperlakukan layaknya seorang raja oleh penduduk setempat, lengkap dengan dua batu tegak atau menhir penjaga bernama Man Moro dan Man Metem di sisi pintu masuknya. Batu itu dikenal sebagai Batu Telur Raja, dan hanya boleh dilihat setahun sekali oleh keturunan raja saat upacara adat khusus.",
                 },
             ],
         },

@@ -5,70 +5,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SmoothScroll from "@/components/smooth-scroll";
 import StoriesHero from "@/components/stories/stories-hero";
-import StoryCard, { Story } from "@/components/stories/story-card";
-
-const STORIES: Story[] = [
-    {
-        id: "towjatuwa-buaya-sakti",
-        title: "Towjatuwa dan Buaya Sakti",
-        excerpt: "Kisah seorang pemuda pemberani dari tepi Danau Sentani yang bersahabat dengan seekor buaya sakti penguasa danau, mengajarkan makna kesetiaan dan perjanjian leluhur.",
-        image: "/img/stories/1.png",
-        readTime: "8 menit",
-        origin: "Sentani",
-        href: "/cerita-rakyat/towjatuwa-buaya-sakti",
-        accentColor: "#6EE7B7",
-    },
-    {
-        id: "legenda-batu-keramat",
-        title: "Legenda Batu Keramat",
-        excerpt: "Di balik batu-batu besar yang tersebar di pegunungan Papua, tersimpan legenda tentang roh leluhur yang menjaga keseimbangan alam dan kehidupan suku-suku di sekitarnya.",
-        image: "/img/stories/2.png",
-        readTime: "6 menit",
-        origin: "Lembah Baliem",
-        href: "/cerita-rakyat/legenda-batu-keramat",
-        accentColor: "#CFC154",
-    },
-    {
-        id: "asal-mula-burung-cendrawasih",
-        title: "Asal Mula Burung Cendrawasih",
-        excerpt: "Mengapa burung surga Papua memiliki bulu yang demikian memukau? Sebuah mitos tentang seorang putri dewa yang turun ke bumi dan berubah menjadi burung paling cantik di dunia.",
-        image: "/img/stories/3.png",
-        readTime: "10 menit",
-        origin: "Raja Ampat",
-        href: "/cerita-rakyat/asal-mula-burung-cendrawasih",
-        accentColor: "#F59E0B",
-    },
-    {
-        id: "biwar-sang-penakluk-naga",
-        title: "Biwar Sang Penakluk Naga",
-        excerpt: "Epik keberanian Biwar, pahlawan muda dari pesisir selatan Papua, yang menantang naga laut raksasa demi menyelamatkan ibunya dan mengembalikan kedamaian bagi desanya.",
-        image: "/img/stories/4.png",
-        readTime: "12 menit",
-        origin: "Papua Selatan",
-        href: "/cerita-rakyat/biwar-sang-penakluk-naga",
-        accentColor: "#60A5FA",
-    },
-    {
-        id: "legenda-cabo-pui-dan-batu-ajaib",
-        title: "Legenda Cabo Pui dan Batu Ajaib",
-        excerpt: "Seorang dukun tua bernama Cabo Pui menemukan batu yang memiliki kekuatan magis. Batu itu mampu menyembuhkan penyakit, namun juga membawa bencana bila disalahgunakan.",
-        image: "/img/stories/5.png",
-        readTime: "7 menit",
-        origin: "Paniai",
-        href: "/cerita-rakyat/legenda-cabo-pui-dan-batu-ajaib",
-        accentColor: "#A78BFA",
-    },
-    {
-        id: "empat-raja",
-        title: "Empat Raja",
-        excerpt: "Dongeng tentang empat raja yang memerintah empat penjuru tanah Papua — masing-masing menguasai lautan, gunung, hutan, dan langit — dan bagaimana persatuan mereka membentuk tanah ini.",
-        image: "/img/stories/6.png",
-        readTime: "9 menit",
-        origin: "Raja Ampat",
-        href: "/cerita-rakyat/empat-raja",
-        accentColor: "#F87171",
-    },
-];
+import StoryCard from "@/components/stories/story-card";
+import { STORIES } from "@/lib/stories";
 
 const eyebrowVariants: Variants = {
     hidden: { opacity: 0, y: 20 },

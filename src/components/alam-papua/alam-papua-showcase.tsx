@@ -86,20 +86,38 @@ export default function AlamPapuaShowcase() {
                 const lines = group.querySelectorAll<HTMLElement>(".alam-title-line");
                 lines.forEach((line) => {
                     gsap.set(line, {
-                        yPercent: i === 0 ? 0 : 110,
-                        opacity: i === 0 ? 1 : 0,
+                        yPercent: 110,
+                        opacity: 0,
                     });
                 });
             });
             descs.forEach((d, i) => {
-                gsap.set(d, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 30 });
+                gsap.set(d, { opacity: 0, y: 30 });
             });
             facts.forEach((f, i) => {
-                gsap.set(f, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 30 });
+                gsap.set(f, { opacity: 0, y: 30 });
             });
             images.forEach((img, i) => {
                 gsap.set(img, { opacity: i === 0 ? 1 : 0, scale: i === 0 ? 1 : 1.05 });
             });
+
+            // Delay entrance animation based on loader state
+            const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+            const enterDelay = hasLoaded ? 1.5 : 3.5; // in seconds
+
+            // Animate FIRST slide elements in
+            const firstLines = titleGroups[0].querySelectorAll<HTMLElement>(".alam-title-line");
+            firstLines.forEach((line, lineIdx) => {
+                gsap.to(line, {
+                    yPercent: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: enterDelay + (lineIdx * 0.1)
+                });
+            });
+            gsap.to(descs[0], { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: enterDelay + 0.3 });
+            gsap.to(facts[0], { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: enterDelay + 0.4 });
 
             // Color interpolation values: from papua-green (#1A4321) → papua-dark (#0F0F0F)
             const greenR = 0x1A, greenG = 0x43, greenB = 0x21;

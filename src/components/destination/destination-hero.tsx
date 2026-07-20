@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import InfiniteCarousel, { CarouselImage } from "./infinite-carousel";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 interface DestinationHeroProps {
     title: string;
@@ -17,6 +17,19 @@ export default function DestinationHero({ title, description, bgImage, carouselI
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
     const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+    
+    const [startAnimation, setStartAnimation] = useState(false);
+
+    useEffect(() => {
+        const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+        const delay = hasLoaded ? 1500 : 3500;
+
+        const timer = setTimeout(() => {
+            setStartAnimation(true);
+        }, delay);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -62,7 +75,7 @@ export default function DestinationHero({ title, description, bgImage, carouselI
             <motion.div 
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                animate={startAnimation ? "visible" : "hidden"}
                 className="relative z-10 flex flex-col items-center justify-center px-6 max-w-4xl mx-auto text-center"
             >
                 <motion.h1 
@@ -92,8 +105,8 @@ export default function DestinationHero({ title, description, bgImage, carouselI
             {/* Carousel positioned precisely on the boundary */}
             <motion.div 
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 className="absolute bottom-0 left-0 right-0 z-50 w-full translate-y-1/2"
             >
                 <InfiniteCarousel images={carouselImages} />

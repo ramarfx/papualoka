@@ -155,11 +155,19 @@ export default function Gallery() {
                                 <span className="text-white text-[11px] font-sans font-semibold tracking-wide uppercase">
                                     {item.location}
                                 </span>
-                                <Download
-                                    size={14}
-                                    className="text-white/40 group-hover:text-white transition-colors shrink-0"
-                                    strokeWidth={2}
-                                />
+                                <a
+                                    href={item.src}
+                                    download={`papualoka-${item.location.toLowerCase().replace(/ /g, "-")}.png`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="p-2 -m-2 cursor-pointer"
+                                    aria-label={`Download image of ${item.location}`}
+                                >
+                                    <Download
+                                        size={14}
+                                        className="text-white/40 group-hover:text-white hover:text-papua-yellow transition-colors shrink-0"
+                                        strokeWidth={2}
+                                    />
+                                </a>
                             </div>
                         </motion.div>
                     ))}
