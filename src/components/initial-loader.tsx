@@ -14,11 +14,11 @@ export default function InitialLoader() {
         setIsMounted(true);
         
         // Optional: Check session storage so it only runs once per session
-        // const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
-        // if (hasLoaded) {
-        //     setIsLoading(false);
-        //     return;
-        // }
+        const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+        if (hasLoaded) {
+            setIsLoading(false);
+            return;
+        }
 
         let currentProgress = 0;
         const duration = 2500; // 2.5 seconds total loading time
