@@ -156,7 +156,8 @@ export default function Navbar() {
                                 { label: "Destinasi Pilihan", href: "/home#destinasi-pilihan" },
                                 { label: "Warisan Budaya", href: "/home#warisan-budaya" },
                                 { label: "Alam Papua", href: "/alam-papua" },
-                                { label: "Cerita Rakyat", href: "/cerita-rakyat" }
+                                { label: "Cerita Rakyat", href: "/cerita-rakyat" },
+                                { label: "Tentang Kami", href: "/about" }
                             ].map((item, idx) => (
                                 <Link
                                     key={item.href}

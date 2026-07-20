@@ -42,3 +42,22 @@
     --foreground: #ededed;
   }
 }
+
+/* Credits scrollbar */
+.credits-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.credits-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.credits-scrollbar::-webkit-scrollbar-thumb {
+  background: #CFC154;
+  border-radius: 999px;
+}
+
+.credits-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d4c75a;
+}
