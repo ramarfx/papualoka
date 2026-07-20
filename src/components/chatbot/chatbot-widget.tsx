@@ -87,30 +87,26 @@ export default function ChatbotWidget() {
       {/* Floating Button */}
       <motion.button
         onClick={toggle}
-        className={`fixed bottom-6 right-4 sm:right-6 z-50 w-[56px] h-[56px] sm:w-[62px] sm:h-[62px] rounded-full flex items-center justify-center shadow-[0_4px_24px_rgba(207,193,84,.35)] cursor-pointer overflow-hidden ring-3 ring-papua-yellow/40 ${isOpen ? "bg-linear-to-br from-papua-yellow to-[#A89B32]" : "bg-papua-dark"}`}
+        className={`fixed bottom-6 right-4 sm:right-6 z-50 w-[56px] h-[56px] sm:w-[62px] sm:h-[62px] rounded-full flex items-center justify-center cursor-pointer bg-white overflow-hidden ${isOpen ? "bg-linear-to-br from-papua-yellow to-[#A89B32]" : ""}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.92 }}
         animate={
           isOpen
             ? { rotate: 0 }
             : {
-                boxShadow: [
-                  "0 4px 24px rgba(207,193,84,.35)",
-                  "0 4px 32px rgba(207,193,84,.55)",
-                  "0 4px 24px rgba(207,193,84,.35)",
-                ],
-              }
+
+            }
         }
         transition={
           isOpen
             ? { type: "spring", stiffness: 400, damping: 22 }
             : {
-                boxShadow: {
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-              }
+              boxShadow: {
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+            }
         }
         aria-label={isOpen ? "Tutup chat PapuaLoka AI" : "Buka chat PapuaLoka AI"}
       >

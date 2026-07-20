@@ -161,49 +161,6 @@ export default function StoryDetailPage({
                         )}
                     </motion.div>
 
-                    {/* ── Video / Media section ── */}
-                    {story.content.youtubeId && (
-                        <section className="bg-black/40 py-16 md:py-24">
-                            <div className="max-w-3xl mx-auto px-5 sm:px-8">
-                                <motion.div
-                                    initial={{ opacity: 0, y: 24 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.6 }}
-                                    className="text-center mb-10 md:mb-12"
-                                >
-                                    <p className="text-white/40 font-sans text-xs tracking-[0.3em] uppercase font-semibold mb-3">
-                                        Saksikan Kisahnya
-                                    </p>
-                                    <h2 className="font-heading text-white text-2xl md:text-3xl font-bold mb-4">
-                                        {story.content.videoTitle}
-                                    </h2>
-                                    {story.content.videoDescription && (
-                                        <p className="text-white/55 font-sans text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-                                            {story.content.videoDescription}
-                                        </p>
-                                    )}
-                                </motion.div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.97 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
-                                    className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-white/[0.06]"
-                                >
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${story.content.youtubeId}?rel=0&modestbranding=1`}
-                                        title={story.content.videoTitle}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="absolute inset-0 w-full h-full"
-                                    />
-                                </motion.div>
-                            </div>
-                        </section>
-                    )}
-
                     {/* ── Related stories ── */}
                     <section className="py-16 md:py-24 px-5 sm:px-8 max-w-7xl mx-auto">
                         <motion.div

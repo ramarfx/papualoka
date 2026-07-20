@@ -168,21 +168,41 @@ export default function AlamPapuaShowcase() {
 
                 // 1. Slide current title lines UP (clipped by overflow-hidden)
                 currentLines.forEach((line, lineIdx) => {
-                    tl.to(
-                        line,
-                        {
-                            yPercent: -110,
-                            opacity: 0,
-                            duration: 0.4,
-                            ease: "none",
-                        },
-                        `${label}+=${lineIdx * 0.05}`
-                    );
+                    if (i === 0) {
+                        tl.fromTo(
+                            line,
+                            { yPercent: 0, opacity: 1 },
+                            {
+                                yPercent: -110,
+                                opacity: 0,
+                                duration: 0.4,
+                                ease: "none",
+                                immediateRender: false,
+                            },
+                            `${label}+=${lineIdx * 0.05}`
+                        );
+                    } else {
+                        tl.to(
+                            line,
+                            {
+                                yPercent: -110,
+                                opacity: 0,
+                                duration: 0.4,
+                                ease: "none",
+                            },
+                            `${label}+=${lineIdx * 0.05}`
+                        );
+                    }
                 });
 
                 // 2. Fade out current description + fact
-                tl.to(descs[i], { opacity: 0, y: -15, duration: 0.3, ease: "none" }, label);
-                tl.to(facts[i], { opacity: 0, y: -15, duration: 0.3, ease: "none" }, label);
+                if (i === 0) {
+                    tl.fromTo(descs[i], { opacity: 1, y: 0 }, { opacity: 0, y: -15, duration: 0.3, ease: "none", immediateRender: false }, label);
+                    tl.fromTo(facts[i], { opacity: 1, y: 0 }, { opacity: 0, y: -15, duration: 0.3, ease: "none", immediateRender: false }, label);
+                } else {
+                    tl.to(descs[i], { opacity: 0, y: -15, duration: 0.3, ease: "none" }, label);
+                    tl.to(facts[i], { opacity: 0, y: -15, duration: 0.3, ease: "none" }, label);
+                }
 
                 // 3. Crossfade images
                 tl.to(images[i], { opacity: 0, duration: 0.5, ease: "none" }, label);

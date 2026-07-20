@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -48,13 +48,12 @@ export default function ChatMessage({ message }: { message: Message }) {
       transition={{ type: "spring", stiffness: 400, damping: 22 }}
       className={`flex ${isUser ? "justify-end" : "justify-start"} gap-2.5 mb-3`}
     >
-      D{!isUser && <MascotAvatar size={30} />}
+      {!isUser && <MascotAvatar size={30} />}
       <div
-        className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed font-sans ${
-          isUser
+        className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed font-sans ${isUser
             ? "bg-papua-yellow text-papua-dark rounded-br-md font-medium"
             : "bg-white/[0.06] border border-white/[0.08] text-[#E0E0E0] rounded-bl-md"
-        }`}
+          }`}
       >
         {isUser ? (
           <p>{message.content}</p>

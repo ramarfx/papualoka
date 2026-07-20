@@ -105,11 +105,11 @@ Tim PapuaLoka terdiri dari 5 orang yang bersemangat melestarikan dan mempromosik
 
 export const WELCOME_MESSAGE = `Halo! 👋 Saya **PapuaLoka AI**, pemandu digitalmu untuk menjelajahi keindahan Papua!
 
-Ada yang ingin kamu ketahui? Saya bisa bantu tentang:
-• 🏝️ Destinasi wisata Papua
-• 📖 Cerita rakyat Papua
-• 🌿 Kekayaan alam Papua
-
+Ada yang ingin kamu ketahui? Saya bisa bantu tentang: <br>
+• 🏝️ Destinasi wisata Papua<br>
+• 📖 Cerita rakyat Papua<br>
+• 🌿 Kekayaan alam Papua<br>
+<br>
 Tanyakan apa saja!`;
 
 export const QUICK_REPLIES = [

@@ -96,7 +96,7 @@ export default function StoryDetailHero({
             >
                 <Link
                     href="/cerita-rakyat"
-                    className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-300 text-sm font-sans font-medium"
+                    className="group flex items-center gap-2 text-papua-yellow transition-colors duration-300 text-sm font-sans font-bold border-2 border-papua-yellow rounded-full px-5 py-2"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
                     Koleksi Cerita

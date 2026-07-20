@@ -99,7 +99,7 @@ export default function Footer({className = ""}: {className?: string}) {
                     
                     {/* Middle: Links (2 columns) */}
                     <motion.div
-                        className="grid grid-cols-2 gap-x-10 sm:gap-x-12 md:gap-x-16 gap-y-5 w-auto"
+                        className="grid grid-cols-2 gap-x-10 sm:gap-x-12 md:gap-x-16 gap-y-10 w-auto h-fit"
                         variants={linkContainerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -110,8 +110,8 @@ export default function Footer({className = ""}: {className?: string}) {
                             { num: "02", label: "JELAJAH", href: "/home#destinasi-pilihan" },
                             { num: "03", label: "BUDAYA", href: "/kalender" },
                             { num: "04", label: "ALAM PAPUA", href: "/alam-papua" },
-                            { num: "05", label: "CERITA RAKYAT", href: "/cerita-rakyat" },
                             { num: "06", label: "TENTANG", href: "/about" },
+                            { num: "05", label: "CERITA RAKYAT", href: "/cerita-rakyat" },
                         ].map((item) => (
                             <motion.div key={item.label} variants={linkVariants}>
                                 <Link href={item.href} className="group flex items-center gap-4 text-white hover:text-papua-yellow transition-colors">
