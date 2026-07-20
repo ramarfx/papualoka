@@ -117,7 +117,7 @@ export default function TeamSection() {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/90 via-black/40 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-[350ms] ease-[cubic-bezier(.22,1,.36,1)] sm:translate-y-5 sm:group-hover:translate-y-0 flex flex-col justify-end p-3 md:p-4">
+                <div className="absolute inset-x-0 bottom-0 h-full bg-linear-to-t from-black/90 via-black/40 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-[350ms] ease-[cubic-bezier(.22,1,.36,1)] sm:translate-y-5 sm:group-hover:translate-y-0 flex flex-col justify-end p-3 md:p-4">
                   <p className="text-white font-bold text-sm sm:text-base md:text-[22px] leading-tight mb-0.5">
                     {member.name}
                   </p>

@@ -60,8 +60,8 @@ export default function TimKamiHeading() {
                 variants={letterVariants}
                 className="
                   inline-block
-                  bg-gradient-to-b
-                  from-white/25
+                  bg-linear-to-b
+                  from-white/30
                   to-white/5
                   bg-clip-text
                   text-transparent

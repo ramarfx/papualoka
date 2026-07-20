@@ -107,11 +107,12 @@ export default function Footer({className = ""}: {className?: string}) {
                     >
                         {[
                             { num: "01", label: "BERANDA", href: "/home" },
-                            { num: "02", label: "JELAJAH", href: "/home#destinasi-pilihan" },
-                            { num: "03", label: "BUDAYA", href: "/kalender" },
-                            { num: "04", label: "ALAM PAPUA", href: "/alam-papua" },
-                            { num: "06", label: "TENTANG", href: "/about" },
-                            { num: "05", label: "CERITA RAKYAT", href: "/cerita-rakyat" },
+                            { num: "02", label: "JELAJAH", href: "/home#peta" },
+                            { num: "03", label: "BUDAYA", href: "/home#beragamnya-negeri-papua" },
+                            { num: "04", label: "KALENDER", href: "/kalender" },
+                            { num: "05", label: "ALAM PAPUA", href: "/alam-papua" },
+                            { num: "06", label: "CERITA RAKYAT", href: "/cerita-rakyat" },
+                            { num: "07", label: "TENTANG", href: "/about" },
                         ].map((item) => (
                             <motion.div key={item.label} variants={linkVariants}>
                                 <Link href={item.href} className="group flex items-center gap-4 text-white hover:text-papua-yellow transition-colors">

@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { X } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { X, ChevronDown } from "lucide-react";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 
 const barVariants : Variants = {
     playing: (custom: { min: number; max: number; duration: number }) => ({
@@ -22,8 +22,18 @@ const barVariants : Variants = {
     }),
 };
 
+const PROVINCES_MENU = [
+    { label: "Papua Barat Daya", href: "/province/papua-barat-daya" },
+    { label: "Papua Barat", href: "/province/papua-barat" },
+    { label: "Papua Tengah", href: "/province/papua-tengah" },
+    { label: "Papua Pegunungan", href: "/province/papua-pegunungan" },
+    { label: "Papua Selatan", href: "/province/papua-selatan" },
+    { label: "Provinsi Papua", href: "/province/papua" },
+];
+
 export default function Navbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [provinceOpen, setProvinceOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isPlaying, setIsPlaying] = useState(true);
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -139,7 +149,7 @@ export default function Navbar() {
                     <Image src="/img/papua-island.png" alt="" fill className="object-cover opacity-[0.03] pointer-events-none mix-blend-screen" />
 
                     <div className="relative z-10 flex flex-col h-full">
-                        <div className="flex items-center justify-between mb-16">
+                        <div className="flex items-center justify-between mb-8">
                             <Image src="/img/logo.png" alt="PapuaLoka" width={130} height={32} className="h-7 w-auto object-contain" />
                             <button
                                 onClick={() => setSidebarOpen(false)}
@@ -150,14 +160,74 @@ export default function Navbar() {
                         </div>
 
                         {/* Menu Links */}
-                        <div className="flex flex-col gap-8 flex-1 justify-center mt-[-10vh]">
+                        <div className="flex flex-col gap-5 flex-1 justify-center my-auto overflow-y-auto py-2">
+                            <Link
+                                href="/home"
+                                onClick={() => setSidebarOpen(false)}
+                                className="group flex items-center gap-4 text-white/40 hover:text-white transition-colors duration-500 font-heading tracking-wide w-max cursor-pointer"
+                            >
+                                <span className="text-white/30 group-hover:text-papua-yellow/50 text-[11px] font-sans font-medium tracking-widest transition-colors">
+                                    01
+                                </span>
+                                <span className="relative text-lg md:text-xl">
+                                    Beranda
+                                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-papua-yellow transition-all duration-500 group-hover:w-full"></span>
+                                </span>
+                            </Link>
+
+                            {/* Dropdown Provinsi */}
+                            <div className="w-full">
+                                <button
+                                    onClick={() => setProvinceOpen((prev) => !prev)}
+                                    className="group flex items-center justify-between w-full text-white/40 hover:text-white transition-colors duration-500 font-heading tracking-wide cursor-pointer text-left py-1"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <span className="text-white/30 group-hover:text-papua-yellow/50 text-[11px] font-sans font-medium tracking-widest transition-colors">
+                                            02
+                                        </span>
+                                        <span className="relative text-lg md:text-xl">
+                                            Provinsi
+                                            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-papua-yellow transition-all duration-500 group-hover:w-full"></span>
+                                        </span>
+                                    </div>
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 text-white/40 group-hover:text-papua-yellow ${provinceOpen ? "rotate-180 text-papua-yellow" : ""}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {provinceOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            className="overflow-hidden pl-10 pt-2 pb-1 flex flex-col gap-2"
+                                        >
+                                            {PROVINCES_MENU.map((prov) => (
+                                                <Link
+                                                    key={prov.href}
+                                                    href={prov.href}
+                                                    onClick={() => {
+                                                        setSidebarOpen(false);
+                                                        setProvinceOpen(false);
+                                                    }}
+                                                    className="text-white/60 hover:text-papua-yellow text-sm font-sans font-medium transition-colors duration-200 flex items-center gap-2 py-0.5 cursor-pointer"
+                                                >
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-papua-yellow/40" />
+                                                    {prov.label}
+                                                </Link>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+
                             {[
-                                { num: "01", label: "Beranda", href: "/home" },
-                                { num: "02", label: "Jelajah", href: "/home#destinasi-pilihan" },
-                                { num: "03", label: "Budaya", href: "/kalender" },
-                                { num: "04", label: "Alam Papua", href: "/alam-papua" },
-                                { num: "05", label: "Cerita Rakyat", href: "/cerita-rakyat" },
-                                { num: "06", label: "Tentang", href: "/about" },
+                                { num: "03", label: "Jelajah", href: "/home#peta" },
+                                { num: "04", label: "Budaya", href: "/home#beragamnya-negeri-papua" },
+                                { num: "05", label: "Kalender", href: "/kalender" },
+                                { num: "06", label: "Alam Papua", href: "/alam-papua" },
+                                { num: "07", label: "Cerita Rakyat", href: "/cerita-rakyat" },
+                                { num: "08", label: "Tentang", href: "/about" },
                             ].map((item) => (
                                 <Link
                                     key={item.href}
@@ -170,7 +240,7 @@ export default function Navbar() {
                                     </span>
                                     <span className="relative text-lg md:text-xl">
                                         {item.label}
-                                        <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-papua-yellow transition-all duration-500 group-hover:w-full ease-[cubic-bezier(0.25,1,0.5,1)]"></span>
+                                        <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-papua-yellow transition-all duration-500 group-hover:w-full"></span>
                                     </span>
                                 </Link>
                             ))}

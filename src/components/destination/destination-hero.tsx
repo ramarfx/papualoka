@@ -95,6 +95,14 @@ export default function DestinationHero({ title, description, bgImage, carouselI
                     variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                        const nextSection = ref.current?.nextElementSibling;
+                        if (nextSection) {
+                            nextSection.scrollIntoView({ behavior: "smooth" });
+                        } else {
+                            window.scrollTo({ top: window.innerHeight * 0.85, behavior: "smooth" });
+                        }
+                    }}
                     className="flex items-center cursor-pointer gap-3 border border-white rounded-full px-6 py-3 text-white font-sans text-sm md:text-base font-semibold hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm bg-black/20 group"
                 >
                     Baca Selengkapnya

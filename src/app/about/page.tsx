@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import TeamSection from "@/components/about/team-section";
 import TimKamiHeading from "@/components/about/tim-kami-heading";
 import CreditsSection from "@/components/about/credits-section";
+import SmoothScroll from "@/components/smooth-scroll";
 
 export const metadata = {
     title: "Tentang Kami | PapuaLoka",
@@ -12,12 +13,14 @@ export const metadata = {
 
 export default function AboutPage() {
     return (
-        <main className="bg-papua-dark min-h-screen relative">
-            <Navbar />
-            <TeamSection />
-            <TimKamiHeading />
-            <CreditsSection />
-            <Footer className="bg-papua-dark" />
-        </main>
+        <SmoothScroll>
+            <main className="bg-papua-dark min-h-screen relative">
+                <Navbar />
+                <TeamSection />
+                <TimKamiHeading />
+                <CreditsSection />
+                <Footer className="bg-papua-dark" />
+            </main>
+        </SmoothScroll>
     );
 }

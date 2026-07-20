@@ -72,7 +72,7 @@ export default function About() {
     };
 
     return (
-        <section className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
+        <section id="beragamnya-negeri-papua" className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
             {/* Top Paragraph */}
             <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-20">
                 <ScrollRevealText

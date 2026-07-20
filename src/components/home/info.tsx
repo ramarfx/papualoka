@@ -10,7 +10,7 @@ import Link from "next/link";
 // Province-specific content: title, description, and 3 timeline stats
 // ──────────────────────────────────────────────────────────────────
 const DEFAULT_CONTENT = {
-    title: "PAPUA",
+    title: "WILAYAH PAPUA",
     desc: "Papua dikenal sebagai wilayah paling timur Indonesia dengan kekayaan alam dan budaya yang luar biasa. Beragam suku, bahasa, dan tradisi hidup berdampingan di Tanah Cenderawasih.",
     stats: [
         { title: "300K KM²", desc: "Wilayah luas dengan bentang alam yang beragam." },
@@ -98,7 +98,7 @@ export default function Info() {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen bg-papua-dark flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
+        <section id="peta" className="relative w-full min-h-screen bg-papua-dark flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
             {/* Top Left Cursor Hint */}
             <motion.div
                 className="absolute top-12 left-0 md:top-24 md:left-24 z-20 w-fit mx-4"
@@ -157,7 +157,7 @@ export default function Info() {
                         </motion.p>
                     </AnimatePresence>
 
-                    {content.title !== DEFAULT_CONTENT.title && (
+                    {content.title !== DEFAULT_CONTENT.title &&  (
                         <Link href={(content as { path?: string }).path || "/province"} className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
                             <span>Pelajari Selanjutnya</span>
                             <ChevronRight
