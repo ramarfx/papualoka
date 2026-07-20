@@ -35,7 +35,18 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
         gsap.ticker.add(raf);
         gsap.ticker.lagSmoothing(0);
 
+        // Automatically observe body height changes and update Lenis scroll bounds
+        const resizeObserver = new ResizeObserver(() => {
+            lenis.resize();
+            ScrollTrigger.refresh();
+        });
+
+        if (document.body) {
+            resizeObserver.observe(document.body);
+        }
+
         return () => {
+            resizeObserver.disconnect();
             lenis.destroy();
             lenisRef.current = null;
             gsap.ticker.remove(raf);
@@ -44,3 +55,4 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     return <>{children}</>;
 }
+

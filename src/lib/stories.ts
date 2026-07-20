@@ -8,6 +8,7 @@ export interface Story {
     origin: string;
     href: string;
     accentColor: string;
+    provinceId?: string;
     content: StoryContent;
 }
 
@@ -37,6 +38,7 @@ export const STORIES: Story[] = [
         origin: "Jayapura",
         href: "/cerita-rakyat/towjatuwa-buaya-sakti",
         accentColor: "#6EE7B7",
+        provinceId: "papua",
         content: {
             openingQuote:
                 "Kebaikan yang tulus kepada siapa pun—bahkan kepada makhluk yang tampak menakutkan sekalipun—akan berbuah pertolongan saat kita paling membutuhkannya.",
@@ -106,6 +108,7 @@ export const STORIES: Story[] = [
         origin: "Kepulauan Yapen",
         href: "/cerita-rakyat/legenda-batu-keramat",
         accentColor: "#CFC154",
+        provinceId: "papua",
         content: {
             openingQuote:
                 "Alam menyimpan keajaiban yang patut dijaga dan dihormati, bukan dieksploitasi. Kebersamaan dalam melestarikan warisan leluhur adalah wujud rasa syukur tertinggi.",
@@ -170,6 +173,7 @@ export const STORIES: Story[] = [
         origin: "Fakfak",
         href: "/cerita-rakyat/asal-mula-burung-cendrawasih",
         accentColor: "#F59E0B",
+        provinceId: "kosong",
         content: {
             openingQuote:
                 "Keindahan sejati lahir dari ketulusan dan kerja keras. Sebaliknya, rasa iri dan permusuhan hanya membawa penyesalan mendalam.",
@@ -242,6 +246,7 @@ export const STORIES: Story[] = [
         origin: "Mimika",
         href: "/cerita-rakyat/biwar-sang-penakluk-naga",
         accentColor: "#60A5FA",
+        provinceId: "papua-tengah",
         content: {
             openingQuote:
                 "Keberanian dan ketekunan mampu mengalahkan rintangan yang tampak mustahil sekalipun. Keadilan dan kegigihan adalah kunci melindungi orang-orang yang kita cintai.",
@@ -314,6 +319,7 @@ export const STORIES: Story[] = [
         origin: "Jayapura",
         href: "/cerita-rakyat/legenda-cabo-pui-dan-batu-ajaib",
         accentColor: "#A78BFA",
+        provinceId: "papua",
         content: {
             openingQuote:
                 "Terkadang, kebaikan besar menuntut pengorbanan yang tulus. Kesetiaan dan kepekaan terhadap petunjuk alam akan membawa terang dalam masa sulit.",
@@ -371,6 +377,156 @@ export const STORIES: Story[] = [
         },
     },
     {
+        id: "kasas-wombik-dan-keln-tosara",
+        slug: "kasas-wombik-dan-keln-tosara",
+        title: "Kasas Wombik dan Keln Tosara",
+        excerpt:
+            "Kisah suku Moi di Tanjung Saoka dan Kasuari tentang dua anjing berburu yang berubah wujud menjadi hantu Kasas Wombik dan kekalahan mereka oleh burung Keln Tosara.",
+        image: "/img/province/papua-barat-daya/tradition/3-1.png",
+        readTime: "6 menit",
+        origin: "Sorong (Suku Moi)",
+        href: "/cerita-rakyat/kasas-wombik-dan-keln-tosara",
+        accentColor: "#F43F5E",
+        provinceId: "papua-barat-daya",
+        content: {
+            openingQuote:
+                "Keberanian dan persatuan warga yang dibantu pertanda alam mampu mengalahkan teror gaib dan mengembalikan kedamaian di pesisir Papua.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Kasas Wombik dan Keln Tosara",
+            videoDescription:
+                "Legenda perburuan di Tanjung Saoka dan pertarungan sengit melawan hantu Kasas Wombik di tanah Sorong.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Perburuan di Tanjung Saoka",
+                },
+                {
+                    type: "paragraph",
+                    text: "Alkisah pada suatu pagi, seorang bapak bersama dua ekor anjingnya pergi berburu ke Tanjung Saoka dan Kasuari. Sepanjang hari mereka mencari hewan buruan di dalam hutan lebat. Menjelang sore, anjing-anjing itu menggonggong kencang setelah mencium bau seekor lau-lau (kangguru papua) yang berusaha menyelamatkan diri.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Dengan sigap, sang bapak melemparkan tombaknya dan berhasil melumpuhkan lau-lau tersebut. Namun karena buruannya sangat berat, ia bermaksud mencari sebatang bambu untuk mengangkutnya pulang. Ia meminta kedua anjingnya, yang bernama Wombik, untuk menjaga hasil buruan yang digantung di pohon.",
+                },
+                {
+                    type: "heading",
+                    text: "Anjing yang Berbicara dan Berubah Wujud",
+                },
+                {
+                    type: "paragraph",
+                    text: "Ketika sang bapak pergi mencari bambu, kedua anjing itu memandang lau-lau dengan lapar dan berbincang layaknya manusia tentang bagian daging yang akan mereka dapatkan.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Anjing Wombik",
+                    text: "Ah trada, paling nanti tuan bilang kitong dapat dia pu tali perut kapa dengan dia pu kaki-kaki dan tulang-tulang itu.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Sang tuan yang kembali membawa bambu terkejut mendengar percakapan manusia dari balik pohon. Ketika mengintip, betapa kagetnya ia melihat bahwa yang berbincang adalah kedua anjingnya sendiri. Saat menyadari keberadaan tuannya, kedua Wombik seketika berubah wujud menjadi sosok hantu terbang (Kasas Wombik) yang mengerikan.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Dengan ketakutan luar biasa, sang bapak lari meninggalkan tombak dan buruannya menuju permukiman warga di tepi pantai sambil berteriak, 'Kasas, kasas wombik, kasaaasss!'",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Pertarungan Keln Tosara dan Daun Kiwuru",
+                },
+                {
+                    type: "paragraph",
+                    text: "Kedua hantu Wombik terbang mengejar hingga ke Tanjung Kasuari. Selama berhari-hari warga desa berusaha menangkap dan melumpuhkan hantu terbang itu namun selalu gagal karena Wombik melompat dari satu batu ke batu lainnya.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Percobaan warga ini diamati oleh seekor burung. Burung cerdik itu mengetahui kelemahan Wombik. Ia mengambil daun dari tumbuhan kiwuru lalu menggosokkannya ke batu-batu pijakan Wombik sehingga menjadi sangat licin.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Saat Wombik hinggap di atas batu yang telah diolesi daun kiwuru, kakinya tergelincir dan keduanya jatuh tak berdaya. Wombik akhirnya tewas tertimbun bebatuan yang runtuh menimpa tubuh mereka.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Sebagai tanda kemenangan dan pembebasan warga dari teror Kasas Wombik, burung itu mengusapkan darah Wombik ke dadanya hingga berwarna merah. Hingga kini, burung berdada merah tersebut dinamai Keln Tosara oleh masyarakat Suku Moi, dan kisahnya diabadikan dalam lagu adat Kasas Wombik.",
+                },
+            ],
+        },
+    },
+    {
+        id: "kisah-danau-ayamaru",
+        slug: "kisah-danau-ayamaru",
+        title: "Kisah Danau Ayamaru",
+        excerpt:
+            "Kisah Chlumbles dari Maybrat yang tak sengaja memicu luapan air raksasa saat berburu musang hitam, hingga terciptanya Danau Ayamaru dan penemuan perahu kole-kole.",
+        image: "/img/province/papua-barat-daya/carousel/4.png",
+        readTime: "8 menit",
+        origin: "Maybrat (Suku Maybrat)",
+        href: "/cerita-rakyat/kisah-danau-ayamaru",
+        accentColor: "#10B981",
+        provinceId: "papua-barat-daya",
+        content: {
+            openingQuote:
+                "Kreativitas dan pengamatan terhadap alam di sekitar kita mampu mengubah ujian besar menjadi keahlian dan kebudayaan yang bermanfaat bagi keturunan.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Asal Mula Terjadinya Danau Ayamaru",
+            videoDescription:
+                "Kisah legendaris terbentuknya Danau Ayamaru dan penemuan perahu kole-kole oleh Chlumbles di Kabupaten Maybrat.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Perburuan di Lembah Aves",
+                },
+                {
+                    type: "paragraph",
+                    text: "Pada zaman dahulu, seorang pria bernama Chlumbles dari daerah Woman (kini Kampung Segior, Maybrat) pergi berburu ke arah selatan bersama anjing pemburunya. Di daerah Aves, anjingnya menggonggong hebat sambil menggali tanah di sekitar bebatuan besar.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Penasaran dengan apa yang bersembunyi di bawah batu, Chlumbles ikut menggali tanah dan memindahkan batu-batu tersebut. Semakin dalam menggali, Chlumbles terkejut karena menemukan pasir laut dan beberapa cangkang kerang di tengah hutan pegunungan.",
+                },
+                {
+                    type: "heading",
+                    text: "Kemurkaan Ratu Air dan Terciptanya Danau",
+                },
+                {
+                    type: "paragraph",
+                    text: "Tiba-tiba, seekor musang hitam meloncat keluar dari lubang galian. Anjing Chlumbles dan Chlumbles sendiri segera mengejar musang tersebut. Tanpa disadari, lubang galian yang merupakan kediaman Ratu Air (Mos Masu Ano) terganggu.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Seketika air memancar deras dari dalam tanah dan mengejar mereka bertiga (mos msun). Air terus mengalir menerjang daratan dari Maru Mana hingga mendekati Mapura. Chlumbles yang kelelahan dan ketakutan memanjat ke puncak gunung untuk menyelamatkan diri, sementara musang dan anjingnya tenggelam oleh arus air.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Chlumbles",
+                    text: "Woo refo fyie mefo? Aya fo mbetru remo refo! (Wooo... ini sudah bagaimana ini? Air sudah tergenang menutupi daerah ini!).",
+                },
+                {
+                    type: "paragraph",
+                    text: "Genangan air yang begitu luas itu tidak kunjung surut dan membentuk sebuah danau besar yang kini dikenal sebagai Danau Ayamaru.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Inspirasi Bebek Danau dan Penemuan Perahu",
+                },
+                {
+                    type: "paragraph",
+                    text: "Saat mengamati danau yang baru terbentuk, Chlumbles melihat sekelompok bebek danau berenang dengan tenang di atas permukaan air. Penasaran mengapa burung tersebut tidak tenggelam, Chlumbles terinspirasi untuk membuat sarana transportasi kayu yang menyerupai bentuk bebek.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Ia menebang pohon besar dan memahatnya menjadi perahu kayu (kole-kole). Namun saat berada di atas air, perahunya tidak bisa bergerak karena belum memiliki alat pengayuh.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Setelah memperhatikan bentuk selaput kaki bebek danau yang lebar, Chlumbles mendapat ide brilian untuk membuat dayung yang bagian bawahnya melebar mirip kaki bebek. Penemuan perahu dan dayung oleh Chlumbles ini menjadi cikal bakal tradisi perahu masyarakat di sekitar Danau Ayamaru hingga hari ini.",
+                },
+            ],
+        },
+    },
+    {
         id: "empat-raja",
         slug: "empat-raja",
         title: "Empat Raja",
@@ -381,6 +537,7 @@ export const STORIES: Story[] = [
         origin: "Raja Ampat",
         href: "/cerita-rakyat/empat-raja",
         accentColor: "#F87171",
+        provinceId: "papua-barat-daya",
         content: {
             openingQuote:
                 "Bakti, ketekunan, dan rasa hormat kepada orang tua akan membuahkan hasil yang membanggakan bagi diri sendiri maupun orang banyak.",
@@ -438,8 +595,582 @@ export const STORIES: Story[] = [
             ],
         },
     },
+    {
+        id: "odesa-oufa-dan-burung-cendrawasih",
+        slug: "odesa-oufa-dan-burung-cendrawasih",
+        title: "Odesa Oufa dan Burung Cendrawasih",
+        excerpt:
+            "Kisah persahabatan anak kepala suku Arfak Odesa Oufa dan burung cenderawasih kecil Orna Mesra yang melahirkan tradisi perlindungan burung cenderawasih.",
+        image: "/img/province/papua-barat/carousel/1.png",
+        readTime: "7 menit",
+        origin: "Pegunungan Arfak",
+        href: "/cerita-rakyat/odesa-oufa-dan-burung-cendrawasih",
+        accentColor: "#F59E0B",
+        provinceId: "papua-barat",
+        content: {
+            openingQuote:
+                "Perbuatan baik yang kita tanam kepada sesama makhluk akan berbuah pertolongan indah saat kita mengalami kesulitan.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Odesa Oufa dan Burung Cendrawasih",
+            videoDescription:
+                "Kisah kebaikan Odesa Oufa merawat burung cenderawasih di Pegunungan Arfak yang menginspirasi aturan perlindungan adat.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Burung Cenderawasih Pegunungan Arfak",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di Pegunungan Arfak yang asri dan damai, hiduplah tiga ekor burung cenderawasih: sang ibu bernama Nam Mesra, serta dua anaknya yaitu Orna Mesra si bungsu dan kakaknya. Setiap pagi, kicauan merdu mereka menyemangati warga sekitar yang hidup berdampingan secara harmonis dengan alam.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di sekitar gunung tersebut, tinggal pula seorang anak kepala suku bernama Odesa Oufa. Ia dikenal baik hati, suka membantu sesama, dan selalu menjelajahi hutan bersama dua sahabatnya.",
+                },
+                {
+                    type: "heading",
+                    text: "Pertolongan di Balik Semak-semak",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu hari saat asyik terbang bersama kakaknya, Orna Mesra tak sengaja menabrak batang pohon hingga terjatuh ke tanah dan mematahkan kakinya. Di saat ketakutan karena seekor burung elang raksasa mengincarnya dari atas dahan, Odesa Oufa dan kedua sahabatnya mendengar rintihan Orna dari balik semak-semak.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Odesa Oufa",
+                    text: "Jangan takut wahai cenderawasih kecil, saya dan sahabat-sahabat saya akan merawatmu hingga sembuh.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Odesa Oufa membawa Orna pulang dan merawat kakinya yang patah dengan telaten hingga sembuh total. Sebelum terbang kembali ke hutan, Orna Mesra mengucapkan terima kasih dan memberikan sebuah janji pesan rahasia.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Orna Mesra",
+                    text: "Jika engkau membutuhkan pertolonganku, bernyanyilah 'lalala... lilili...', maka aku akan datang kepadamu.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Pesta Adat dan Perlindungan Cenderawasih",
+                },
+                {
+                    type: "paragraph",
+                    text: "Tak lama setelah berpisah, Odesa Oufa tergelincir dan jatuh ke dalam jurang yang sangat dalam. Mengingat janji Orna, Odesa bernyanyi nyaring. Mendengar nyanyian tersebut, Orna Mesra terbang membawa saudara dan kawan-kawannya untuk membantu menuntun Odesa Oufa keluar dari jurang dengan selamat.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Mendengar kisah penyelamatan tersebut, sang Kepala Suku menggelar pesta adat selama tiga hari tiga malam. Kepala suku menetapkan aturan adat bahwasanya seluruh masyarakat dilarang keras memburu cenderawasih dan wajib mengganti mahkota hiasan dengan bunga dan dedaunan hutan.",
+                },
+            ],
+        },
+    },
+    {
+        id: "gowoda-dan-air-merah",
+        slug: "gowoda-dan-air-merah",
+        title: "Gowoda dan Air Merah",
+        excerpt:
+            "Kisah keteguhan gadis cantik Gowoda dari Teluk Oburauw Kaimana yang membongkar sihir Nenek Saseworo dan menemukan kebahagiaan bersama Mireta.",
+        image: "/img/province/papua-barat/carousel/5.png",
+        readTime: "9 menit",
+        origin: "Kaimana",
+        href: "/cerita-rakyat/gowoda-dan-air-merah",
+        accentColor: "#EF4444",
+        provinceId: "papua-barat",
+        content: {
+            openingQuote:
+                "Kejujuran dan kebaikan hati akan senantiasa mengalahkan kejahatan, betapa pun kuatnya kebohongan berusaha menutupi kebenaran.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Gowoda dan Air Merah",
+            videoDescription:
+                "Legenda perjalanan Gowoda dari Kaimana dan asal usul Sungai Moda Eta yang berwarna merah.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Gadis Rajin dari Kampung Werafuta",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di Kampung Werafuta, Teluk Oburauw, Kaimana, hiduplah seorang gadis yatim piatu bernama Gowoda. Ia dikenal sangat cantik, ramah, serta mahir berkebun, melaut, dan menganyam noken serta koba-koba. Suatu hari, Gowoda bertekad berlayar menuju Tanjung Simora untuk menemui seorang pemuda gagah dan baik hati bernama Mireta.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di tengah perjalanan laut yang panjang, Gowoda singgah di Tanjung Sermuku untuk meminta air minum pada seorang nenek bernama Saseworo. Namun Nenek Saseworo yang memiliki ilmu sihir justru tergiur melihat kecantikan Gowoda dan berniat merebut takdir sang gadis.",
+                },
+                {
+                    type: "heading",
+                    text: "Sihir Penyamaran Nenek Saseworo",
+                },
+                {
+                    type: "paragraph",
+                    text: "Dengan ilmu sihirnya, Nenek Saseworo merasuki wujud Gowoda menjadi cantik jelita dan mengurung roh Gowoda asli di dalam perut babi betina di perahu. Nenek Saseworo menyamar sebagai Gowoda dan disambut meriah oleh keluarga Mireta di Tanjung Simora.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Namun saat melangkah ke dalam piring adat penyambutan, piring tersebut mendadak terbelah menjadi dua—sebuah pertanda buruk menurut adat setempat. Meski demikian, pernikahan penyamaran tetap berlangsung.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Terungkapnya Rahasia dan Kali Moda Eta",
+                },
+                {
+                    type: "paragraph",
+                    text: "Kakak tertua Mireta, Binuwa, merasa ada hal aneh. Ia memperhatikan bahwa dari dalam kandang babi keluar seorang gadis cantik yang secara diam-diam membersihkan rumah, memasak, dan menganyam noken yang sangat rapi.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Binuwa akhirnya menangkap tangan gadis tersebut yang tak lain adalah Gowoda asli. Setelah mendengar kisah sebenarnya, Binuwa membantu Gowoda membongkar kejahatan Nenek Saseworo. Dalam perkelahian sengit di tepi sungai, penyamaran Saseworo hancur dan ia kembali ke wujud nenek tua lalu tewas.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Darah Saseworo mengalir mengubah warna air sungai menjadi merah, yang kemudian dinamai Kali Moda Eta (Air Merah). Gowoda akhirnya menikah resmi dengan Mireta melalui upacara piring adat yang utuh dan bahagia.",
+                },
+            ],
+        },
+    },
+    {
+        id: "asal-usul-gunung-sigemerai",
+        slug: "asal-usul-gunung-sigemerai",
+        title: "Asal Usul Gunung Sigemerai",
+        excerpt:
+            "Legenda dua bersaudara Jaseso dan Jakukum di Teluk Bintuni yang menebang pohon kayu besi sakral hingga melahirkan nama Gunung Sigemerai.",
+        image: "/img/province/papua-barat/carousel/2.png",
+        readTime: "7 menit",
+        origin: "Teluk Bintuni",
+        href: "/cerita-rakyat/asal-usul-gunung-sigemerai",
+        accentColor: "#8B5CF6",
+        provinceId: "papua-barat",
+        content: {
+            openingQuote:
+                "Rasa hormat pada janji leluhur dan hukum alam adalah kearifan yang harus senantiasa dijaga oleh setiap generasi.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Asal Usul Gunung Sigemerai",
+            videoDescription:
+                "Kisah dua bersaudara Jaseso dan Jakukum dari Teluk Bintuni dan asal-usul sebutan Gunung Sigemerai.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Dua Bersaudara di Pegunungan Bintuni",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di kawasan pegunungan Teluk Bintuni, hiduplah dua saudara kandung bernama Jaseso dan Jakukum dari marga Tiri. Mereka hidup harmonis dengan alam, berkebun ubi, serta berburu hewan di antara pepohonan merbau dan matoa yang lebat.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu pagi yang cerah, keduanya bersepakat untuk membersihkan kebun dan menebang pohon-pohon liar agar tanaman ubi mereka tumbuh subur.",
+                },
+                {
+                    type: "heading",
+                    text: "Pohon Kayu Besi Sakral",
+                },
+                {
+                    type: "paragraph",
+                    text: "Ketika Jakukum mengayunkan kapaknya ke sebuah pohon besar, kapaknya melenting keras dan hanya mengelupas sedikit kulit pohon. Walau telah mengerahkan seluruh tenaga, pohon kayu besi itu tetap berdiri kokoh tanpa goresan berarti.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Jaseso yang penasaran ikut mencoba menebangnya setelah berdoa pada arwah leluhur. Namun kapak taring babi milik mereka tetap melenting bagai membentur besi tebal.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Jaseso",
+                    text: "Leluhur kita pernah membuat perjanjian adat di tanah ini. Kapak taring babi tidak akan sanggup menumbangkannya kecuali dengan kapak besi dan ritual babi.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Kesetiaan Jakukum dan Nama Sigemerai",
+                },
+                {
+                    type: "paragraph",
+                    text: "Jaseso memutuskan berjalan jauh ke wilayah pantai seorang diri untuk mencari kapak besi, sementara Jakukum diminta tetap menjaga kebun dan pondok mereka.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Hari berganti bulan, Jaseso tak kunjung kembali dari pesisir pantai. Jakukum yang setia tetap menunggu di bawah pohon kayu besi tersebut sambil meratap memanggil nama kakaknya hingga akhir hayatnya.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Tempat tinggal mereka diabadikan oleh marga Tiri sebagai kawasan keramat, dan gunung bekas tempat penebangan kayu besi tersebut dinamai Gunung Sigemerai, yang berarti bekas kayu besi yang ditebang.",
+                },
+            ],
+        },
+    },
+    {
+        id: "asal-mula-pohon-kelapa",
+        slug: "asal-mula-pohon-kelapa",
+        title: "Asal Mula Pohon Kelapa",
+        excerpt:
+            "Kisah Cipriw dari suku Asmat di hilir Sungai Fait yang menjelma menjadi pohon kelapa (Jisin) berbuah lebat di atas peraduannya.",
+        image: "/img/province/papua-selatan/carousel/3.png",
+        readTime: "8 menit",
+        origin: "Asmat (Suku Asmat)",
+        href: "/cerita-rakyat/asal-mula-pohon-kelapa",
+        accentColor: "#10B981",
+        provinceId: "papua-selatan",
+        content: {
+            openingQuote:
+                "Setiap pemberian alam menyimpan kisah kasih serta pengorbanan leluhur yang patut kita syukuri dan hargai.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Asal Mula Pohon Kelapa Asmat",
+            videoDescription:
+                "Kisah legendaris tumbuhnya pohon kelapa (Jisin) pertama di tanah Asmat, Papua Selatan.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Cipriw dan Rumah Jew Asmat",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di hilir Sungai Fait dari pantai Safan, hiduplah sepasang suami istri suku Asmat bernama Biwiripit dan Teweraut. Mereka memiliki seorang anak tunggal bernama Cipriw. Namun Cipriw sangat penakut, terutama untuk tidur di rumah Jew (rumah bujang pria dewasa) karena takut melewati pohon Ucuw (beringin) yang dipercaya dihuni roh.",
+                },
+                {
+                    type: "heading",
+                    text: "Peristiwa Tragis Pohon Ucuw",
+                },
+                {
+                    type: "paragraph",
+                    text: "Roh pohon Ucuw yang tersinggung karena Cipriw selalu ketakutan padahal roh tersebut tidak pernah mengganggu warga, akhirnya menancapkan anak panah pada pelipis Cipriw hingga sang anak tewas.",
+                },
+                {
+                    type: "paragraph",
+                    text: "Kepergian Cipriw mendatangkan duka yang teramat dalam bagi Biwiripit, Teweraut, dan seluruh warga kampung hilir Sungai Fait.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Tumbuhnya Pohon Jisin",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di atas tempat peraduan Cipriw, muncullah keajaiban: tumbuh sebatang pohon aneh berbuah lebat dengan air yang segar dan daging buah bergaris mirip paras Cipriw. Melalui mimpi Biwiripit dan Teweraut, pohon ajaib tersebut dinamai 'Jisin' (pohon kelapa) dan buahnya 'Akyamanmak' (buah dari orang mati), yang menjadi awal keberadaan pohon kelapa di tanah Asmat.",
+                },
+            ],
+        },
+    },
+    {
+        id: "legenda-danau-paniai",
+        slug: "legenda-danau-paniai",
+        title: "Legenda Danau Paniai",
+        excerpt:
+            "Kisah ditemukannya telaga jernih nan luas di pegunungan Paniai oleh pemburu Suku Mee yang menjadi Danau Paniai pemberi kehidupan.",
+        image: "/img/province/papua-tengah/carousel/1.png",
+        readTime: "7 menit",
+        origin: "Paniai (Suku Mee)",
+        href: "/cerita-rakyat/legenda-danau-paniai",
+        accentColor: "#3B82F6",
+        provinceId: "papua-tengah",
+        content: {
+            openingQuote:
+                "Keindahan alam pegunungan Paniai adalah anugerah tempat berteduh dan sumber kehidupan yang wajib dijaga dengan keharmonisan adat.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Legenda Danau Paniai",
+            videoDescription:
+                "Kisah ditemukannya Danau Paniai di pegunungan Papua Tengah oleh masyarakat Suku Mee.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Perburuan di Lembah Wissel",
+                },
+                {
+                    type: "paragraph",
+                    text: "Alkisah di dataran tinggi pegunungan Paniai, hiduplah kelompok masyarakat Suku Mee. Mereka menggantungkan hidup dari berburu udang dan binatang hutan di lereng pegunungan. Suatu ketika, seorang pemburu muda bersama anjingnya menjelajahi kawasan hutan perawan yang belum pernah dijamah manusia.",
+                },
+                {
+                    type: "heading",
+                    text: "Telaga Jernih di Puncak Pegunungan",
+                },
+                {
+                    type: "paragraph",
+                    text: "Setelah mendaki bukit-bukit terjal, pemburu tersebut terperangah mendapati sebuah cekungan lembah raksasa berisi air jernih berkilau bagaikan cermin. Di dalam air telaga tersebut, berenang ribuan udang air tawar (udang selingkuh) dan ikan-ikan yang melimpah.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Pemburu Suku Mee",
+                    text: "Paniai! Paniai! (Air yang bening dan memberi kehidupan!)",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Warisan Kehidupan Suku Mee",
+                },
+                {
+                    type: "paragraph",
+                    text: "Pemburu tersebut kembali ke kampungnya dan membawa seluruh warganya untuk berpindah dan bermukim di pesisir danau tersebut. Sejak saat itu, Danau Paniai menjadi sumber penghidupan utama Suku Mee dan diabadikan dalam Tari Suku Mee sebagai simbol kebersamaan dan rasa syukur.",
+                },
+            ],
+        },
+    },
+    {
+        id: "legenda-ukiran-sakral-kamoro",
+        slug: "legenda-ukiran-sakral-kamoro",
+        title: "Legenda Ukiran Sakral Kamoro",
+        excerpt:
+            "Kisah seniman ukir Suku Kamoro di Mimika yang mendapat ilham dari roh leluhur untuk menciptakan ukiran Mbitoro dan patung penghormatan.",
+        image: "/img/province/papua-tengah/tradition/3-1.png",
+        readTime: "6 menit",
+        origin: "Mimika (Suku Kamoro)",
+        href: "/cerita-rakyat/legenda-ukiran-sakral-kamoro",
+        accentColor: "#10B981",
+        provinceId: "papua-tengah",
+        content: {
+            openingQuote:
+                "Setiap pahatan dan ukiran kayu menyimpan kehormatan marga serta doa-doa yang menghubungkan masa lalu dengan masa depan.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Legenda Ukiran Sakral Kamoro",
+            videoDescription:
+                "Legenda keahlian mengukir kayu sakral Mbitoro oleh masyarakat Suku Kamoro di Mimika.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Pahatan Pohon Kiwuru Mimika",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di pesisir Mimika, masyarakat Suku Kamoro dikenal sangat menghormati alam pesisir dan sungai. Seorang pemahat tua bernama Arawa bermimpi didatangi roh leluhur yang memintanya membuat tiang ukir sakral (Mbitoro) untuk melindungi kampung dari bahaya.",
+                },
+                {
+                    type: "heading",
+                    text: "Proses Pembuatan Mbitoro Sakral",
+                },
+                {
+                    type: "paragraph",
+                    text: "Arawa bersama para pemuda suku memilih kayu pohon bakau terbaik. Dengan penuh ketelitian dan diiringi tabuhan tifa serta Tari Sasi, Arawa mengukir motif-motif klan yang melambangkan keberanian, hewan buruan, serta arwah nenek moyang.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Arawa",
+                    text: "Ukiran ini adalah identitas dan pelindung marga kita. Setiap garis adalah penghormatan pada leluhur.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Warisan Kebudayaan Kamoro",
+                },
+                {
+                    type: "paragraph",
+                    text: "Setelah Mbitoro berdiri di depan Karapao (rumah adat Kamoro), kedamaian dan kelimpahan hasil laut senantiasa melingkupi kampung tersebut. Tradisi mengukir Mbitoro kini diakui sebagai warisan budaya adiluhung Suku Kamoro yang dihormati di seluruh dunia.",
+                },
+            ],
+        },
+    },
+    {
+        id: "fumeripitsy-pencipta-suku-asmat",
+        slug: "fumeripitsy-pencipta-suku-asmat",
+        title: "Fumeripitsy Pencipta Suku Asmat",
+        excerpt:
+            "Mitologi Dewa Fumeripitsy yang mengukir patung manusia dari kayu dan menghidupkannya dengan tabuhan genderang di tanah Asmat.",
+        image: "/img/province/papua-selatan/carousel/1.png",
+        readTime: "7 menit",
+        origin: "Asmat (Suku Asmat)",
+        href: "/cerita-rakyat/fumeripitsy-pencipta-suku-asmat",
+        accentColor: "#F59E0B",
+        provinceId: "papua-selatan",
+        content: {
+            openingQuote:
+                "Suku Asmat percaya bahwa manusia lahir dari ukiran seni dan tabuhan musik yang menggemakan nafas kehidupan.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Fumeripitsy Pencipta Suku Asmat",
+            videoDescription:
+                "Kisah asal usul mitologi penciptaan manusia Suku Asmat oleh Dewa Fumeripitsy di Papua Selatan.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Pertarungan Dewa Fumeripitsy",
+                },
+                {
+                    type: "paragraph",
+                    text: "Alkisah, Dewa Fumeripitsy turun ke bumi dan menjelajah dari ufuk barat. Di tengah petualangannya, ia bertarung melawan buaya raksasa hingga terluka parah dan terdampar di tepian sungai Asmat. Seekor burung flamingo berhati mulia merawat sang dewa hingga sembuh total.",
+                },
+                {
+                    type: "heading",
+                    text: "Patung Kayu dan Genderang Ajaib",
+                },
+                {
+                    type: "paragraph",
+                    text: "Setelah pulih, Fumeripitsy membangun rumah dan mengukir dua buah patung kayu yang sangat indah. Ia kemudian membuat genderang kayu (tifa) yang nyaring bunyinya dan menari tanpa henti di sekeliling patung tersebut.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Dewa Fumeripitsy",
+                    text: "Bangkitlah wahai patung ukiran kayu, bergerak dan berdansalah mengikuti irama tifa ini!",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Nenek Moyang Suku Asmat",
+                },
+                {
+                    type: "paragraph",
+                    text: "Gerakan dahsyat sang dewa dan alunan genderang membuat kedua patung kayu itu menjadi hidup dan ikut menari. Pasangan patung manusia tersebut menjadi manusia pertama yang menjadi nenek moyang Suku Asmat. Kepercayaan inilah yang menjadikan Suku Asmat sangat mahir mengukir kayu hingga diakui dunia.",
+                },
+            ],
+        },
+    },
+    {
+        id: "batu-menangis-puncak-trikora",
+        slug: "batu-menangis-puncak-trikora",
+        title: "Batu Menangis Puncak Trikora",
+        excerpt:
+            "Legenda larangan mengotori tanah sakral Puncak Trikora Wamena dan keajaiban batu menangis yang menurunkan suhu di Lembah Baliem.",
+        image: "/img/province/papua-pegunungan/carousel/1.png",
+        readTime: "7 menit",
+        origin: "Wamena (Puncak Trikora)",
+        href: "/cerita-rakyat/batu-menangis-puncak-trikora",
+        accentColor: "#EC4899",
+        provinceId: "papua-pegunungan",
+        content: {
+            openingQuote:
+                "Pilihlah setiap langkah dan perbuatan dengan bijak, serta hormatilah kesucian aturan alam dan adat istiadat setempat.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Batu Menangis Puncak Trikora",
+            videoDescription:
+                "Legenda kisah batu menangis di kaki Puncak Trikora Wamena, Papua Pegunungan.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Persiapan Pesta Ewe Ako di Wamena",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di sebuah desa dekat Danau Habema di bawah kaki Puncak Trikora Wamena, masyarakat Suku Hubula bersiap merayakan pesta adat babi lima tahunan bernama Ewe Ako. Sepasang kakak beradik ikut bertugas menjelajahi hutan untuk mengumpulkan sayur-sayuran.",
+                },
+                {
+                    type: "heading",
+                    text: "Pelanggaran di Kaki Puncak Trikora",
+                },
+                {
+                    type: "paragraph",
+                    text: "Ketika berada di kaki Gunung Trikora (Hirip Akup)—tempat sakral yang dilarang keras untuk dikotori—sang adik laki-laki yang sudah tak tahan buang hajat terpaksa melanggar larangan tersebut dan menyeka dirinya di susunan batu sakral.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Sang Kakak",
+                    text: "Tahanlah wahai adikku, tempat ini sangat sakral bagi arwah nenek moyang kita.",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Menjadi Satu dengan Alam",
+                },
+                {
+                    type: "paragraph",
+                    text: "Seketika tubuh sang adik menyatu kaku dengan batu tersebut dan tak dapat dibebaskan. Sang kakak hanya bisa memeluknya dengan pilu. Konon hingga kini, saat roh anak tersebut merasa dingin dan menangis di kaki Puncak Trikora, suhu udara di seantero Wamena akan mendadak turun drastis diiringi hujan gerimis.",
+                },
+            ],
+        },
+    },
+    {
+        id: "pupa-dan-narinare-lembah-baliem",
+        slug: "pupa-dan-narinare-lembah-baliem",
+        title: "Pupa dan Narinare dari Lembah Baliem",
+        excerpt:
+            "Kisah persahabatan Pupa dan Narinare, penemuan Kali Baliem, dan awal mula tradisi bakar batu (Barapen) perdamaian di Wamena.",
+        image: "/img/province/papua-pegunungan/carousel/2.png",
+        readTime: "8 menit",
+        origin: "Lembah Baliem (Suku Hubula)",
+        href: "/cerita-rakyat/pupa-dan-narinare-lembah-baliem",
+        accentColor: "#F59E0B",
+        provinceId: "papua-pegunungan",
+        content: {
+            openingQuote:
+                "Perbedaan pendapat dan perselisihan sejatinya dapat diselesaikan dengan musyawarah adat dan persaudaraan yang sejati.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Pupa dan Narinare dari Lembah Baliem",
+            videoDescription:
+                "Kisah penemuan Kali Baliem oleh Pupa dan asal usul tradisi pesta Barapen perdamaian.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Dua Sahabat Pengembara Rimba",
+                },
+                {
+                    type: "paragraph",
+                    text: "Di hutan belantara Lembah Baliem, hiduplah dua orang sahabat bernama Pupa dan Narinare. Mereka mengolah kebun dan berburu bersama untuk mencukupi kebutuhan sehari-hari.",
+                },
+                {
+                    type: "heading",
+                    text: "Penemuan Sungai Agung Baliem",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu ketika saat berburu babi hutan hingga jauh ke pedalaman bukit terjal, Pupa menemukan sebuah sungai yang sangat besar berkilau dengan air dingin melimpah—yang kelak dikenal sebagai Kali Baliem.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Narinare",
+                    text: "Sobat, sungai agung itu berada di tanah warisan leluhur keluargaku!",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Pesta Perdamaian Barapen",
+                },
+                {
+                    type: "paragraph",
+                    text: "Perselisihan klaim kepemilikan sungai meluas hingga memicu ketegangan antar suku. Kepala-kepala suku akhirnya berunding dan memutuskan menyerahkan Kali Baliem kepada Pupa, yang dirayakan dengan pesta adat Bakar Batu (Barapen) besar-besaran sebagai lambang persatuan abadi.",
+                },
+            ],
+        },
+    },
+    {
+        id: "asal-muasal-nama-wamena",
+        slug: "asal-muasal-nama-wamena",
+        title: "Asal Muasal Nama Wamena",
+        excerpt:
+            "Legenda kesalahpahaman gadis Ahumpua dan penjelajah Ap Huluan mengenai anak babi (Wamena) yang diabadikan menjadi nama kota Wamena.",
+        image: "/img/province/papua-pegunungan/carousel/3.png",
+        readTime: "6 menit",
+        origin: "Wamena (Ahumpua)",
+        href: "/cerita-rakyat/asal-muasal-nama-wamena",
+        accentColor: "#10B981",
+        provinceId: "papua-pegunungan",
+        content: {
+            openingQuote:
+                "Sebuah nama yang lahir dari kepolosan dan pertemuan dua budaya dapat mengukir sejarah panjang bagi suatu wilayah.",
+            youtubeId: "dQw4w9WgXcQ",
+            videoTitle: "Asal Muasal Nama Wamena",
+            videoDescription:
+                "Kisah sejarah dan asal-usul penamaan Kota Wamena di Lembah Baliem Papua Pegunungan.",
+            paragraphs: [
+                {
+                    type: "heading",
+                    text: "Gadis-Gadis Ahumpua di Kali Baliem",
+                },
+                {
+                    type: "paragraph",
+                    text: "Dahulu kala kawasan kota Wamena bernama Ahumpua. Setiap hari anak-anak gadis bertugas menggembala anak babi di tepi Kali Baliem sebelum mandi bersama.",
+                },
+                {
+                    type: "heading",
+                    text: "Pertemuan dengan Ap Huluan",
+                },
+                {
+                    type: "paragraph",
+                    text: "Suatu hari, datanglah seorang penjelajah berkulit putih (Ap Huluan). Ketika penjelajah tersebut bertanya dengan bahasa isyarat mengenai nama tempat itu, seorang gadis pemberi petunjuk mengira Ap Huluan menanyakan anak babi di sampingnya.",
+                },
+                {
+                    type: "dialogue",
+                    speaker: "Gadis Ahumpua",
+                    text: "Tu Wamena! (Itu anak babi!)",
+                },
+                { type: "divider" },
+                {
+                    type: "heading",
+                    text: "Lahirnya Kota Wamena",
+                },
+                {
+                    type: "paragraph",
+                    text: "Ap Huluan mencatat nama wilayah tersebut sebagai 'Wamena'. Sejak kedatangan masyarakat luas dan berkembangnya pemukiman di Ahumpua, nama Wamena secara resmi diabadikan sebagai nama kota legendaris di jantung Lembah Baliem Papua Pegunungan.",
+                },
+            ],
+        },
+    },
 ];
 
 export function getStoryBySlug(slug: string): Story | undefined {
     return STORIES.find((s) => s.slug === slug);
 }
+

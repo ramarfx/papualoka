@@ -4,12 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("Indonesia");
   const [animationDelay, setAnimationDelay] = useState<number | null>(null);
 
   const bgRef = useRef<HTMLDivElement>(null);
@@ -154,53 +152,6 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="pointer-events-auto relative select-none">
-              <button
-                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                className="flex items-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm font-sans tracking-widest transition-colors duration-200 py-2 cursor-pointer font-semibold uppercase"
-              >
-                <span>{selectedLang}</span>
-                <svg
-                  className={`w-3.5 h-3.5 transition-transform duration-300 ${langDropdownOpen ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {/* Language Dropdown List */}
-              {langDropdownOpen && (
-                <>
-                  <div
-                    className="fixed inset-0 z-10"
-                    onClick={() => setLangDropdownOpen(false)}
-                  />
-                  <div className="absolute bottom-10 left-0 z-20 bg-black/75 backdrop-blur-xl border border-white/10 rounded-2xl py-2.5 w-40 shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => {
-                          setSelectedLang(lang);
-                          setLangDropdownOpen(false);
-                        }}
-                        className={`w-full text-left px-5 py-2.5 text-xs transition-colors cursor-pointer ${selectedLang === lang ? "text-emerald-400 bg-white/5 font-semibold" : "text-white/70 hover:text-white hover:bg-white/10"}`}
-                      >
-                        {lang}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
         </div>
       </header>
     </div>

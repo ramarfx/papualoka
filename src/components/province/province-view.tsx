@@ -51,6 +51,7 @@ export default function ProvinceView({ data }: ProvinceViewProps) {
                 </div>
 
                 <ProvinceStories
+                    provinceId={data.id}
                     provinceName={data.name}
                     description={data.storiesDesc}
                 />

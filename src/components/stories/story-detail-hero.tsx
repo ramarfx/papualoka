@@ -72,20 +72,21 @@ export default function StoryDetailHero({
             ref={ref}
             className="relative w-full min-h-[88vh] flex flex-col items-center justify-center overflow-hidden"
         >
-            {/* Parallax Background Image */}
-            <motion.div style={{ y: bgY }} className="absolute inset-0 z-0">
+            {/* Parallax Background Image with subtle blur & scale to hide pixelation */}
+            <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 overflow-hidden">
                 <Image
                     src={image}
                     alt={title}
                     fill
-                    className="object-cover"
+                    className="object-cover scale-105 blur-xs opacity-85"
                     priority
                     sizes="100vw"
                 />
             </motion.div>
 
-            {/* Overlay — consistent with stories-hero gradient treatment */}
-            <div className="absolute inset-0 z-0 bg-linear-to-b from-black/20 via-black/40 to-black" />
+            {/* Smooth Papua Green to Papua Dark Gradient Overlay */}
+            <div className="absolute inset-0 z-0 bg-linear-to-b from-papua-green/75 via-papua-green/30 to-papua-dark" />
+            <div className="absolute inset-0 z-0 bg-linear-to-b from-black/30 via-transparent to-papua-dark pointer-events-none" />
 
             {/* Back Navigation */}
             <motion.div

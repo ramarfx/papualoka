@@ -5,11 +5,15 @@ import StoryCard from "@/components/stories/story-card";
 import { STORIES } from "@/lib/stories";
 
 interface ProvinceStoriesProps {
+    provinceId?: string;
     provinceName: string;
     description: string;
 }
 
-export default function ProvinceStories({ provinceName, description }: ProvinceStoriesProps) {
+export default function ProvinceStories({ provinceId, provinceName, description }: ProvinceStoriesProps) {
+    const provinceStories = provinceId ? STORIES.filter((s) => s.provinceId === provinceId) : STORIES;
+    const displayStories = provinceStories.length > 0 ? provinceStories : STORIES;
+
     return (
         <section className="w-full bg-papua-dark py-24 md:py-32 relative z-20">
             <div className="max-w-7xl mx-auto px-6">
@@ -43,7 +47,7 @@ export default function ProvinceStories({ provinceName, description }: ProvinceS
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {STORIES.map((story) => (
+                    {displayStories.map((story) => (
                         <StoryCard key={story.id} story={story} />
                     ))}
                 </div>

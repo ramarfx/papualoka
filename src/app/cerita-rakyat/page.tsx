@@ -1,6 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SmoothScroll from "@/components/smooth-scroll";
@@ -40,7 +42,26 @@ const gridContainerVariants: Variants = {
     },
 };
 
+const INITIAL_VISIBLE_COUNT = 6;
+
 export default function CeritaRakyatPage() {
+    const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
+
+    const visibleStories = STORIES.slice(0, visibleCount);
+    const hasMore = visibleCount < STORIES.length;
+
+    useEffect(() => {
+        // Trigger Lenis and window resize to update scroll limits when items load
+        const timer = setTimeout(() => {
+            window.dispatchEvent(new Event("resize"));
+        }, 100);
+        return () => clearTimeout(timer);
+    }, [visibleCount]);
+
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => prev + 6);
+    };
+
     return (
         <SmoothScroll>
             <main className="bg-papua-dark min-h-screen">
@@ -91,12 +112,28 @@ export default function CeritaRakyatPage() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
-                        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6"
                     >
-                        {STORIES.map((story) => (
+                        {visibleStories.map((story) => (
                             <StoryCard key={story.id} story={story} />
                         ))}
                     </motion.div>
+
+                    {/* Load More Button */}
+                    {hasMore && (
+                        <div className="mt-12 md:mt-16 text-center">
+                            <motion.button
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4 }}
+                                onClick={handleLoadMore}
+                                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-papua-yellow/10 hover:bg-papua-yellow/20 text-papua-yellow font-sans font-semibold text-xs sm:text-sm tracking-wider uppercase border border-papua-yellow/30 hover:border-papua-yellow/60 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group shadow-sm shadow-black/30"
+                            >
+                                <span>Muat Lebih Banyak</span>
+                                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                            </motion.button>
+                        </div>
+                    )}
                 </section>
 
                 <Footer className="bg-papua-dark" />
@@ -104,3 +141,4 @@ export default function CeritaRakyatPage() {
         </SmoothScroll>
     );
 }
+
