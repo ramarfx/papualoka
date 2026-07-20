@@ -2,12 +2,31 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { X, ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { X } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+
+const barVariants : Variants = {
+    playing: (custom: { min: number; max: number; duration: number }) => ({
+        height: [custom.min, custom.max, custom.min],
+        transition: {
+            duration: custom.duration,
+            repeat: Infinity,
+            repeatType: "mirror" as const,
+            ease: "easeInOut",
+        },
+    }),
+    paused: (custom: { min: number }) => ({
+        height: custom.min,
+        transition: { duration: 0.6, ease: "easeOut" },
+    }),
+};
 
 export default function Navbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 30);
@@ -15,20 +34,47 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        if (isPlaying) {
+            const promise = audio.play();
+            if (promise !== undefined) {
+                promise.catch(() => {
+                    const handleFirstInteraction = () => {
+                        if (audio.paused) {
+                            audio.play().then(() => setIsPlaying(true)).catch(() => {});
+                        }
+                    };
+                    window.addEventListener("click", handleFirstInteraction, { once: true });
+                    window.addEventListener("keydown", handleFirstInteraction, { once: true });
+                });
+            }
+        } else {
+            audio.pause();
+        }
+    }, [isPlaying]);
+
+    const toggleAudio = () => {
+        setIsPlaying((prev) => !prev);
+    };
+
     return (
         <>
+            <audio ref={audioRef} src="/audio/backsound.mp3" loop preload="auto" />
             <nav className={`fixed top-0 left-0 right-0 z-99 flex items-center justify-between px-6 md:px-16 py-4 md:py-6 transition-all maw-300 duration-500 ${isScrolled ? "backdrop-blur-md border-b border-white/5 py-3 md:py-4 shadow-lg" : "bg-transparent"}`}>
                 {/* Left: MENU and Hamburger Icon */}
                 <button
                     onClick={() => setSidebarOpen(true)}
-                    className="focus:outline-none flex items-center gap-3 p-2 rounded-full hover:bg-white/10 transition-colors duration-300 group"
+                    className="focus:outline-none flex items-center gap-3 p-2 rounded-full hover:bg-white/10 transition-colors duration-300 group cursor-pointer"
                     aria-label="Buka Menu"
                 >
                     <span className="text-white font-sans text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Menu</span>
                     <div className="flex flex-col gap-[5px] items-start w-6">
-                        <div className="w-full h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-emerald-400"></div>
-                        <div className="w-[80%] h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-emerald-400"></div>
-                        <div className="w-[50%] h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-emerald-400"></div>
+                        <div className="w-full h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-papua-yellow"></div>
+                        <div className="w-[80%] h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-papua-yellow"></div>
+                        <div className="w-[50%] h-[2px] bg-white rounded-full transition-all duration-300 group-hover:bg-papua-yellow"></div>
                     </div>
                 </button>
 
@@ -43,16 +89,38 @@ export default function Navbar() {
                     />
                 </Link>
 
-                {/* Right: 4-bar Icon */}
+                {/* Right: Audio Visualizer Toggle Button */}
                 <button
-                    className="focus:outline-none flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors duration-300"
-                    aria-label="Audio/Visualizer Menu"
+                    onClick={toggleAudio}
+                    className="focus:outline-none flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors duration-300 group cursor-pointer"
+                    aria-label={isPlaying ? "Matikan Backsound Musik" : "Putar Backsound Musik"}
+                    title={isPlaying ? "Matikan Musik" : "Putar Musik"}
                 >
                     <div className="flex items-end gap-[3.5px] h-6 w-6 justify-center">
-                        <div className="w-[3px] h-3.5 bg-white rounded-full transition-all duration-300"></div>
-                        <div className="w-[3px] h-6 bg-white rounded-full transition-all duration-300"></div>
-                        <div className="w-[3px] h-2.5 bg-white rounded-full transition-all duration-300"></div>
-                        <div className="w-[3px] h-6 bg-white rounded-full transition-all duration-300"></div>
+                        <motion.div
+                            custom={{ min: 6, max: 18, duration: 2.2 }}
+                            animate={isPlaying ? "playing" : "paused"}
+                            variants={barVariants}
+                            className="w-[3px] bg-white/90 rounded-full transition-colors group-hover:bg-papua-yellow"
+                        />
+                        <motion.div
+                            custom={{ min: 10, max: 24, duration: 2.8 }}
+                            animate={isPlaying ? "playing" : "paused"}
+                            variants={barVariants}
+                            className="w-[3px] bg-white/90 rounded-full transition-colors group-hover:bg-papua-yellow"
+                        />
+                        <motion.div
+                            custom={{ min: 7, max: 16, duration: 1.9 }}
+                            animate={isPlaying ? "playing" : "paused"}
+                            variants={barVariants}
+                            className="w-[3px] bg-white/90 rounded-full transition-colors group-hover:bg-papua-yellow"
+                        />
+                        <motion.div
+                            custom={{ min: 9, max: 21, duration: 2.5 }}
+                            animate={isPlaying ? "playing" : "paused"}
+                            variants={barVariants}
+                            className="w-[3px] bg-white/90 rounded-full transition-colors group-hover:bg-papua-yellow"
+                        />
                     </div>
                 </button>
             </nav>

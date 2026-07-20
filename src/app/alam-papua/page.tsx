@@ -13,7 +13,7 @@ export default function AlamPapuaPage() {
         <main className="bg-papua-dark min-h-screen">
             <Navbar />
             <AlamPapuaShowcase />
-            <Footer />
+            <Footer className="bg-papua-dark" />
         </main>
     );
 }

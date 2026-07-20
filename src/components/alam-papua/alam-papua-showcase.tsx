@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Trees } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -203,6 +203,11 @@ export default function AlamPapuaShowcase() {
                 // Breathing room between transitions
                 if (i < ALAM_TOTAL - 2) tl.to({}, { duration: 0.15 });
             }
+
+            // 7. At the end of the showcase, fade out background image overlay opacity to 0
+            const endLabel = "s_end";
+            tl.addLabel(endLabel);
+            tl.to(bgs[ALAM_TOTAL - 1], { opacity: 0, duration: 0.4, ease: "none" }, endLabel);
         },
         { scope: sectionRef }
     );
@@ -226,7 +231,7 @@ export default function AlamPapuaShowcase() {
             <div className="relative w-full h-screen overflow-hidden">
                 {/* ── Background color layer (transitions green → dark) ── */}
                 <div
-                    className="alam-bg-color absolute inset-0 z-0"
+                    className="alam-bg-color absolute inset-0 z-0 bg-papua-dark"
                     style={{ backgroundColor: "#1A4321" }}
                 />
 
@@ -247,7 +252,6 @@ export default function AlamPapuaShowcase() {
                 {/* ── Gradient overlays ── */}
                 <div className="absolute inset-0 z-2 pointer-events-none">
                     <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-black/30 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black/20 to-transparent" />
                 </div>
 
                 {/* ── Back button ── */}
@@ -333,26 +337,13 @@ export default function AlamPapuaShowcase() {
                                 {ALAM_SECTIONS.map((sec, i) => (
                                     <div
                                         key={`fact-${sec.id}`}
-                                        className={`alam-fact flex items-stretch gap-0 rounded-lg overflow-hidden border border-white/10 max-w-md ${i === 0 ? "relative" : "absolute top-0 left-0 right-0"
+                                        className={`alam-fact flex items-stretch gap-0 p-2 bg-white/5 backdrop-blur-xs rounded-lg overflow-hidden border border-white/10 max-w-md ${i === 0 ? "relative" : "absolute top-0 left-0 right-0"
                                             }`}
                                     >
                                         {/* Fact text */}
-                                        <div className="flex-1 flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 bg-white/5 backdrop-blur-xs">
-                                            <div className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/10 flex items-center justify-center">
-                                                <svg
-                                                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/60"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                    strokeWidth={2}
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-4.04a4.5 4.5 0 00-6.364-6.364L4.5 6.227m11.944 5.961l1.757-1.757"
-                                                    />
-                                                </svg>
-                                            </div>
+                                        <div className="flex-1 flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 ">
+                                            <Trees className="text-white size-10" />
+
                                             <p className="text-white/80 font-sans text-[10px] sm:text-xs leading-relaxed">
                                                 {sec.factText}
                                             </p>
@@ -364,7 +355,7 @@ export default function AlamPapuaShowcase() {
                                                 src={sec.factImage}
                                                 alt="Fact"
                                                 fill
-                                                className="object-cover object-center"
+                                                className="object-cover object-center rounded-lg"
                                                 sizes="112px"
                                             />
                                         </div>

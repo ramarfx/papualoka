@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geom, Montserrat } from "next/font/google";
 import "./globals.css";
+import InitialLoader from "@/components/initial-loader";
 
 const geom = Geom({
   variable: "--font-geom",
@@ -54,7 +55,10 @@ export default function RootLayout({
       lang="en"
       className={`${geom.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <InitialLoader />
+        {children}
+      </body>
     </html>
   );
 }

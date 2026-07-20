@@ -7,25 +7,26 @@ import Navbar from "@/components/navbar";
 import { motion, Variants } from "framer-motion";
 
 
-const textVariants: Variants = {
-  hidden: { y: "100%", opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: "spring", damping: 15, stiffness: 100, delay: 0.5 },
-  },
-};
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState("Indonesia");
+  const [animationDelay, setAnimationDelay] = useState<number | null>(null);
 
   const bgRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Check if it's the first load to synchronize animation with the InitialLoader
+    const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
+    if (!hasLoaded) {
+      setAnimationDelay(4); // Loader duration + delay
+    } else {
+      setAnimationDelay(0.5);
+    }
+
     let ticking = false;
 
     const updatePosition = () => {
@@ -95,9 +96,16 @@ export default function Home() {
         <div ref={textRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 transform-gpu">
           <div className=" py-4">
             <motion.h1 
-              variants={textVariants}
               initial="hidden"
-              animate="visible"
+              animate={animationDelay !== null ? "visible" : "hidden"}
+              variants={{
+                hidden: { y: "100%", opacity: 0 },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { type: "spring", damping: 15, stiffness: 100, delay: animationDelay || 0 },
+                },
+              }}
               className="font-bold -mt-12 text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading text-center select-none"
             >
               PAPUA
