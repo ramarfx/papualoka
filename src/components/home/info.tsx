@@ -21,10 +21,11 @@ const DEFAULT_CONTENT = {
 
 const PROVINCE_CONTENT: Record<
     string,
-    { title: string; desc: string; stats: { title: string; desc: string }[] }
+    { title: string; path: string; desc: string; stats: { title: string; desc: string }[] }
 > = {
     papuabaratdaya: {
         title: "PAPUA BARAT DAYA",
+        path: "/province/papua-barat-daya",
         desc: "Papua Barat Daya adalah provinsi termuda Papua, berpusat di Sorong — pintu gerbang menuju keajaiban bahari Raja Ampat yang diakui sebagai pusat keanekaragaman hayati laut dunia.",
         stats: [
             { title: "40.362 KM²", desc: "Hamparan laut dan daratan dengan keanekaragaman hayati yang luar biasa." },
@@ -34,6 +35,7 @@ const PROVINCE_CONTENT: Record<
     },
     papuabarat: {
         title: "PAPUA BARAT",
+        path: "/province/papua-barat",
         desc: "Papua Barat menyimpan hamparan hutan hujan tropis lebat, teluk cenderawasih yang memukau, serta Manokwari sebagai kota misi tertua di Papua yang sarat sejarah.",
         stats: [
             { title: "97.024 KM²", desc: "Hutan hujan tropis yang masih terjaga dan teluk biru yang membentang luas." },
@@ -43,6 +45,7 @@ const PROVINCE_CONTENT: Record<
     },
     papuatengah: {
         title: "PAPUA TENGAH",
+        path: "/province/papua-tengah",
         desc: "Papua Tengah membentang dari pegunungan tengah hingga dataran rendah yang subur. Nabire menjadi titik akses utama menuju keajaiban Danau Paniai dan puncak-puncak megah Papua.",
         stats: [
             { title: "119.749 KM²", desc: "Dari puncak pegunungan bersalju hingga dataran rendah yang subur." },
@@ -52,6 +55,7 @@ const PROVINCE_CONTENT: Record<
     },
     papuapegunungan: {
         title: "PAPUA PEGUNUNGAN",
+        path: "/province/papua-pegunungan",
         desc: "Papua Pegunungan adalah atap Indonesia — rumah Puncak Jaya setinggi 4.884 mdpl, lembah Baliem yang megah, dan suku Dani yang menjaga tradisi ribuan tahun tanpa henti.",
         stats: [
             { title: "55.553 KM²", desc: "Deretan pegunungan tertinggi di Indonesia dengan salju abadi." },
@@ -61,6 +65,7 @@ const PROVINCE_CONTENT: Record<
     },
     papuaselatan: {
         title: "PAPUA SELATAN",
+        path: "/province/papua-selatan",
         desc: "Papua Selatan adalah tanah savana luas dan rawa-rawa khas Merauke — kota paling timur Indonesia. Wilayah ini kaya budaya suku Marind dan berbatasan langsung dengan Papua Nugini.",
         stats: [
             { title: "118.844 KM²", desc: "Dataran rendah, rawa-rawa luas, dan savana menuju Laut Arafura." },
@@ -70,6 +75,7 @@ const PROVINCE_CONTENT: Record<
     },
     papua: {
         title: "PAPUA",
+        path: "/province/papua",
         desc: "Provinsi Papua adalah jantung dari Tanah Cenderawasih — rumah bagi Jayapura sebagai pusat pemerintahan, hutan tropis yang lebat, dan ragam etnis yang hidup harmonis di pesisir serta pedalaman.",
         stats: [
             { title: "88.648 KM²", desc: "Hutan tropis lebat dan garis pantai panjang menuju Samudera Pasifik." },
@@ -152,7 +158,7 @@ export default function Info() {
                     </AnimatePresence>
 
                     {content.title !== DEFAULT_CONTENT.title && (
-                        <Link href="/destination" className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
+                        <Link href={'path' in content ? content.path : "/province"} className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
                             <span>Pelajari Selanjutnya</span>
                             <ChevronRight
                                 className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
