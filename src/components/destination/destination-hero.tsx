@@ -107,7 +107,7 @@ export default function DestinationHero({ title, description, bgImage, carouselI
                 initial={{ opacity: 0, y: 50 }}
                 animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                className="absolute bottom-0 left-0 right-0 z-50 w-full translate-y-1/2"
+                className="absolute -bottom-12 left-0 right-0 z-50 w-full translate-y-1/2"
             >
                 <InfiniteCarousel images={carouselImages} />
             </motion.div>

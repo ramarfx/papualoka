@@ -70,7 +70,7 @@ export default function DestinationStats({ stats }: DestinationStatsProps) {
     };
 
     return (
-        <section className="w-full bg-papua-dark pb-24 pt-32 md:pt-40 lg:pt-48 px-6 relative z-10 overflow-hidden">
+        <section className="w-full bg-papua-dark pb-24 pt-32 md:pt-40 lg:pt-64 px-6 relative z-10 overflow-hidden">
             <motion.div 
                 variants={containerVariants}
                 initial="hidden"

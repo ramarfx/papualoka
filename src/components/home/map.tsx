@@ -85,7 +85,7 @@ export default function InteractiveMap({
   const transformOrigin = activeCenter ? `${activeCenter.x}px ${activeCenter.y}px` : "center center";
 
   return (
-    <div className="relative w-full aspect-[800/500] max-w-[800px] mx-auto select-none overflow-hidden">
+    <div className="relative w-full aspect-800/500 max-w-360 mx-auto select-none overflow-hidden">
       {/* Outer wrapper */}
       <div className="w-full h-full">
         <svg

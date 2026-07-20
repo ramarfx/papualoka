@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/danau-sentani/1.png", className: "" }, 
-    { src: "/img/destination/danau-sentani/2.png", className: "" }, 
-    { src: "/img/destination/danau-sentani/3.png", className: "" }, 
-    { src: "/img/destination/danau-sentani/4.png", className: "" }, 
+    { src: "/img/destination/danau-sentani/1.png", className: "" },
+    { src: "/img/destination/danau-sentani/2.png", className: "" },
+    { src: "/img/destination/danau-sentani/3.png", className: "" },
+    { src: "/img/destination/danau-sentani/4.png", className: "" },
 ];
 
 const STATS = [
@@ -169,45 +169,46 @@ export default function DanauSentaniPage() {
         <SmoothScroll>
             <main className="bg-papua-dark min-h-screen">
                 <Navbar />
-                <DestinationHero 
+                <DestinationHero
                     title="Danau Sentani"
                     description="Terletak di kaki Pegunungan Cyclops, Danau Sentani menyuguhkan panorama alam yang tenang dengan puluhan pulau kecil di sekitarnya. Kawasan ini juga terkenal akan kekayaan budaya masyarakat setempat."
                     bgImage="/img/destination/sentani-bg.png"
                     carouselImages={CAROUSEL_IMAGES}
                 />
-                
+
                 <DestinationStats stats={STATS} />
 
-                <DestinationVideo 
+                <DestinationVideo
                     title="Danau Sentani"
                     subtitle="Keindahan di Bawah Pegunungan Cyclops"
                     description="Permukaan air yang tenang berpadu dengan bukit-bukit hijau menciptakan suasana damai yang tak terlupakan di Danau Sentani."
-                    youtubeId="x21y3Ylw_lk" 
+                    youtubeId="x21y3Ylw_lk"
                 />
 
-                <DestinationAccess 
+                <DestinationAccess
                     title="Akses Menuju Danau Sentani"
                     steps={ACCESS_STEPS}
                 />
 
-                <DestinationActivities 
+                <DestinationActivities
                     title="Aktivitas Seru di Danau Sentani"
                     description="Nikmati beragam aktivitas seru di Danau Sentani, mulai dari menjelajahi kampung adat, berburu kerajinan lokal, hingga menikmati panorama alam yang memukau."
                     activities={ACTIVITIES}
                 />
 
-                <DestinationPreservation 
+                <DestinationPreservation
                     bgImage="/img/destination/danau-sentani/pelestarian.png"
                     title="Upaya Pelestarian"
                     description="Danau Sentani memadukan keindahan alam dan budaya yang kaya. Mari menjaga kebersihan serta menghormati tradisi masyarakat setempat."
                     items={PRESERVATION_ITEMS}
                 />
 
-                <DestinationExplore 
+                <DestinationExplore
                     items={EXPLORE_ITEMS}
+                    currentSlug="danau-sentani"
                 />
 
-                <Footer />
+                <Footer className="bg-papua-dark" />
             </main>
         </SmoothScroll>
     );

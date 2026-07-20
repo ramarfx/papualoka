@@ -23,11 +23,16 @@ export interface ExploreItem {
 
 interface DestinationExploreProps {
     items: ExploreItem[];
+    currentSlug?: string;
 }
 
-export default function DestinationExplore({ items }: DestinationExploreProps) {
+export default function DestinationExplore({ items, currentSlug }: DestinationExploreProps) {
     const [swiper, setSwiper] = useState<SwiperType | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const displayItems = currentSlug
+        ? items.filter((item) => item.id !== currentSlug && item.href !== `/destination/${currentSlug}`)
+        : items;
 
     const handlePrev = () => {
         if (swiper) swiper.slidePrev();
@@ -38,7 +43,7 @@ export default function DestinationExplore({ items }: DestinationExploreProps) {
     };
 
     return (
-        <section className="w-full bg-[#111111] py-24 relative z-10 overflow-hidden">
+        <section className="w-full bg-papua-dark py-24 relative z-10 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
 
                 {/* Carousel Container */}
@@ -48,7 +53,7 @@ export default function DestinationExplore({ items }: DestinationExploreProps) {
                     <button
                         onClick={handlePrev}
                         aria-label="Previous Slide"
-                        className="hidden md:flex absolute -left-16 lg:-left-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/20 hover:border-white/50 bg-transparent text-white items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                        className="hidden md:flex absolute -left-16 lg:-left-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white text-black items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer shadow-lg hover:bg-white/90"
                     >
                         <ChevronLeft className="w-5 h-5" />
                     </button>
@@ -77,7 +82,7 @@ export default function DestinationExplore({ items }: DestinationExploreProps) {
                         onSlideChange={(s) => setActiveIndex(s.realIndex)}
                         className="w-full rounded-[32px] md:rounded-[40px] shadow-2xl"
                     >
-                        {items.map((item) => (
+                        {displayItems.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <div className="flex flex-col md:flex-row w-full min-h-[460px] md:h-[420px] rounded-[32px] md:rounded-[40px] overflow-hidden relative">
 
@@ -158,7 +163,7 @@ export default function DestinationExplore({ items }: DestinationExploreProps) {
 
                 {/* Custom Pagination Indicators */}
                 <div className="flex items-center gap-2.5 mt-8 z-20">
-                    {items.map((_, idx) => (
+                    {displayItems.map((_, idx) => (
                         <button
                             key={idx}
                             onClick={() => swiper && swiper.slideToLoop(idx)}

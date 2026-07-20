@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import { Trash2, Handshake, ShoppingBag } from "lucide-react";
 
 const CAROUSEL_IMAGES = [
-    { src: "/img/destination/puncak-jayawijaya/1.png", className: "" }, 
-    { src: "/img/destination/puncak-jayawijaya/2.png", className: "" }, 
-    { src: "/img/destination/puncak-jayawijaya/3.png", className: "" }, 
-    { src: "/img/destination/puncak-jayawijaya/4.png", className: "" }, 
+    { src: "/img/destination/puncak-jayawijaya/1.png", className: "" },
+    { src: "/img/destination/puncak-jayawijaya/2.png", className: "" },
+    { src: "/img/destination/puncak-jayawijaya/3.png", className: "" },
+    { src: "/img/destination/puncak-jayawijaya/4.png", className: "" },
 ];
 
 const STATS = [
@@ -42,7 +42,7 @@ const ACCESS_STEPS: AccessStep[] = [
         id: "step-3",
         title: "3. Ekspedisi Pendakian",
         description: "Dari basecamp, dibutuhkan keahlian teknis rock climbing dan pendampingan pemandu bersertifikat untuk menaklukkan puncak bersalju abadi ini.",
-        image: "/img/destination/plane.png", 
+        image: "/img/destination/plane.png",
         align: "left"
     }
 ];
@@ -176,45 +176,46 @@ export default function PuncakJayawijayaPage() {
         <SmoothScroll>
             <main className="bg-papua-dark min-h-screen">
                 <Navbar />
-                <DestinationHero 
+                <DestinationHero
                     title="Puncak Jayawijaya"
                     description="Berdiri megah sebagai puncak tertinggi Indonesia dan salah satu dari Seven Summits dunia, Jayawijaya menyimpan es abadi yang langka di kawasan tropis. Sebuah tantangan dan keajaiban alam yang tiada duanya."
                     bgImage="/img/destination/jayawijaya-bg.png"
                     carouselImages={CAROUSEL_IMAGES}
                 />
-                
+
                 <DestinationStats stats={STATS} />
 
-                <DestinationVideo 
+                <DestinationVideo
                     title="Puncak Jayawijaya"
                     subtitle="Atap Salju Nusantara"
                     description="Pemandangan bersalju eksotis yang menghiasi langit tropis Papua, menguji setiap jiwa petualang yang berani mendakinya."
-                    youtubeId="QSH9l_80y7Q" 
+                    youtubeId="QSH9l_80y7Q"
                 />
 
-                <DestinationAccess 
+                <DestinationAccess
                     title="Akses Menuju Puncak Jayawijaya"
                     steps={ACCESS_STEPS}
                 />
 
-                <DestinationActivities 
+                <DestinationActivities
                     title="Aktivitas Seru di Puncak Jayawijaya"
                     description="Rasakan sensasi menjelajahi puncak tertinggi Indonesia dengan panorama pegunungan megah dan pengalaman yang tak terlupakan."
                     activities={ACTIVITIES}
                 />
 
-                <DestinationPreservation 
+                <DestinationPreservation
                     bgImage="/img/destination/puncak-jayawijaya/pelestarian.png"
                     title="Upaya Pelestarian"
                     description="Puncak Jayawijaya menawarkan keindahan alam yang langka. Nikmati setiap petualangan dengan tetap menjaga kebersihan dan kelestarian pegunungan."
                     items={PRESERVATION_ITEMS}
                 />
 
-                <DestinationExplore 
+                <DestinationExplore
                     items={EXPLORE_ITEMS}
+                    currentSlug="puncak-jayawijaya"
                 />
 
-                <Footer />
+                <Footer className="bg-papua-dark" />
             </main>
         </SmoothScroll>
     );

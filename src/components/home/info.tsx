@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { AlertCircle, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import InteractiveMap from "./map";
+import Link from "next/link";
 
 // ──────────────────────────────────────────────────────────────────
 // Province-specific content: title, description, and 3 timeline stats
@@ -91,7 +92,7 @@ export default function Info() {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen bg-[#0F0F0F] flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
+        <section className="relative w-full min-h-screen bg-papua-dark flex flex-col justify-center py-24 px-8 md:px-24 overflow-hidden">
             {/* Top Left Cursor Hint */}
             <motion.div
                 className="absolute top-12 left-0 md:top-24 md:left-24 z-20 w-fit mx-4"
@@ -135,7 +136,6 @@ export default function Info() {
                                 {content.title}
                             </motion.h2>
                         </AnimatePresence>
-                        <div className="h-[2px] w-12 bg-[#D3B745] shrink-0 mt-1"></div>
                     </div>
 
                     <AnimatePresence mode="wait">
@@ -151,13 +151,15 @@ export default function Info() {
                         </motion.p>
                     </AnimatePresence>
 
-                    <button className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-[0.1em] font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
-                        <span>Pelajari Selanjutnya</span>
-                        <ChevronRight
-                            className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            strokeWidth={3}
-                        />
-                    </button>
+                    {content.title !== DEFAULT_CONTENT.title && (
+                        <Link href="/destination" className="flex items-center gap-2 text-white font-sans text-xs md:text-sm tracking-widest font-bold uppercase hover:text-[#D3B745] transition-colors group w-max">
+                            <span>Pelajari Selanjutnya</span>
+                            <ChevronRight
+                                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                strokeWidth={3}
+                            />
+                        </Link>
+                    )}
                 </motion.div>
 
                 {/* Center Map */}

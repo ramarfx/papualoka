@@ -21,9 +21,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
             duration: 1.2,
             easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
-            syncTouch: true,
-            touchMultiplier: 2,
-            touchInertiaMultiplier: 20,
             lerp: 0.05,
         });
 
