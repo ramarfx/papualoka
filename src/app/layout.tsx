@@ -3,6 +3,7 @@ import { Geom, Montserrat } from "next/font/google";
 import "./globals.css";
 import InitialLoader from "@/components/initial-loader";
 import PageTransition from "@/components/page-transition";
+import ChatbotWidget from "@/components/chatbot/chatbot-widget";
 
 const geom = Geom({
   variable: "--font-geom",
@@ -61,6 +62,7 @@ export default function RootLayout({
         <PageTransition>
           {children}
         </PageTransition>
+        <ChatbotWidget />
       </body>
     </html>
   );

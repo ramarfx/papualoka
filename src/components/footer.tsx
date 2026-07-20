@@ -97,25 +97,26 @@ export default function Footer({className = ""}: {className?: string}) {
                 {/* Right Area Container */}
                 <div className="flex flex-col sm:flex-row justify-between lg:justify-end gap-16 lg:gap-32 w-full lg:w-auto mt-8 lg:mt-0">
                     
-                    {/* Middle: Links */}
-                    <motion.div 
-                        className="flex flex-col gap-5 w-auto"
+                    {/* Middle: Links (2 columns) */}
+                    <motion.div
+                        className="grid grid-cols-2 gap-x-10 sm:gap-x-12 md:gap-x-16 gap-y-5 w-auto"
                         variants={linkContainerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false }}
                     >
                         {[
-                            { num: "01", label: "BERANDA", href: "#" },
-                            { num: "02", label: "JELAJAH", href: "#" },
-                            { num: "03", label: "BUDAYA", href: "#" },
-                            { num: "04", label: "TENTANG", href: "#" },
-                            { num: "05", label: "GALERI", href: "#galeri" },
+                            { num: "01", label: "BERANDA", href: "/home" },
+                            { num: "02", label: "JELAJAH", href: "/home#destinasi-pilihan" },
+                            { num: "03", label: "BUDAYA", href: "/kalender" },
+                            { num: "04", label: "ALAM PAPUA", href: "/alam-papua" },
+                            { num: "05", label: "CERITA RAKYAT", href: "/cerita-rakyat" },
+                            { num: "06", label: "TENTANG", href: "/about" },
                         ].map((item) => (
                             <motion.div key={item.label} variants={linkVariants}>
                                 <Link href={item.href} className="group flex items-center gap-4 text-white hover:text-papua-yellow transition-colors">
                                     <span className="text-white/30 group-hover:text-papua-yellow/50 text-[11px] font-sans font-medium tracking-widest transition-colors">{item.num}</span>
-                                    <span className="text-xs font-sans font-bold tracking-[0.15em] uppercase transition-all duration-300">{item.label}</span>
+                                    <span className="text-xs font-sans font-bold tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap">{item.label}</span>
                                 </Link>
                             </motion.div>
                         ))}

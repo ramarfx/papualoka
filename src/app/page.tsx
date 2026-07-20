@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import { motion, Variants } from "framer-motion";
-
-
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,7 +64,6 @@ export default function Home() {
 
   const languages = ["Indonesia"];
 
-
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -76,13 +73,15 @@ export default function Home() {
 
   return (
     <div className="bg-[#050906] text-white min-h-screen font-sans selection:bg-emerald-500 selection:text-black overflow-x-hidden">
-
       <Navbar />
 
       {/* Hero Parallax Header Container */}
       <header className="h-screen w-full relative overflow-hidden bg-[#060b08]">
         {/* Layer 1: Background Sky (Moves slow, 40%) */}
-        <div ref={bgRef} className="absolute inset-0 w-full h-[120%] pointer-events-none transform-gpu">
+        <div
+          ref={bgRef}
+          className="absolute inset-0 w-full h-[120%] pointer-events-none transform-gpu"
+        >
           <Image
             src="/img/opening-bg.png"
             alt="Langit Papua"
@@ -93,9 +92,22 @@ export default function Home() {
         </div>
 
         {/* Layer 2: Text "PAPUA" (Moves medium, 25%) */}
-        <div ref={textRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 transform-gpu">
+        <div
+          ref={textRef}
+          className="
+              absolute
+              inset-0
+              flex
+              items-center
+              justify-center
+              pointer-events-none
+              z-10
+              transform-gpu
+              translate-y-[3vh]
+          "
+        >
           <div className=" py-4">
-            <motion.h1 
+            <motion.h1
               initial="hidden"
               animate={animationDelay !== null ? "visible" : "hidden"}
               variants={{
@@ -103,7 +115,12 @@ export default function Home() {
                 visible: {
                   y: 0,
                   opacity: 1,
-                  transition: { type: "spring", damping: 15, stiffness: 100, delay: animationDelay || 0 },
+                  transition: {
+                    type: "spring",
+                    damping: 15,
+                    stiffness: 100,
+                    delay: animationDelay || 0,
+                  },
                 },
               }}
               className="font-bold -mt-12 text-[85px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-white leading-none tracking-normal font-heading text-center select-none"
@@ -114,7 +131,10 @@ export default function Home() {
         </div>
 
         {/* Layer 3: Foreground Mountain Overlay (Moves slowest, 10%) */}
-        <div ref={overlayRef} className="absolute inset-0 w-full h-[108%] pointer-events-none z-20 transform-gpu">
+        <div
+          ref={overlayRef}
+          className="absolute inset-0 w-full h-[108%] pointer-events-none z-20 transform-gpu"
+        >
           <Image
             src="/img/opening-overlay.png"
             alt="Pegunungan Papua"
@@ -126,7 +146,7 @@ export default function Home() {
 
         <div className="absolute bottom-0 w-full h-1/3 z-30 flex flex-col justify-between px-8 md:px-16 pb-8 pointer-events-none">
           <div className="flex justify-center">
-            <Link 
+            <Link
               href="/home"
               className="pointer-events-auto px-5 py-2.5 rounded-full border-2 border-white bg-transparent font-sans text-xl tracking-normal font-semibold uppercase cursor-pointer hover:bg-papua-green-light hover:border-papua-green-light hover:text-white transition-all"
             >
@@ -141,15 +161,28 @@ export default function Home() {
                 className="flex items-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm font-sans tracking-widest transition-colors duration-200 py-2 cursor-pointer font-semibold uppercase"
               >
                 <span>{selectedLang}</span>
-                <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${langDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform duration-300 ${langDropdownOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2.5"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
 
               {/* Language Dropdown List */}
               {langDropdownOpen && (
                 <>
-                  <div className="fixed inset-0 z-10" onClick={() => setLangDropdownOpen(false)} />
+                  <div
+                    className="fixed inset-0 z-10"
+                    onClick={() => setLangDropdownOpen(false)}
+                  />
                   <div className="absolute bottom-10 left-0 z-20 bg-black/75 backdrop-blur-xl border border-white/10 rounded-2xl py-2.5 w-40 shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
                     {languages.map((lang) => (
                       <button
