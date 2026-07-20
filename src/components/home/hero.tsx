@@ -78,14 +78,6 @@ export default function Hero() {
                         </div>
                     </Link>
                 </div>
-
-                {/* Language Dropdown */}
-                <div className="flex items-center pointer-events-auto">
-                    <button className="flex items-center gap-2 text-white font-sans text-xs md:text-sm font-semibold hover:text-papua-green-light transition-colors duration-200">
-                        <span>Indonesia</span>
-                        <ChevronDown className="w-3.5 h-3.5" strokeWidth={2.5} />
-                    </button>
-                </div>
             </motion.div>
         </section>
     );
