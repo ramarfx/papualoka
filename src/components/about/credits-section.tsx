@@ -270,7 +270,7 @@ export default function CreditsSection() {
           variants={fadeUpVariants}
           className="flex-1 w-full max-w-[620px]"
         >
-          <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl backdrop-blur-md p-6 sm:p-8 h-[360px] sm:h-[400px] md:h-[430px] overflow-y-auto credits-scrollbar">
+          <div data-lenis-prevent className="bg-white/[0.02] border border-white/[0.08] rounded-l-2xl backdrop-blur-md p-6 sm:p-8 h-[360px] sm:h-[400px] md:h-[430px] overflow-y-auto credits-scrollbar">
             <ul className="flex flex-col">
               {CREDITS.map((credit) => (
                 <motion.li key={credit.id} variants={itemVariants}>

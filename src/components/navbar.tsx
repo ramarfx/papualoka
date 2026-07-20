@@ -143,24 +143,26 @@ export default function Navbar() {
                     className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-500"
                 />
                 {/* Drawer Body */}
-                <div className={`absolute top-0 left-0 bottom-0 w-full sm:w-[380px] bg-[#0c0c0c] border-r border-white/5 p-8 md:p-8 flex flex-col shadow-2xl transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
-                    
+                <div
+                    data-lenis-prevent
+                    className={`absolute top-0 left-0 bottom-0 w-full sm:w-[380px] bg-[#0c0c0c] border-r border-white/5 p-6 md:p-8 flex flex-col shadow-2xl transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+                >
                     {/* Background Texture inside sidebar */}
                     <Image src="/img/papua-island.png" alt="" fill className="object-cover opacity-[0.03] pointer-events-none mix-blend-screen" />
 
-                    <div className="relative z-10 flex flex-col h-full">
-                        <div className="flex items-center justify-between mb-8">
+                    <div className="relative z-10 flex flex-col h-full min-h-0">
+                        <div className="flex items-center justify-between mb-6 shrink-0">
                             <Image src="/img/logo.png" alt="PapuaLoka" width={130} height={32} className="h-7 w-auto object-contain" />
                             <button
                                 onClick={() => setSidebarOpen(false)}
-                                className="text-white/60 hover:text-papua-yellow p-3 rounded-full hover:bg-white/5 transition-colors cursor-pointer"
+                                className="text-white/60 hover:text-papua-yellow p-2.5 rounded-full hover:bg-white/5 transition-colors cursor-pointer"
                             >
-                                <X className="w-7 h-7" />
+                                <X className="w-6 h-6" />
                             </button>
                         </div>
 
                         {/* Menu Links */}
-                        <div className="flex flex-col gap-5 flex-1 justify-center my-auto overflow-y-auto py-2">
+                        <div className="flex flex-col gap-4 flex-1 overflow-y-auto min-h-0 py-2 pr-1">
                             <Link
                                 href="/home"
                                 onClick={() => setSidebarOpen(false)}

@@ -72,7 +72,7 @@ export default function About() {
     };
 
     return (
-        <section id="beragamnya-negeri-papua" className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
+        <section className="bg-papua-green relative transition-colors duration-500 overflow-hidden pb-32">
             {/* Top Paragraph */}
             <div className="px-6 mx-auto w-full max-w-7xl pt-24 pb-12 relative z-20">
                 <ScrollRevealText
@@ -83,11 +83,11 @@ export default function About() {
             </div>
 
             {/* Standard Auto-Playing Carousel Section */}
-            <div className="relative w-full flex flex-col justify-center z-10">
+            <div id="beragamnya-negeri-papua" className="relative w-full flex flex-col justify-center z-10 pt-20 md:pt-32">
                 {/* Dots background */}
                 <Image src="/img/papua-dots.png" alt="Background" width={1014} height={896} className="opacity-20 absolute right-0 bottom-0 pointer-events-none mix-blend-overlay -z-10" />
 
-                <div className="px-6 mx-auto w-full max-w-7xl relative z-10">
+                <div  className="px-6 mx-auto w-full max-w-7xl relative z-10 ">
                     <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-10">
                         Beragamnya <span className="text-papua-yellow">Negeri Papua</span>
                     </h1>
@@ -123,7 +123,7 @@ export default function About() {
                                     <p className="text-[#a0b0a3] text-xs font-bold tracking-[0.15em] uppercase mb-2 md:mb-3 font-sans">
                                         {TRIBES[activeIndex].category}
                                     </p>
-                                    <h2 className="text-white text-2xl md:text-3xl lg:text-[42px] leading-[1.2] font-bold font-sans mb-3 md:mb-4" dangerouslySetInnerHTML={{ __html: TRIBES[activeIndex].title }} />
+                                    <h2 className="text-white text-2xl md:text-3xl lg:text-3xl leading-[1.2] font-bold font-sans mb-3 md:mb-4" dangerouslySetInnerHTML={{ __html: TRIBES[activeIndex].title }} />
                                     <p className="text-[#c4d0c6] text-xs md:text-sm lg:text-base leading-relaxed font-sans w-full md:max-w-10/12">
                                         {TRIBES[activeIndex].description}
                                     </p>
