@@ -34,8 +34,20 @@ export const TEAM_MEMBERS: TeamMember[] = [
       instagram: "https://www.instagram.com/nazlaraley?igsh=Z3BoOHptd3BwMHE4",
     },
   },
+
   {
     id: "member-3",
+    name: "Syifa Nazilah",
+    role: "Copywriting & Researcher",
+    image: "/img/team/syifa.jpg",
+    glow: true,
+    socials: {
+      linkedin: "https://www.linkedin.com/in/syifa-nazilah",
+      instagram: "https://www.instagram.com/syifnzp?igsh=ZnFqY20ydnltc29i",
+    },
+  },
+  {
+    id: "member-4",
     name: "Ramadina Al Muzthazam ",
     role: "Frontend Developer",
     image: "/img/team/rama.jpeg",
@@ -44,17 +56,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
       linkedin: "https://www.linkedin.com/in/ramarfx",
       instagram: " instagram.com/ramtxh",
       github: "github.com/ramarfx",
-    },
-  },
-  {
-    id: "member-4",
-    name: "Syifa Nazilah",
-    role: "Copywriting & Researcher",
-    image: "/img/team/syifa.jpg",
-    glow: true,
-    socials: {
-      linkedin: "https://www.linkedin.com/in/syifa-nazilah",
-      instagram: "https://www.instagram.com/syifnzp?igsh=ZnFqY20ydnltc29i",
     },
   },
   {
