@@ -18,7 +18,7 @@ export default function AlamPapuaPage() {
                 <Navbar />
                 
                 {/* ── Back button ── */}
-                <div className="absolute top-20 md:top-29 left-5 sm:left-8 md:left-12 lg:left-16 z-50 pointer-events-auto">
+                <div className="absolute top-20 md:top-22 left-5 sm:left-8 md:left-12 lg:left-16 z-50 pointer-events-auto">
                     <Link
                         href="/home"
                         className="group flex gap-4 items-center"
